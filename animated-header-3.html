@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>offset demo</title>
+  <style>
+  p {
+    margin-left: 10px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+*{ margin:0px; padding:0; }
+
+header{ width:100%; float:left; z-index:1;
+	transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease,-webkit-transform .3s ease;
+}
+.hdrTop{ width:100%; padding:20px 0px; float:left; background:rgba(0, 255, 0, 0.2); }
+.hdrBtm{ width:100%; padding:30px 0px; float:left; position: relative; background:rgba(0, 255, 255, 0.7); 
+	transition: -webkit-transform .3s ease;
+    transition: transform .3s ease;
+    transition: transform .3s ease,-webkit-transform .3s ease; }
+.Sticky{
+	/*-webkit-transform: translateY(-60px); transform: translateY(-60px); */
+	position: fixed; top:0; left:0;
+}
+
+@media screen and (max-width:600px){
+	.hdrTop{ padding:10px 0px; }
+	.hdrBtm{ padding:10px 0px; }
+}
+</style>
+
+<header class="header">
+	<div class="hdrTop">2<br>2<br>2</div>
+	<div class="hdrBtm">2<br>2<br>2<br>2<br>2<br>2</div>
+</header>
+
+<div style="width:100%; float:left; height:400px; margin-top:0px;">
+<img src="https://preview.oklerthemes.com/porto/7.2.0/img/slides/slide-corporate-3-1.jpg" alt="" style="width:100%;">
+</div>
+
+<div style="width:100%; height:2200px;">
+</div>
+
+ 
+<script>
+	(function($) {
+
+'use strict';
+
+var FullHeaderElement = ".header";
+var StikyElement = ".hdrBtm";
+var StikyClass = "Sticky";
+
+function scrolld(){
+	var FullHeaderElementHeight = $(FullHeaderElement).outerHeight();
+	$(FullHeaderElement).css("min-height", FullHeaderElementHeight+"px");
+	console.log(FullHeaderElementHeight);
+	var scrollTop = $(window).scrollTop();
+	var PrevSectionOfStikyElement = $(StikyElement).prev().outerHeight();
+	var StikyElementOffset = scrollTop - PrevSectionOfStikyElement;
+	if(scrollTop>=PrevSectionOfStikyElement){
+		$(StikyElement).addClass(StikyClass);
+	}else{
+		$(StikyElement).removeClass(StikyClass);
+	}
+	
+}
+
+
+scrolld();
+jQuery(window).on('scroll', function(){
+	scrolld();		 
+});
+jQuery(window).on('resize', function(){
+	scrolld();		 
+});
+
+}).apply(this, [jQuery]);
+
+
+
+
+
+
+</script>
+ 
+</body>
+</html>
