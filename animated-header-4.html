@@ -18,19 +18,26 @@
 header{ width:100%; float:left; z-index:1; transition: -webkit-transform .3s ease; transition: transform .3s ease; padding-top:120px; }
 .hdrBtm{ width:100%; padding:30px 0px; float:left; position: relative; background:rgba(0, 255, 255, 0.7); }
 .StickyElementAfterScroll{ transition: -webkit-transform .3s ease; transition: transform .3s ease; transition: transform .3s ease,-webkit-transform .3s ease; }
-.Sticky{ /*-webkit-transform: translateY(-60px); transform: translateY(-60px); */	position: fixed; top:0; left:0; width:100%; }
-
+.Sticky .StickyElementAfterScroll{ /*-webkit-transform: translateY(-60px); transform: translateY(-60px); */	position: fixed; top:0; left:0; width:100%; }
+.stickyHeader{ /*-webkit-transform: translateY(-60px); transform: translateY(-60px); */	position: fixed; top:0; left:0; width:100%; }
 </style>
 <!-- <div class="hdrBtm">2<br>2<br>2<br>2<br>2<br>2</div> -->
-<header class="header">
-	<div class="StickyElementAfterScroll" style="background:yellow">2<br>2<br>2<br>2<br>2<br>2</div>
-</header>
+
 
 <div style="width:100%; float:left; margin-top:0px;">
 <img src="https://preview.oklerthemes.com/porto/7.2.0/img/slides/slide-corporate-3-1.jpg" alt="" style="width:100%;">
 </div>
+<!-- <button onclick="window.location.href='https://www.google.com/'">Click me</button> -->
 
-<div style="width:100%; height:2200px;">
+
+	<div style="width:100%; float:left; margin-top:0px;">
+		<img src="https://preview.oklerthemes.com/porto/7.2.0/img/slides/slide-corporate-3-1.jpg" alt="" style="width:100%;">
+	</div>
+
+	<header class="header">
+			<div class="StickyElementAfterScroll" style="background:yellow">2<br>2<br>2<br>2<br>2<br>2</div>
+		</header>
+<div style="width:100%; height:2200px; clear:both;">
 </div>
 
  
@@ -43,23 +50,32 @@ header{ width:100%; float:left; z-index:1; transition: -webkit-transform .3s eas
 		var StikyElement = ".StickyElementAfterScroll";
 		var StikyClass = "Sticky";
 
+		var StikyElementOffset = $(StikyElement).offset();
+			var StikyElementTopOffset = StikyElementOffset.top;
+			console.log("sticky top offset:"+StikyElementTopOffset);
+
 		// animation function
 		function stickyHeaderAnimate(){
 			var FullHeaderElement = StikyElement;
 			var FullHeaderElementHeight = $(FullHeaderElement).outerHeight();
+			console.log("Header Height:" + FullHeaderElementHeight);
 
 			var scrollTop = $(window).scrollTop();
 			console.log("scroll to top:"+scrollTop);
 
-			var StikyElementOffset = $(StikyElement).offset();
+			/*var StikyElementOffset = $(StikyElement).offset();
 			var StikyElementTopOffset = StikyElementOffset.top;
+			console.log("sticky top offset:"+StikyElementTopOffset);*/
 			console.log("sticky top offset:"+StikyElementTopOffset);
 			
 			if(scrollTop >= StikyElementTopOffset ){
-				$(StikyElement).addClass(StikyClass);
-				
+				//$(StikyElement).addClass(StikyClass);
+				$("html").addClass(StikyClass);
+				$("body").css("padding-top", FullHeaderElementHeight);
 			}else{
-				$(StikyElement).removeClass(StikyClass);
+				//$(StikyElement).removeClass(StikyClass);
+				$("html").removeClass(StikyClass);
+				$("body").css("padding-top", "");
 			}
 		}
 
