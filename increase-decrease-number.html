@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Increase and Decrease Numbeer</title>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+	<style>
+		/* Increase/Decrease Input css start */
+		.incrsDcrsInput {
+			width: auto;
+			position: relative;
+			display: inline-block;
+			margin-right: -10px;
+		}
+
+		.incrsDcrsInput .eventBtn {
+			width: 39px;
+			height: 39px;
+			color: #fff;
+			font-size: 14px;
+			text-align: center;
+			line-height: 42px;
+			position: absolute;
+			top: 0px;
+			background:gray;
+			background-repeat: no-repeat;
+			cursor: pointer;
+			transition: all ease 0.2s;
+		}
+
+		.incrsDcrsInput .eventBtn:hover {
+			color: #fff;
+		}
+
+		.incrsDcrsInput .eventBtn:active {
+			color: #fff;
+			transform: scale(0.9);
+			-webkit-transform: scale(0.9);
+		}
+
+		.incrsDcrsInput .eventBtn.dcrsBtn {
+			left: 0;
+		}
+
+		.incrsDcrsInput .eventBtn.incrsBtn {
+			right: 0;
+		}
+
+		.incrsDcrsInput .eventBtn[disabled=disabled] {
+			pointer-events: none;
+			opacity: 0.3;
+		}
+
+		.incrsDcrsInput input[type=text] {
+			width: 100px;
+			border: none;
+			box-shadow: none;
+			-webkit-box-shadow: none;
+			display: inline-block;
+			height: 41px;
+			padding: 0px;
+			text-align: center;
+			background: transparent;
+			color: #006381;
+			font-size: 18px;
+			font-weight: 600;
+			font-family: 'Open Sans Condensed', sans-serif;
+			margin: 0px 39px;
+		}
+
+		/* Increase/Decrease Input css ended */
+	</style>
+
+
+	<div class="incrsDcrsInput">
+		<a class="eventBtn dcrsBtn" title="dcrsBtn"><i class="fa fa-minus" aria-hidden="true"></i>-</a>
+		<input type="text" value="1" maxlength="3" class="incrsDecrsValue">
+		<a class="eventBtn incrsBtn" title="incrsBtn"><i class="fa fa-plus" aria-hidden="true"></i>+</a>
+	</div>
+
+
+	<script>
+		/* Increase/Decrease Input script start */
+		$(".incrsDcrsInput").each(function () {
+			var incrsDecrsElement = $(this).find(".incrsDecrsValue");
+			var increaseButton = $(this).find(".incrsBtn");
+			var decreaseButton = $(this).find(".dcrsBtn");
+			var minValue = 1;
+			var maxValue = 99;
+
+			// get data from text field
+			$(incrsDecrsElement).keyup(function () {
+				var getincrsDecrsElement = $(incrsDecrsElement).val();
+				if (/[a-zA-Z-_ ]/.test(getincrsDecrsElement)) {
+					$(incrsDecrsElement).val(1);
+				} else {
+					if (getincrsDecrsElement > maxValue || getincrsDecrsElement < minValue) {
+						alert("No of items should be "+minValue+" - "+maxValue);
+						//$("#showMsg").html("No of items should be " + minValue + " - " + maxValue);
+						//$('#alertModal').modal('show');
+						$(incrsDecrsElement).val(1);
+					}
+				}
+			});
+
+			// item increase value
+			$(increaseButton).click(function () {
+				var getincrsDecrsElement = $(incrsDecrsElement).val();
+				var newValue = +getincrsDecrsElement + 1;
+				if (getincrsDecrsElement < maxValue) {
+					$(incrsDecrsElement).val(newValue);
+				}
+			});
+
+			// item decrease value
+			$(decreaseButton).click(function () {
+				var getincrsDecrsElement = $(incrsDecrsElement).val();
+				var newValue = +getincrsDecrsElement - 1;
+				if (getincrsDecrsElement > minValue) {
+					$(incrsDecrsElement).val(newValue);
+				}
+			});
+
+		});
+/* Increase/Decrease Input script ended */
+	</script>
+
+
+</body>
+
+</html>
