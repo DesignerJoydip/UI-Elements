@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <!-- <script src="script.js"></script> -->
+
+    <style>
+    /* Styles go here */
+
+    .box-container {
+        height: 200px;
+    }
+
+    .box-item {
+        width: 100%;
+        z-index: 1000
+    }
+    </style>
+
+    <script>
+    $(document).ready(function() {
+
+        $('.box-item').draggable({
+        cursor: 'move',
+        helper: "clone"
+        });
+
+        $("#container1").droppable({
+        drop: function(event, ui) {
+            var itemid = $(event.originalEvent.toElement).attr("itemid");
+            $('.box-item').each(function() {
+            if ($(this).attr("itemid") === itemid) {
+                $(this).appendTo("#container1");
+            }
+            });
+        }
+        });
+
+        $("#container2").droppable({
+        drop: function(event, ui) {
+            var itemid = $(event.originalEvent.toElement).attr("itemid");
+            $('.box-item').each(function() {
+            if ($(this).attr("itemid") === itemid) {
+                $(this).appendTo("#container2");
+            }
+            });
+        }
+        });
+
+    });
+    </script>
+    
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">Panel 1</h1>
+            </div>
+            <div id="container1" class="panel-body box-container">
+              <div itemid="itm-1" class="btn btn-default box-item">Item 1</div>
+              <div itemid="itm-2" class="btn btn-default box-item">Item 2</div>
+              <div itemid="itm-3" class="btn btn-default box-item">Item 3</div>
+              <div itemid="itm-4" class="btn btn-default box-item">Item 4</div>
+              <div itemid="itm-5" class="btn btn-default box-item">Item 5</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h1 class="panel-title">Panel 2</h1>
+            </div>
+            <div id="container2" class="panel-body box-container"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
