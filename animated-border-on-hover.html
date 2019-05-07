@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Switch Radio Button</title>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+
+<body>
+
+	<style>
+		.main {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.item {
+  height: 100%;
+}
+
+.main:before,
+.main:after,
+.item:before,
+.item:after {
+  content: "";
+  position: absolute;
+  background: red;
+  transition: all .2s linear;
+}
+
+.main:before {
+  width: 2px;
+  height: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.main:after {
+  height: 2px;
+  width: 0;
+  top: 0;
+  left: 0;
+}
+
+.item:before {
+  width: 2px;
+  height: 0;
+  top: 0;
+  right: 0;
+}
+
+.item:after {
+  height: 2px;
+  width: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.main:hover:before {
+  height: 100%;
+  transition: all .2s linear;
+}
+
+.main:hover:after {
+  width: 100%;
+  transition: all .2s linear .2s;
+}
+
+.main:hover .item:before {
+  height: 100%;
+  transition: all .2s linear .2s;
+}
+
+.main:hover .item:after {
+  width: 100%;
+  transition: all .2s linear .2s;
+}
+	</style>
+
+	
+
+
+<div class="main">
+	<div class="item">
+		Some Content
+	</div>
+</div>
+
+</body>
+
+</html>
