@@ -363,7 +363,7 @@ echo get_post_meta($post->ID, "meta_field_one", true);
 
 
 -------------------------------------------------------------------------------------------------------
-Current pot link
+Current post link
 -------------------------------------------------------------------------------------------------------
 <?php echo get_permalink($post->ID); ?>
 
@@ -413,3 +413,196 @@ function template_taxonomies() {
   );
 }
 add_action('init','template_taxonomies');
+
+
+---------------------------------------------------------------------------------------
+Get all page list array
+-------------------------------------------------------------------------------------
+$args = array(
+  'post_type' => 'page',
+  'post_parent' => 0,
+  'fields' => 'ids',
+  'posts_per_page' => -1,
+  'post__not_in' => array('3','5','11'),
+);
+$qry = new WP_Query($args);
+var_dump($qry->posts);
+
+---------------------------------------------------------------------------------------
+Get all page list
+-------------------------------------------------------------------------------------
+
+$pages = get_pages(); 
+foreach ($pages as $page_data) {
+    $content = apply_filters('the_content', $page_data->post_content); 
+	$title = $page_data->post_title; 
+	$link = _get_page_link( $page_data );
+	//echo $content; 
+	echo $title;
+	echo "<a href='".$link."'>Link</a>";
+	echo "<br>";
+}
+
+---------------------------
+
+$args = array(
+    'sort_order' => 'asc',
+    'sort_column' => 'post_title',
+    'hierarchical' => 1,
+    'exclude' => '',
+    'include' => '',
+    'meta_key' => '',
+    'meta_value' => '',
+    'authors' => '',
+    'child_of' => 0,
+    'parent' => -1,
+    'exclude_tree' => '',
+    'number' => '',
+    'offset' => 0,
+    'post_type' => 'page',
+    'post_status' => 'publish'
+); 
+$pages = get_pages($args); 
+
+foreach ($pages as $page) {
+	$title = $page->post_title; 
+	$slug = $page->post_name; 
+	$link = _get_page_link( $page);
+	echo $title. "<br />";
+	echo "<a href='".$link."'>Link</a>";
+	echo "<br>";
+	echo "<br>";
+}
+// https://codex.wordpress.org/Class_Reference/WP_Post
+
+--------------------------------------------------------------------------------------------
+Get Page data by page slug name
+--------------------------------------------------------------------------------------------
+$page = get_page_by_path( 'about-us' );
+$post_id = $page->ID;
+$title = get_the_title( $page );
+$content = apply_filters('the_content', $page->post_content);
+$custom_field_1 = get_post_meta($post_id, 'Price', true);
+$link = _get_page_link( $page );
+
+echo $title;
+// echo $content;
+echo $custom_field_1;
+echo "<a href='".$link."'>Link</a>";
+
+---------------------------------------------------------------------------------------------
+get categories id
+---------------------------------------------------------------------------------------------
+
+  <?php
+$category_ids = get_all_category_ids();
+foreach($category_ids as $cat_id) {
+  $cat_name = get_cat_name($cat_id);
+  echo $cat_id . ': ' . $cat_name;
+}
+?>
+
+-----------------------------------------------------
+
+------------------ get custom post type ------------------------
+
+
+$args = array( 'post_type' => 'product', 'posts_per_page' => 10 );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();
+	the_title();
+	echo '<div class="entry-content">';
+	the_content();
+	echo '</div>';
+endwhile;
+
+--------- : example : -------------
+
+$args = array( 'post_type' => 'testimonial', 'posts_per_page' => 10 );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post();
+
+echo '<a href='; the_permalink(); echo '>';
+
+	the_title();
+	echo '<div class="entry-content">';
+	the_content();
+	echo '</div>';
+	echo '</a>';
+endwhile; 
+
+
+
+------ activation of featured image in custom post type ----------------------------
+
+add_theme_support('post-thumbnails');
+function setup_types() {
+    register_post_type('Hot Properties', array(
+        'label' => __('Hot Properties'),
+        'supports' => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+        'show_ui' => true,
+    ));
+}
+add_action('init', 'setup_types');
+
+----------------------------------------------------------
+
+------------------------------------- create menu -----------------------------------
+
+register_nav_menu( 'primary', 'Primary Menu' ); 
+(paste into function.php and create to menu 1. header nav, 2. footer nav in admin panel)
+
+veiw created menu in page use code below :
+
+wp_nav_menu( array('menu' => 'header nav' ));
+
+&
+
+wp_nav_menu( array('menu' => 'footer nav' ));
+
+------------------------------------------------------------------------------------------
+
+---------------------------------add featured image part ---------------------------------
+
+add_theme_support( 'post-thumbnails' );
+(paste it into function.php file and refresh the Admin Post page); 
+
+for show the image in post 
+
+if ( has_post_thumbnail() ) {
+	the_post_thumbnail();
+} 
+
+http://codex.wordpress.org/Post_Thumbnails
+
+------------------------------------------------------------------------------------------
+
+--------------------- loop ----------------------------------------
+
+<?php
+$args = array( 'posts_per_page' => 10, 'order'=> 'ASC', 'orderby' => 'title' );
+$postslist = get_posts( $args );
+foreach ( $postslist as $post ) :
+  setup_postdata( $post ); ?> 
+	<div><a href="<?php the_permalink(); ?>">
+		<?php the_date(); ?>
+		<br />
+		<?php the_title(); ?>   
+		<?php the_excerpt(); ?>
+	</a></div>
+<?php
+endforeach; 
+wp_reset_postdata();
+?>
+
+-------------------------------------------------------------------------------------
+
+-------------------------------- links code -------------------------------
+
+css, js, static image etc linkcode : echo get_template_directory_uri();
+
+Hyperlink code : <a href="<?php the_permalink(); ?>"></a>
+
+----------------------------------------------------------------------------
+
+
