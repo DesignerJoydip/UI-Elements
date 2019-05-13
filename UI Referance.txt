@@ -1,0 +1,76 @@
+https://demo.cocobasic.com/blanka-html/index.html
+http://tk-themes.net/html-fount/demo/demo-architect-index.html
+
+/**************************************************************************
+Design 
+**************************************************************************/
+
+https://themeforest.net/category/site-templates?page=7
+
+http://html.tonatheme.com/2019/Barnet-intro/
+http://t.commonsupport.com/zemen/index.html
+https://preview.oklerthemes.com/porto/7.2.0/index.html
+https://portotheme.com/html/porto/
+http://event-theme.com/themes/goshophtml/
+http://preview.themedemo.co/prague-html-landing/
+http://smartco.enventer.com/html/
+http://templates.seekviral.com/excitor/
+http://themesground.com/harrier-demo/demo_page/
+http://stens-html.buzline.org/
+http://themeearth.com/tf/html/finixpa/
+
+http://themes.semicolonweb.com/html/canvas/intro.html
+http://themes.semicolonweb.com/html/canvas/demo-recipes.html
+
+event management ---------------------------------------------------------
+--------------------------------------------------------------------------
+https://themeforest.net/item/harmoni-event-management-psd-template/21461054?s_rank=3
+https://themeforest.net/item/crazy-hour-event-management-psd-template/9741027?s_rank=10
+https://themeforest.net/item/carnival-material-event-template/17679128?s_rank=27
+https://themeforest.net/item/pantero-event-conference-psd-template/20114977?s_rank=28
+
+Tour and Travel ----------------------------------------------------------
+--------------------------------------------------------------------------
+https://themeforest.net/item/ora-travel-hotel-booking-psd-template/22967549?s_rank=3
+https://themeforest.net/item/frolic-psd-template-for-tour-operators-travel-agencies/22541288?s_rank=5
+
+Restaurant and Cafe-------------------------------------------------------
+--------------------------------------------------------------------------
+http://www.chitrakootweb.com/template/cefrax/
+http://jellydemos.com/html/paladar/landing/
+http://themescare.com/demos/droome-preview/
+
+Jquery
+------------------------------------------------------------------------
+animation on scroll
+------------------------------------------------------------------------
+https://michalsnik.github.io/aos/
+http://htmlpreview.github.io/?https://github.com/arman37/Custom-Scroller/blob/master/index.html
+https://scrollpress.github.io/scrollpress/demo-index.html
+https://tgomilar.github.io/paroller.js/
+https://codyhouse.co/demo/reading-progress-indicator/index.html
+http://jadus.github.io/jquery-sortScroll/
+http://callmecavs.com/jump.js/
+https://codepen.io/mike-zarandona/full/Dasnw
+https://codyhouse.co/demo/page-scroll-effects/parallax-hijacking.html
+http://simbyone.com/demo/loading-header-while-scrolling/index.php
+http://pazguille.github.io/horwheel/
+http://lab.stephaneguigne.com/js/jquery-scrollsections/example/callbacks.html
+https://www.jqueryscript.net/demo/flyin-fade-in-out-scrollmation/
+
+
+
+animated slider with owl carousel:
+https://codepen.io/radimby/pen/YpEJQP
+https://codepen.io/shamim539/pen/BQRJxJ
+
+animated slider with slick js:
+https://codepen.io/joxxce/pen/WjGLyr
+
+clip path css
+https://css-tricks.com/almanac/properties/c/clip/
+
+
+
+
+
