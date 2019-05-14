@@ -40,7 +40,7 @@
         >li{
             float: left;
             position: relative;
-            margin:0px 5px;
+            margin:0px 10px;
             &.has-sub{
                 >a{
                     padding-right: 25px; 
@@ -62,7 +62,7 @@
             }
         &:hover{
             >ul{
-                left: auto;
+                right: auto;
             }
         }
         &:after{
@@ -93,7 +93,7 @@
         li{
             &:hover{
                 >ul{
-                    left: auto; 
+                    right: auto; 
                 }
             }
             a{
@@ -107,7 +107,7 @@
             min-width:250px;
             width:100%;
             background:$green;
-            left: -9999px;
+            right: -9999px;
             top:22px;
             li{
                 position: relative;
@@ -131,6 +131,11 @@
                     &:hover{
                         background:$blue;
                         color:$white;
+                    }
+                }
+                &:hover{
+                    ul{
+                        right: 100% !important;
                     }
                 }
             }
@@ -167,14 +172,15 @@
 }
 /* mobile menu css */
 .primary-menu.small-screen{
-    width: 100%;
+    width: 30px;
     position:  inherit;
     ul{
         width: 100%;
         display: none;
         position: absolute;
-        background-color:$green; 
-        right:0; 
+        background-color:$green;
+        left:0px;
+        right:auto; 
         box-shadow:none; 
         z-index:9; 
         margin:0px;
@@ -198,7 +204,19 @@
                 &:hover{
                     color:$blue;
                 }
-            } 
+            }
+            &.has-sub{
+                >a{
+                    &:after{
+                        display:none;
+                        @extend %menusub-after-property;
+                    }
+                    &:before{
+                        display:none;
+                        @extend %menusub-before-property;
+                    }
+                }
+            }
         }
         ul{
             position: relative;
@@ -218,6 +236,9 @@
                 .submenu-button {
                     height: 44px;
                     width: 44px;
+                }
+                ul{
+                    right:auto !important;
                 }
             }
             ul{
@@ -285,7 +306,8 @@
     .submenu-button{
         position: absolute;
         z-index: 99;
-        right: 0;
+        right:auto;
+        left: 0;
         top: 0;
         display: block;
         height: 46px;
@@ -298,22 +320,26 @@
             width: 2px;
             height: 8px;
             content: '';
-            display:none;
+            display:block;
             background: rgb(250, 250, 250);
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
         }
         &:after{
             position: absolute;
             top: 22px;
-            right: 19px;
+            right: 23px;
             width: 8px;
             height: 2px;
             content: ''; 
-            display:none;
+            display:block;
             background: rgb(250, 250, 250);
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
         }
         &.submenu-opened{
             &:before{
-                display:none;
+                display:block;
                 background: rgb(250, 250, 250);
             }
             &:after{
