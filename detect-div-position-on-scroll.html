@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
   <title>offset demo</title>
   <style>
   p {
@@ -13,55 +14,88 @@
 <body>
 
 <style type="text/css">
-*{ margin:0px; padding:0; }
-.box{ width:100%; background-color:#e0faff; position:relative;
+*{ margin:0px; padding:45px 0px 0px 0px; }
+.navbar{ width:100%; background-color:gray; padding:15px 0px; text-align:center; position:fixed; top:0px; left:0px; z-index:9; }
+.navbar ul{ list-style:none; padding:0; margin:0; }
+.navbar li{ width:auto; display:inline-block; margin:0px 15px; color:white; cursor:pointer; }
+.navbar li.active a, .navbar a.active{ color:yellow; }
 
-		transition:all ease 0.4s;
 
- }
+.box{ width:100%; background-color:#e0faff; position:relative;transition:all ease 0.4s;}
 .block_2{ background-color:#c2ffd4; }
 .block_3{ background-color:#ffbde2; }
 .block_4{ background-color:#ffdebd; }
 .active{ background-color:yellow !important; }
+footer{ width:100%; background:#000; color:#fff; text-align:center; padding:20px 0px; }
 
-.navbar{ width:100%; background-color:gray; padding:15px 0px; text-align:center; }
-.navbar ul{ list-style:none; padding:0; margin:0; }
-.navbar li{ width:auto; display:inline-block; margin:0px 15px; color:white; cursor:pointer; }
-.navbar li.active{ color:yellow; }
+
 
 </style>
 <div class="navbar">
 	<ul>
-		<li>Block 1</li><li>Block 2</li><li>Block 3</li><li>Block 4</li>
+		<li><a href="#blockID_1">Block 1</a></li>
+		<li><a href="#blockID_2">Block 2</a></li>
+		<li><a href="#blockID_3">Block 3</a></li>
+		<li><a href="#blockID_4">Block 4</a></li>
 	</ul>
 </div>
-<div class="box block_1 active">
+<div class="box block_1 active" id="blockID_1">
 <h1 style="height:700px;">Block 1</h1>
 </div>
-<div class="box block_2">
+<div class="box block_2" id="blockID_2">
 <h1 style="height:400px;">Block 2</h1>
 </div>
-<div class="box block_3">
+<div class="box block_3" id="blockID_3">
 <h1 style="height:200px;">Block 3</h1>
 </div>
-<div class="box block_4">
+<div class="box block_4" id="blockID_4">
 <h1 style="height:500px;">Block 4</h1>
 </div>
+<footer>
+	Footer
+</footer>
  
 <script>
+
+
 jQuery(window).scroll(function(){
+
+
+
 		var windowh = $(window).height();
 		var scrollTop = $(window).scrollTop();
 	      $(".box").each(function(){
 	      	var elementOffset = $(this).offset().top;
 	      	var currentElementOffset = (elementOffset - scrollTop);
 	      	//console.log("winheight: "+windowh+"elementpos: "+currentElementOffset);
-	      	if(currentElementOffset<=windowh/2){
+	      	if(currentElementOffset<=windowh / 2){
 	      		$(".box").removeClass("active");
 				$(this).addClass("active");
+				var activeBlockID = $(this).attr("id");
+				//console.log(activeBlockID);
+				$(".navbar a").removeClass("active");
+				$(".navbar a[href^='#"+activeBlockID+"']").addClass("active");
+
 	      	}
 	      });
+
+
+		  
 });
+
+
+$(".navbar a[href^='#']").click(function(e) {
+			e.preventDefault();
+			
+			var position = $($(this).attr("href")).offset().top;
+
+			$("body, html").animate({
+				scrollTop: position
+			}, 1000);
+});
+
+
+
 
 </script>
  
