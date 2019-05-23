@@ -628,3 +628,39 @@ echo '</a>';
 ------------------------------------------------------------------------------
 
 
+
+------------------------------------------------------------------------------
+Create custom post type
+------------------------------------------------------------------------------
+function create_quick_link_boxes() {  
+    register_post_type( 'quicklinkboxes',  
+        array(  
+            'labels' => array(  
+                'name' => __( 'Quick Link Box' ),  
+                'singular_name' => __( 'Quick Link Box' ),
+				'add_new' => 'Add Quick Link',
+    'add_new_item' => __( 'Add Quick Link' ),
+    'edit_item' => __( 'Edit Quick Link' ),
+    'new_item' => __( 'New Quick Link' ),
+    'all_items' => __( 'All Quick Link' ),
+    'view_item' => __( 'View Quick Link' ),
+    'search_items' => __( 'Search Quick Link' ),
+    'not_found' =>  __( 'No Quick Link found' ),
+    'not_found_in_trash' => __( 'No Quick Link found in Trash' ), 
+    'parent_item_colon' => __( '' ),
+    'menu_name' => __( 'Quick Link' )
+            ),  
+        'public' => true, 
+		'has_archive' => true, 
+        'menu_position' => 10,  
+        'rewrite' => array('slug' => 'quick-link-box'),
+		'supports' => array( 'title', 'author', 'thumbnail','excerpt','custom-fields','comments','page-attributes'  )
+        )  
+    );  
+}  
+  
+add_action( 'init', 'create_quick_link_boxes' );
+
+------------------------------------------------------------------------------
+
+
