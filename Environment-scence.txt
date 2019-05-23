@@ -6,3 +6,25 @@ https://adamlittledale.artstation.com/
 
 Free tree download
 https://store.speedtree.com/store/free-speedtree-model-bundle-for-ue4-subscription/
+
+Occan material:
+http://ashtonmaltie.com/thesis
+https://www.worldofleveldesign.com/categories/ue4/materials-starter-content-water-instance.php
+
+https://docs.unrealengine.com/en-us/Engine/Rendering/Materials/HowTo/DetailTexturing
+
+reactive Water
+reactive Grass
+
+
+create albedo map
+https://www.youtube.com/watch?v=VBoHh6CR-kM&amp;hl=en&amp;persist_hl=1&amp;gl=US
+
+https://tutorials.cgrecord.net/2015/04/creating-cave-entrance-scene-in-unreal.html
+
+
+Become a 3d Artist
+https://magazine.artstation.com/2017/09/3d-artist-perspective/
+
+Book:
+https://www.worldofleveldesign.com/store/ue4-the-corridor.php
