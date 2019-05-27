@@ -1,13 +1,10 @@
 Abhishek Tarafder <abhishek@matrixnmedia.com>,
 Debjani Ghosh <debjani@matrixnmedia.com>,
-Kankana Chaudhury <kankana@matrixnmedia.com>,
-Mrittika Ghosh <mrittika@matrixnmedia.com>,
 Gopal Biswas <gopal@matrixnmedia.com>,
 Aninda Kumar Ghosh <aninda@matrixnmedia.com>,
 Sanjay Basak <sanjaybasak@matrixnmedia.com>,
 pintu sasmal <pintu@matrixnmedia.com>,
 Avick Roy <avick@matrixnmedia.com>,
-Manisha Dey <manisha@matrixnmedia.com>,
 Nilanjana Sahoo <nilanjanasahoo@matrixnmedia.com>,
 Tapas Sarkar <tapas@matrixnmedia.com>,
 Swarup Gayen <swarup@matrixnmedia.com>,
@@ -44,10 +41,13 @@ Dolan Chowdhury <dolan@matrixnmedia.com>,
 madhusudan mondal <madhusudan@matrixnmedia.com>,
 Abhijit saha <abhijit@matrixnmedia.com>,
 Joydev Mondal <joydev@matrixnmedia.com>,
-Koushik Mandal <koushikmd@matrixnmedia.com>
+Koushik Mandal <koushikmd@matrixnmedia.com>,
+Amit Kar <amitkar@matrixnmedia.com>,
+Manisha Dey <manisha@matrixnmedia.com>,
 Pal Da
 Mama
 Raja
+
 Sir
 Rajesh Sir
 Neha
