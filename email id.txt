@@ -1,9 +1,15 @@
 Abhishek Tarafder <abhishek@matrixnmedia.com>,
 Debjani Ghosh <debjani@matrixnmedia.com>,
-Gopal Biswas <gopal@matrixnmedia.com>,
+Amit Kar <amitkar@matrixnmedia.com>,
 Aninda Kumar Ghosh <aninda@matrixnmedia.com>,
+Ankur Dey <ankur@matrixnmedia.com>,
+Subhasish Mukherjee <subhasishmukherjee@matrixnmedia.com>,
+Ayan Ghosh <ayanghosh@matrixnmedia.com>,
+Gopal Biswas <gopal@matrixnmedia.com>,
 Sanjay Basak <sanjaybasak@matrixnmedia.com>,
+pintu sasmal <pintu@matrixnmedia.com>,
 Avick Roy <avick@matrixnmedia.com>,
+Manisha Dey <manisha@matrixnmedia.com>,
 Nilanjana Sahoo <nilanjanasahoo@matrixnmedia.com>,
 Tapas Sarkar <tapas@matrixnmedia.com>,
 Swarup Gayen <swarup@matrixnmedia.com>,
@@ -25,9 +31,6 @@ Vishakha Gupta <vishakha@matrixnmedia.com>,
 Biplab Chakraborty <biplab@matrixnmedia.com>,
 Debnidhi Kuila <debnidhi@matrixnmedia.com>,
 Kaushik Mondal <kaushikmondal@matrixnmedia.com>,
-Ankur Dey <ankur@matrixnmedia.com>,
-Ayan Ghosh <ayanghosh@matrixnmedia.com>,
-Subhasish Mukherjee <subhasishmukherjee@matrixnmedia.com>,
 Saswat Routroy <saswat@matrixnmedia.com>,
 Somanth Das <somnathdas@matrixnmedia.com>,
 Abhishek Sen <abhisheksen@matrixnmedia.com>,
@@ -40,12 +43,11 @@ Dipendranath Basu Roy <droy@matrixnmedia.com>,
 Dolan Chowdhury <dolan@matrixnmedia.com>,
 madhusudan mondal <madhusudan@matrixnmedia.com>,
 Abhijit saha <abhijit@matrixnmedia.com>,
-Koushik Mandal <koushikmd@matrixnmedia.com>,
-Amit Kar <amitkar@matrixnmedia.com>,
+Koushik Mandal <koushikmd@matrixnmedia.com>
+
+
 Mama
 Raja
-pintu sasmal <pintu@matrixnmedia.com>,
-Manisha Dey <manisha@matrixnmedia.com>,
 Pal Da
 
 
