@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+    <title>Simplest jQuery Dropdown Nav Demo</title>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Roboto:400,700,500);
+
+        /* main Styles */
+
+        html {
+            box-sizing: border-box;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            background: #fafafa;
+            font-family: "Roboto", sans-serif;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        /* Navigation css start */
+
+        nav {
+            background: #2ba0db;
+        }
+
+        nav .fa.fa-angle-down {
+            margin-left: 6px;
+        }
+
+        nav ul {
+            font-size: 0;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            position: relative;
+        }
+
+        nav ul li a {
+            color: #fff;
+            display: block;
+            font-size: 14px;
+            padding: 15px 14px;
+            transition: 0.3s linear;
+            -webkit-transition: 0.3s linear;
+        }
+
+        nav ul li:hover,
+        nav ul li.submenu:hover > a {
+            background: #126d9b;
+        }
+
+        nav ul li:hover ul{
+            z-index:9;
+        }
+
+        nav ul li.submenu a{
+            padding-right:20px;
+            position: relative;
+        }
+
+        nav ul li.submenu:after{
+            content:'';
+            position: absolute;
+            top:50%;
+            right:10px;
+            width:7px;
+            height:2px;
+            margin-top:-1px;
+            background:#fff;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            z-index:1;
+        }
+        nav ul li.submenu:before{
+            content:'';
+            position: absolute;
+            top:50%;
+            right:6px;
+            width:7px;
+            height:2px;
+            margin-top:-1px;
+            background:#fff;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            z-index:1;
+        }
+
+        nav ul li ul {
+            border-bottom: 5px solid #2ba0db;
+            display: none;
+            position: absolute;
+            width: 250px;
+            z-index:-1;
+        }
+
+        nav ul ul li.submenu:after{
+            content:'';
+            position: absolute;
+            top:50%;
+            right:10px;
+            width:7px;
+            height:2px;
+            margin-top:-3px;
+            background:#fff;
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            z-index:1;
+        }
+        nav ul ul li.submenu:before{
+            content:'';
+            position: absolute;
+            top:50%;
+            right:10px;
+            width:7px;
+            height:2px;
+            margin-top:1px;
+            background:#fff;
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            z-index:1;
+        }
+
+        nav ul li ul li {
+            width:100%;
+            border-top: 1px solid #444;
+            display: block;
+        }
+
+        nav ul li ul li:first-child {
+            border-top: none;
+        }
+
+        nav ul li ul li a {
+            width:100%;
+            background: #373737;
+            display: inline-block;
+            padding: 10px 14px;
+        }
+
+        nav ul li ul li a:hover {
+            background: #126d9b;
+        }
+
+        nav ul li ul li ul {
+            left: 100%;
+            top: 0px;
+        }
+
+        /* Navigation css ended */
+    </style>
+</head>
+
+<body>
+    <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Categories</a>
+                    <ul>
+                        <li><a href="#">Category One</a></li>
+                        <li><a href="#">Category Two</a></li>
+                        <li><a href="#">Category Three</a></li>
+                    </ul>
+                </li>
+                <li> <a href="#">Services</a>
+                    <ul>
+                        <li><a href="#">Service One</a>
+                            <ul>
+                                <li><a href="#">Service One</a></li>
+                                <li><a href="#">Service Two</a>
+                                    <ul>
+                                        <li><a href="#">Service One</a></li>
+                                        <li><a href="#">Service Two</a></li>
+                                        <li><a href="#">Service Three</a></li>
+                                        <li><a href="#">Service Four</a></li>
+                                        <li><a href="#">Service Five</a></li>
+                                        <li><a href="#">Service Six</a>
+                                            <ul>
+                                                <li><a href="#">Service One</a></li>
+                                                <li><a href="#">Service Two</a></li>
+                                                <li><a href="#">Service Three</a></li>
+                                                <li><a href="#">Service Four</a></li>
+                                                <li><a href="#">Service Five</a></li>
+                                                <li><a href="#">Service Six</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Service Three</a></li>
+                                <li><a href="#">Service Four</a></li>
+                                <li><a href="#">Service Five</a></li>
+                                <li><a href="#">Service Six</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Service Two</a>
+                            <ul>
+                                <li><a href="#">Service One</a></li>
+                                <li><a href="#">Service Two</a>
+                                    <ul>
+                                        <li><a href="#">Service One</a></li>
+                                        <li><a href="#">Service Two</a></li>
+                                        <li><a href="#">Service Three</a></li>
+                                        <li><a href="#">Service Four</a></li>
+                                        <li><a href="#">Service Five</a></li>
+                                        <li><a href="#">Service Six</a>
+                                            <ul>
+                                                <li><a href="#">Service One</a></li>
+                                                <li><a href="#">Service Two</a></li>
+                                                <li><a href="#">Service Three</a></li>
+                                                <li><a href="#">Service Four</a></li>
+                                                <li><a href="#">Service Five</a></li>
+                                                <li><a href="#">Service Six</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">Service Three</a></li>
+                                <li><a href="#">Service Four</a></li>
+                                <li><a href="#">Service Five</a></li>
+                                <li><a href="#">Service Six</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Service Three</a></li>
+                        <li><a href="#">Service Four</a></li>
+                        <li><a href="#">Service Five</a></li>
+                        <li><a href="#">Service Six</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+    </nav>
+
+    <i class='fa fa-angle-down'></i>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+
+        resizeFix = function () {
+            //$(window).width() > 991 ? console.log("desktop") : console.log("mobile");
+            $('nav li').each(function () {
+                $(this).has('ul').addClass('submenu');
+            });
+            if ($(window).width() >= 992) {
+                console.log("desktop");
+                $('nav').removeClass('mobilemenu');
+                $('nav li').each(function () {
+                    $(this).hover(
+                        function () {
+                            //$('ul', this).stop().slideDown(200);
+                            $(this).children('ul').stop().delay(300).slideDown(300);
+                        },
+                        function () {
+                            $('ul', this).stop().slideUp(100);
+                        }
+                    );
+                });
+
+
+            } else if($(window).width() <= 991) {
+                console.log("mobile");
+                $('nav').addClass('mobilemenu');
+                /*$('nav li').each(function () {
+                    $(this).has('ul').removeClass('submenu');
+                });*/
+            }
+        }, resizeFix(), $(window).on("resize", resizeFix)
+
+//function deskTop(){
+
+//}
+
+    </script>
+</body>
+
+</html>
