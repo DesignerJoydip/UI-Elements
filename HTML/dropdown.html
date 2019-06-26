@@ -58,6 +58,10 @@
             padding: 0;
         }
 
+        nav > ul{
+            background:#159a6f;
+        }
+
         nav ul li {
             display: inline-block;
             position: relative;
@@ -78,7 +82,7 @@
         }
 
         nav ul li:hover ul{
-            z-index:9;
+            /*z-index:9;*/
         }
 
         nav ul li.submenu a{
@@ -86,7 +90,7 @@
             position: relative;
         }
 
-        nav ul li.submenu:after{
+        nav ul li.submenu > a:after{
             content:'';
             position: absolute;
             top:50%;
@@ -99,7 +103,7 @@
             -webkit-transform: rotate(45deg);
             z-index:1;
         }
-        nav ul li.submenu:before{
+        nav ul li.submenu > a:before{
             content:'';
             position: absolute;
             top:50%;
@@ -118,10 +122,10 @@
             display: none;
             position: absolute;
             width: 250px;
-            z-index:-1;
+            /*z-index:-1;*/
         }
 
-        nav ul ul li.submenu:after{
+        nav ul ul li.submenu > a:after{
             content:'';
             position: absolute;
             top:50%;
@@ -134,7 +138,7 @@
             -webkit-transform: rotate(45deg);
             z-index:1;
         }
-        nav ul ul li.submenu:before{
+        nav ul ul li.submenu > a:before{
             content:'';
             position: absolute;
             top:50%;
@@ -174,16 +178,100 @@
             top: 0px;
         }
 
+        .mobile-navbar{
+            background:#ff0000;
+            display:none;
+            height:40px;
+        }
+        
+        @media (max-width:991px){
+            .mobile-navbar{
+                display:block;
+            }
+            .mobilemenu_ul.ul_closed{
+                left:-100%; opacity:0;
+            }
+            .mobilemenu_ul{
+                position: relative;
+                transition: all ease 0.4s;
+                -webkit-transition: all ease 0.4s;
+                left:0px;
+                opacity:1;
+            }
+            .mobilemenu ul{
+                margin:0px;
+            }
+            .mobilemenu ul li {
+                width: 100%;
+                display:inline-block;
+            }
+            .mobilemenu ul li ul{
+                width:100%;
+                position: relative;
+                left:0;
+                /*display:inline-block;*/
+                border:none;
+            }
+            .mobilemenu ul li.show-sub >ul{
+                display:inline-block;
+            }
+            .mobilemenu ul li a {
+                width: 100%;
+                display:inline-block;
+                padding: 15px 14px;
+                border-bottom:#126d9b solid 1px;
+            }
+            .mobilemenu ul ul li.submenu > a:after{
+                content:'';
+                position: absolute;
+                top:50%;
+                right:10px;
+                width:7px;
+                height:2px;
+                margin-top:-1px;
+                background:#fff;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                z-index:1;
+            }
+            .mobilemenu ul ul li.submenu > a:before{
+                content:'';
+                position: absolute;
+                top:50%;
+                right:6px;
+                width:7px;
+                height:2px;
+                margin-top:-1px;
+                background:#fff;
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+                z-index:1;
+            }
+            .mobilemenu .sub-dropdown{
+                width:40px;
+                height:47px;
+                position: absolute;
+                top:0;
+                background:#ff0000;
+                right:0px;
+                z-index:21;
+            }
+            
+        }
+
         /* Navigation css ended */
     </style>
 </head>
 
 <body>
     <nav>
-            <ul>
+        <div class="mobile-navbar">
+            Navigation <span class="burgermenu-icon">nbnbnvb</span>
+        </div>
+            <ul class="mobilemenu_ul ul_closed">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">Categories</a>
+                <li><a href="https://bigbirchlakeassociation.org/#91" target="_blank">Categories</a>
                     <ul>
                         <li><a href="#">Category One</a></li>
                         <li><a href="#">Category Two</a></li>
@@ -287,9 +375,25 @@
             } else if($(window).width() <= 991) {
                 console.log("mobile");
                 $('nav').addClass('mobilemenu');
-                /*$('nav li').each(function () {
-                    $(this).has('ul').removeClass('submenu');
-                });*/
+                $(".burgermenu-icon").click(function(){
+                    $('.mobilemenu_ul').toggleClass('ul_closed');
+                });
+                $('nav li').each(function () {
+                    if($(this).has('ul').length){
+                        //var sub_dropdown = $(this).children("ul > li > a").find(".sub-dropdown").length;
+                        var sub_dropdown = $(this).find(".sub-dropdown").length;
+                        if(sub_dropdown == 0){
+                            //$(this).children("li a").append('<span class="sub-dropdown"></span>');
+                            $(this).prepend('<span class="sub-dropdown"></span>');
+                            $(this).find(".sub-dropdown").on("click", function() {
+                                //alert($(this).closest("nav").find(".show-sub").length);
+                                //$("nav > ul > li.submenu.show-sub").removeClass("show-sub");
+                                //$(this).closest("li").toggleClass("show-sub");
+                                $(this).closest("li").children("ul").slideToggle(400);
+                            });
+                        }
+                    }
+                });
             }
         }, resizeFix(), $(window).on("resize", resizeFix)
 
