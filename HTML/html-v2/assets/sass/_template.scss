@@ -1,49 +1,4 @@
-/* header css start */
-header{
-    padding:0px;
-    margin:0px;
-    position: relative;
-    z-index: 21;
-    .logo{
-        margin:0px;
-    }
-    .topSectn{
-        padding:10px 0px;
-        background:#000;
-        position: relative;
-        ul{
-            display:inline-block;
-            margin:0px -16px;
-            li{
-                display:inline-block;
-                margin:0px 16px;
-                color:#fff;
-                a{
-                    text-decoration:none;
-                    color:#fff;
-                }
-            }
-            &.social{
-                margin:0px -2px;
-                li{
-                    margin:0px 1px;  
-                }
-            }
-        }
-    }
-    .btmSectn{
-        padding:10px 0px;
-        .row{
-            justify-content: space-between;
-            >div{
-                &.header-middle-area{
-                    
-                }
-            }
-        }
-    }
-}
-/* header css ended */
+
 
 /* home banner css start */
 .homeBnnrScn{
@@ -76,7 +31,7 @@ header{
     .bnnr-headng{
         font-size:32px;
         line-height:38px;
-        color:$blue;
+        color:blue;
         font-family:$bold-font;
         letter-spacing: 1px;
         margin:15px 0px;
@@ -193,7 +148,7 @@ header{
             opacity:0;
             border-radius:100%;
             -webkit-border-radius:100%;
-            background:rgba($blue, 0.6);
+            background:rgba(blue, 0.6);
             transition: all ease 0.3s;
             -webkit-transition: all ease 0.3s;
             &.green-overlay{
@@ -247,7 +202,7 @@ header{
 footer{
     padding:90px 0px 20px 0px;
     position: relative;
-    background:$blue;
+    background:blue;
     .social{
         li{
             width:auto;
@@ -320,7 +275,7 @@ footer{
 .footExpandBtn{
     width:70px;
     height:50px;
-    background:$blue;
+    background:blue;
     color:$white;
     font-size:30px;
     position:absolute;

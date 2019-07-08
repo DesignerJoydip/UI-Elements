@@ -54,6 +54,7 @@
                         <textarea class="form-control" id="comment" name="comment" maxlength="100" rows="5"></textarea>
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
+                    <div style="width:300px; height:200px; background:red;" class="boxx">fgfgdfgdfg</div>
                 </form>
             </div>
             <!-- <div class="panel-footer">This example is part of the article <a
@@ -66,6 +67,7 @@
 
 
     <script>
+
         var $form = $("#form-1"),
             $successMsg = $(".alert");
         $.validator.addMethod("letters", function (value, element) {
@@ -90,15 +92,27 @@
                     minlength: 50,
                 },
             },
-            messages: {
+           messages: {
                 name: "Please specify your name (only letters and spaces are allowed)",
                 email: "Please specify a valid email address"
             },
             submitHandler: function () {
-                //$successMsg.show();
+                $successMsg.show();
                 $form.submit();
             }
         });
+
+
+ $(".boxx").click(function(event){
+    event.stopPropagation();
+    console.log("clicked");
+    $(this).addClass("joydip");
+});
+$("body").click(function(event){
+    event.stopPropagation(); 
+    console.log("blureddddd");
+    $(".boxx").removeClass("joydip");
+});
     </script>
 
 </body>

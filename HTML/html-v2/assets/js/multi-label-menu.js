@@ -1,2 +1,60 @@
-!function(a){a.fn.menumaker=function(b){var c=a(this),d=a.extend({title:"Menu",format:"dropdown",breakpoint:991,sticky:!1},b);return this.each(function(){if(c.find("li ul").parent().addClass("has-sub"),"select"!=d.format)c.prepend('<div class="menu-button">'+"</div>"),a(this).find(".menu-button").on("click",function(){a(this).toggleClass("menu-opened");var b=a(this).next("ul");b.hasClass("open")?b.hide().removeClass("open"):(b.show().addClass("open"),"dropdown"===d.format&&b.find("ul").show())}),multiTg=function(){c.find(".has-sub").prepend('<span class="submenu-button"></span>'),c.find(".submenu-button").on("click",function(){a(this).toggleClass("submenu-opened"),a(this).siblings("ul").hasClass("open")?a(this).siblings("ul").removeClass("open").hide():a(this).siblings("ul").addClass("open").show()})},"multitoggle"===d.format?multiTg():c.addClass("dropdown");else if("select"===d.format){c.append('<select style="width: 100%"/>').addClass("select-list");var b=c.find("select");b.append("<option>"+d.title+"</option>",{selected:"selected",value:""}),c.find("a").each(function(){var c=a(this),d="";for(i=1;i<c.parents("ul").length;i++)d+="-";b.append('<option value="'+a(this).attr("href")+'">'+d+c.text()+"</option")}),b.on("change",function(){window.location=a(this).find("option:selected").val()})}return d.sticky===!0&&c.css("position","fixed"),resizeFix=function(){a(window).width()>d.breakpoint&&(c.find("ul").show(),c.removeClass("small-screen"),"select"===d.format?c.find("select").hide():c.find(".menu-button").removeClass("menu-opened")),a(window).width()<=d.breakpoint&&!c.hasClass("small-screen")&&(c.find("ul").hide().removeClass("open"),c.addClass("small-screen"),"select"===d.format&&c.find("select").show())},resizeFix(),a(window).on("resize",resizeFix)})}}(jQuery);
-$(document).ready(function(){ $(".primary-menu").menumaker({ title: "Menu", format: "multitoggle" }); });
+resizeFix = function () {
+    var nav_class = 'primary-menu';
+    var nav_open_style_class = 'flyout_left'; // open ttype class: flyout_left
+    $('.'+ nav_class).each(function(){
+        $(this).find('li').each(function () {
+            $(this).has('ul').addClass('submenu');
+        });
+    
+    if ($(window).width() >= 992) {
+        //console.log("desktop");
+        $(this).removeClass('mobile-view');
+        $(this).each(function () {
+            $(this).find('li').hover(
+                function () {
+                    $(this).children('ul').stop().delay(300).slideDown(300);
+                },
+                function () {
+                    $('ul', this).stop().slideUp(100);
+                }
+            );
+        });
+
+
+    } else {
+        //console.log("mobile");
+        $(this).addClass('mobile-view');
+
+        var mobile_menu_heading_element = $(this).find(".mobile-navbar").length;
+        if(mobile_menu_heading_element == 0){
+            $(this).prepend('<div class="mobile-navbar">Navigation <span class="burgermenu-icon"></span></div>');
+        }
+
+        if(nav_open_style_class != ''){
+            var animated_menu_class = $(this).find('.mobilemenu_ul.'+nav_open_style_class).length;
+            $(this).parent().parent().find('.mobilemenu_ul').addClass(nav_open_style_class);
+            $(this).find(".burgermenu-icon").click(function(){
+                $(this).parent().parent().find('.mobilemenu_ul').toggleClass('ul_opened');
+            });
+        }else{
+            $(this).find(".burgermenu-icon").click(function(){
+                $(this).parent().parent().find('.mobilemenu_ul').slideToggle(400);
+            });
+        }
+
+        $(this).find('li').each(function () {
+            if($(this).has('ul').length){
+                var sub_dropdown = $(this).find(".sub-dropdown").length;
+                if(sub_dropdown == 0){
+                    $(this).prepend('<span class="sub-dropdown"></span>');
+                    $(this).find(".sub-dropdown").on("click", function() {
+                        $(this).toggleClass('expanded');
+                        $(this).closest("li").children("ul").slideToggle(400);
+                    });
+                }
+            }
+        });
+    }
+
+}); 
+}, resizeFix(), $(window).on("resize", resizeFix)
