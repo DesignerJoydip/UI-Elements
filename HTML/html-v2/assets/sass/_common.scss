@@ -4,10 +4,10 @@
 
 /* placeholder and Selection css */
 ::selection {
-    /*color:$white; background:blue;*/
+    color:#fff; background:blue;
 }
 ::-moz-selection {
-    /*color:$white; background:blue;*/
+    color:#fff; background:blue;
 }
 ::-webkit-input-placeholder {
     color:blue; text-overflow: ellipsis; font-size:16px;
