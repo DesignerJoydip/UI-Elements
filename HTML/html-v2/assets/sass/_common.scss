@@ -4,19 +4,19 @@
 
 /* placeholder and Selection css */
 ::selection {
-    color:#fff; background:blue;
+    color:#fff; background:#2c2c2c;
 }
 ::-moz-selection {
-    color:#fff; background:blue;
+    color:#fff; background:$text_color;
 }
 ::-webkit-input-placeholder {
-    color:blue; text-overflow: ellipsis; font-size:16px;
+    color:$text_color; text-overflow: ellipsis; font-size:16px;
 }
 ::-moz-placeholder {
-    color:blue; text-overflow: ellipsis; opacity: 0.5; font-size:16px;
+    color:$text_color; text-overflow: ellipsis; opacity: 0.5; font-size:16px;
 }
 :-ms-input-placeholder {
-    color:blue; text-overflow: ellipsis; opacity: 0.5; font-size:16px;
+    color:$text_color; text-overflow: ellipsis; opacity: 0.5; font-size:16px;
 }
 
 /* body css property */
@@ -24,13 +24,13 @@ body, html {
     height: 100%; -moz-osx-font-smoothing: grayscale;
 }
 body {
-    font-family:$bdy-font; line-height: $body-LH; -webkit-font-smoothing: antialiased; font-smoothing: antialiased;
+    font-family:$bdy-font; height:100%; line-height: $body-LH; -webkit-font-smoothing: antialiased; font-smoothing: antialiased;
 }
 h1,h2,h3,h4,h5,h6 {
     margin-top: 0px;
 }
 p {
-    margin: 0 0 25px; font-size:23px; line-height:28px;
+    margin: 0 0 25px; font-size:18px; line-height:28px;
 }
 b,strong {
     font-weight: 600;
