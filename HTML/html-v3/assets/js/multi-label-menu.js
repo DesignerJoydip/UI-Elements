@@ -11,14 +11,26 @@ resizeFix = function () {
         //console.log("desktop");
         $(this).removeClass('mobile-view');
         $(this).each(function () {
-            $(this).find('li').hover(
+            /*$(this).find('li').hover(
                 function () {
-                    $(this).children('ul').stop().delay(300).slideDown(300);
+                    $(this).children('ul').stop().delay(300).slideDown(300);  
                 },
                 function () {
                     $('ul', this).stop().slideUp(100);
                 }
-            );
+            );*/
+            $(this).find('li').on('click',function(){
+                var attr = $(this).attr('name');
+                if (typeof attr !== typeof undefined && attr !== false) {
+                    $(this).removeAttr("title");
+                    $(this).children('ul').stop().delay(300).slideUp(300);
+                }else{
+                    $(this).attr('title', 'menu-open');
+                    $(this).children('ul').stop().delay(300).slideDown(300);
+                }
+                //$(this).attr("title", "menu-open");
+                
+            });
         });
 
 
