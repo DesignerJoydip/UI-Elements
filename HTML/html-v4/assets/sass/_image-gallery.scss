@@ -1,0 +1,17 @@
+.image-gallery-section{
+    width:100%;
+    padding:0px;
+    position: relative;
+    overflow: hidden;
+}
+.image-gallery-thumb{
+    width:25%;
+    height:200px;
+    overflow: hidden;
+    float: left;
+    img{
+        width:100%;
+        height:100%;
+        object-fit: cover;
+    }
+}

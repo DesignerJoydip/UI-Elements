@@ -1,0 +1,45 @@
+/* header css */
+header{
+    padding:0px;
+    margin:0px;
+    position: relative;
+    z-index: 21;
+    .logo{
+        margin:0px;
+    }
+    .topSectn{
+        padding:10px 0px;
+        background:#000;
+        position: relative;
+        ul{
+            /*display:inline-block;*/
+            margin:0px 0px;
+            li{
+                display:inline-block;
+                margin:0px 0px;
+                /*color:#fff;*/
+                a{
+                    text-decoration:none;
+                    /*color:#fff;*/
+                }
+            }
+            &.social{
+                margin:0px -2px;
+                li{
+                    margin:0px 1px;  
+                }
+            }
+        }
+    }
+    .btmSectn{
+        padding:10px 0px;
+        .row{
+            justify-content: space-between;
+            >div{
+                &.header-middle-area{
+                    
+                }
+            }
+        }
+    }
+}

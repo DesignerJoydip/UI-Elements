@@ -1,0 +1,43 @@
+
+body{ overflow-x: hidden; }
+
+header{ padding: 20px 5%; }
+
+.page-section{ width:100%; padding:20px 5%; position: relative; }
+
+.black-dash{ background: #000; position: absolute; transform: rotate(30deg); -webkit-transform: rotate(30deg); transition: all ease-out 0.7s; -webkit-transition: all ease-out 0.7s; transition-delay: 1s; -webkit-transition-delay: 1s; opacity: 0; z-index:9;  }
+.black-dash.revealed{ opacity:1; }
+
+.black-dash.black-dash-big{ width:5px; height:250px; }
+.black-dash.black-dash-small{ width:3px; height:150px; }
+
+
+
+.black-dash.dash-0 { right: 50%; top: 625px; }
+
+.black-dash.dash-1, .black-dash.dash-1.load{ left:20px; top:215px; }
+.black-dash.dash-1.revealed{ left:110px; top:60px; }
+
+.black-dash.dash-2, .black-dash.dash-2.load{ left:40px; top:235px; }
+.black-dash.dash-2.revealed{ left:130px; top:140px; }
+
+.black-dash.dash-3, .black-dash.dash-3.load{ right:0px; top:295px; }
+.black-dash.dash-3.revealed{ right:50px; top:415px; }
+
+.black-dash.dash-4, .black-dash.dash-4.load{ right:0px; top:285px; }
+.black-dash.dash-4.revealed{ right:85px; top:435px; }
+
+.black-dash.dash-5, .black-dash.dash-5.load{ right:50%; top:625px; }
+.black-dash.dash-5.revealed{ right:50%; top:674px; }
+
+
+.custom-shape-1{ width:500px; height: 700px; background:gray; position: absolute; left:0; top:400px; overflow: hidden; background: url('https://unsplash.it/1920/800?image=152') repeat center; background-size: cover; background-attachment: fixed; }
+.custom-shape-1:after{ content:''; position: absolute; top:0px; right:0px; width:0px; height:0px; border-bottom: 140vh solid #fff; border-left: 100vh solid transparent; }
+
+.custom-shape-2{ position: absolute; right:0; top:0px; width: 0; height: 0; border-bottom: 350px solid #ffbd6c; border-left: 200px solid transparent; }
+
+
+
+.section-1{ padding-top:100px;  }
+
+.section-2{ padding-top:20px;  }
