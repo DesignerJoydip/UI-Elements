@@ -40,6 +40,16 @@ http://www.chitrakootweb.com/template/cefrax/
 http://jellydemos.com/html/paladar/landing/
 http://themescare.com/demos/droome-preview/
 
+wedding ----------------------------------------------------
+------------------------------------------------------------------
+http://irsfoundation.com/tf/templates/wedding/lovely-wedding/
+http://irsfoundation.com/tf/templates/wedding/lovely-wedding/lovely-wedding/index.html
+http://astheme.ourdreamit.com/sweetheart/
+http://astheme.ourdreamit.com/sweetheart/p-s-t/grid-gallery/index.html
+http://verothemes.com/wedding/html/index.html
+http://verothemes.com/wedding/html/01_index.html
+http://verothemes.com/wedding/html/02_multipage_index.html
+
 Jquery
 ------------------------------------------------------------------------
 animation on scroll
