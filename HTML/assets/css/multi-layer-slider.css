@@ -1,0 +1,138 @@
+*{ margin:0px; padding:0px; }
+    /******Slider****/
+.anim-slider {
+  background: #225A86;
+  list-style-type: none;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 550px;
+  padding:0;
+  margin:0;
+}
+/********Slides**********/
+.anim-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.anim-slide * {
+  position: absolute;
+  opacity: 0;
+}
+/*****Current Slide******/
+.anim-slide-this {
+  z-index: 1000;
+} 
+.anim-slide-this * {
+  opacity: 1;
+}
+
+ /*******Arrows********/
+nav.anim-arrows>span {
+  position: absolute;
+  top: 40%;
+  z-index: 2000;
+  opacity: 0;
+  -webkit-transition: opacity .4s ease-in;
+  -moz-transition: opacity .4s ease-in;
+  -ms-transition: opacity .4s ease-in;
+  -o-transition: opacity .4s ease-in;
+  transition: opacity .4s ease-in;
+}
+nav.anim-arrows>span.anim-arrows-prev,
+nav.anim-arrows>span.anim-arrows-next {
+  color: #fff;
+  position: absolute;
+  padding: 2px 10px;
+}
+nav.anim-arrows>span.anim-arrows-prev {
+  left: 1%;
+}
+nav.anim-arrows>span.anim-arrows-next {
+  right: 1%;
+}
+.anim-slider:hover>nav.anim-arrows>span {
+  opacity:1;
+  cursor: pointer;
+}
+
+/********Dots************/
+.anim-dots {
+  display: none;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.delay0-5s {-webkit-animation-delay:1s; animation-delay:.5s;}
+.delay1s {-webkit-animation-delay:1s; animation-delay:1s;}
+.delay1-5s {-webkit-animation-delay:1.5s; animation-delay:1.5s;}
+.delay2s {-webkit-animation-delay:2s; animation-delay:2s;}
+.delay2-5s {-webkit-animation-delay:2.5s; animation-delay:2.5s;}
+.delay3s {-webkit-animation-delay:3s; animation-delay:3s;}
+.delay3-5s {-webkit-animation-delay:3.5s; animation-delay:3.5s;}
+.delay4s {-webkit-animation-delay:4s; animation-delay:4s;}
+.delay4-5s {-webkit-animation-delay:4.5s; animation-delay:4.5s;}
+.delay5s {-webkit-animation-delay:5s; animation-delay:5s;}
+.delay5-5s {-webkit-animation-delay:5.5s; animation-delay:5.5s;}
+.delay6s {-webkit-animation-delay:6s; animation-delay:6s;}
+.delay6-5s {-webkit-animation-delay:6.5s; animation-delay:6.5s;}
+
+
+
+.anim-slide h1 {
+    color:#225A86;
+    background-color: #fff;
+    font-size: 50px;
+  }
+.anim-slide h2 {
+  color: #fff;
+  font-size: 35px;
+}
+.anim-slide h3 {
+  color: #fff;
+  font-size: 30px;
+}
+.anim-slide h4 {
+  color: #fff;
+  font-size: 25px;
+}
+.anim-slide h1#slider {text-shadow: -1px 1px 0px; padding: 6px;width:100%;}
+.anim-slide h2#plugin {width:100%; top: 22%;}
+.anim-slide h3#license {width:100%; top: 37%;}
+.anim-slide h4#version {width: 100%; top: 50%;}
+
+.anim-slide h3#todo {top: 0%; left: 20%;}
+.anim-slide h3#bounce {top: 15%; left: 49%;}
+.anim-slide h4#bounceUp {top: 15%; left: 60%;}
+.anim-slide h4#bounceRight {top: 15%; left: 75%;}
+.anim-slide h3#fade {top:31%; left: 20%;}
+.anim-slide h4#fadeDown {top: 43%; left: 28%;}
+.anim-slide h4#fadeUp {top: 31%; left: 28%;}
+.anim-slide h3#rotate {top: 50%; left: 49%;}
+.anim-slide h4#rotateRight {top: 50%; left: 61%;}
+.anim-slide h4#rotateLeft {top: 50%; left: 80%;}
+
+.anim-slide img#css3 {left: 35%; top: 4%;}
+.anim-slide img#html5 {left: 52%; top: -1%;}
+.anim-slide img#jquery {top: 60%; left: 41%;}
+.anim-slide img#modernizr {width:260px; top: 75%; left: 20%;}
+.anim-slide h2#animatecss {top: 69%; left: 60%; color: #f35626;}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animate Slider</title>
+
+  <script src="assets/js/jquery-2.2.4.min.js"></script>
+  
+
+  <link href="assets/css/slick.css" rel="stylesheet" media="all and (orientation:landscape)">
+  <!-- <link href="assets/css/slick-theme.css" rel="stylesheet" media="all and (orientation:landscape)"> -->
+  <!-- <link href="assets/css/animate.min.css" rel="stylesheet" media="all and (orientation:landscape)"> -->
+  <link href="assets/css/slick-custom.css" rel="stylesheet" media="all and (orientation:landscape)">
+
+</head>
+<body>
+
+	<!-- single slide open -->
+	<div class="slider slick-animated-slider">
+		<div>
+			<div class="slick-content-area fadeInLeft"><div class="">fdfdfdf</div></div>
+			<img src="assets/images/travel-banner-1.jpg" class="animatedBgRevese">
+		</div>
+		<div>
+			<div class="slick-content-area fadeInLeft"><div class="">fdfdfdf</div></div>
+			<img src="assets/images/travel-banner-2.jpg" class="animatedBgRevese">
+		</div>
+		<div>
+			<div class="slick-content-area fadeInLeft"><div class="">fdfdfdf</div></div>
+			<img src="assets/images/banner-1.jpg" class="animatedBgRevese">
+		</div>
+	</div>
+	<!-- single slider closed -->
+<script src="assets/js/slick.min.js"></script>
+	<script type="text/javascript">
+	$('.slick-animated-slider').slick({
+		dots: false,
+		infinite: true,
+		arrows:false,
+		speed: 300,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		fade: true,
+		cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+	</script>
+
+</body>
+</html>

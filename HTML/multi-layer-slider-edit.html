@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>Goto Div</title> 
+    <script type="text/javascript" src="assets/js/jquery-2.2.4.min.js"></script>
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/multi-layer-slider-edit.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+    <ul class='anim-slider'>
+        <!-- Slide No1 -->
+        <li class='anim-slide'>
+            <h1 id='slider'>Animate Slider</h1>
+            <h2 id='plugin'>jQuery Plugin</h2>
+            <h3 id='license'>MIT License</h3>
+            <h4 id='version'>v.1.0.5</h4>
+            <img src="https://hdqwalls.com/download/travel-hd-2560x1440.jpg" alt="" class="slider-big-back-image animatedBg">
+        </li>
+        <!-- slidrrr 2 -->
+        <li class='anim-slide'>
+            <h1 id='slider'>Animate Slider</h1>
+            <h2 id='plugin'>jQuery Plugin</h2>
+            <h3 id='license'>MIT License</h3>
+            <h4 id='version'>v.1.0.5</h4>
+            <img src="https://hdqwalls.com/download/travel-hd-2560x1440.jpg" alt="" class="slider-big-back-image animatedBgRevese">
+        </li>
+        <!-- Slide No2 -->
+        <!-- <li class='anim-slide'>
+            <h3 id='todo'>So what you can do ...</h3>
+            <h3 id='bounce'>bounce</h3>
+            <h4 id='bounceUp'>bounceInUp</h4>
+            <h4 id='bounceRight'>bounceInRight</h4>
+            <h3 id='fade'>fade</h3>
+            <h4 id='fadeUp'>fadeInUp</h4>
+            <h4 id='fadeDown'>fadeInDown</h4>
+            <h3 id='rotate'>rotate</h3>
+            <h4 id='rotateRight'>rotateInUpRight</h4>
+            <h4 id='rotateLeft'>rotateInUpLeft</h4>
+        </li> -->
+        <!-- Slide No3 -->
+        <!-- <li class='anim-slide'>
+            <img alt='CSS3' id='css3' src='https://vchouliaras.github.io/jquery.animateSlider.js/images/demo1/css3.png'>
+            <img alt='HTML5' id='html5' src='https://vchouliaras.github.io/jquery.animateSlider.js/images/demo1/html5.png'>
+            <img alt='jQuery' id='jquery'
+                src='https://vchouliaras.github.io/jquery.animateSlider.js/images/demo1/jquery.png'>
+            <img alt='Modernizr' id='modernizr'
+                src='https://vchouliaras.github.io/jquery.animateSlider.js/images/demo1/modernizr.png'>
+            <h2 id='animatecss'>Animate.css</h2>
+        </li> -->
+        <!-- Arrows -->
+        <nav class='anim-arrows'>
+            <span class='anim-arrows-prev'>
+                <i class='fa fa-angle-left fa-3x'></i>
+            </span>
+            <span class='anim-arrows-next'>
+                <i class='fa fa-angle-right fa-3x'></i>
+            </span>
+        </nav>
+    </ul>
+    <!-- <script src='https://vchouliaras.github.io/jquery.animateSlider.js/js/jquery.min.js'></script> -->
+    <script src='assets/js/modernizr.js'></script>
+    <!-- Load the plugin -->
+    <script src='assets/js/jquery.animateSlider.js'></script>
+    <script>
+        $(".anim-slider").animateSlider(
+            {
+                autoplay: true,
+                interval: 5000,
+                animations:
+                {
+                    0: 	//Slide No1
+                    {
+                        h1:
+                        {
+                            show: "bounceIn",
+                            hide: "flipOutX",
+                            delayShow: "delay1s"
+                        },
+                        h2:
+                        {
+                            show: "fadeInUpBig",
+                            hide: "fadeOutDownBig",
+                            delayShow: "delay1-5s"
+                        },
+                        h3:
+                        {
+                            show: "bounceInRight",
+                            hide: "fadeOutRightBig",
+                            delayShow: "delay1-5s"
+                        },
+                        h4:
+                        {
+                            show: "bounceInUp",
+                            hide: "fadeOutLeftBig",
+                            delayShow: "delay2s"
+                        }
+                    },
+                    1: //Slide No2
+                    {
+                         h1:
+                        {
+                            show: "bounceIn",
+                            hide: "flipOutX",
+                            delayShow: "delay1s"
+                        },
+                        h2:
+                        {
+                            show: "fadeInUpBig",
+                            hide: "fadeOutDownBig",
+                            delayShow: "delay1-5s"
+                        },
+                        h3:
+                        {
+                            show: "bounceInRight",
+                            hide: "fadeOutRightBig",
+                            delayShow: "delay1-5s"
+                        },
+                        h4:
+                        {
+                            show: "bounceInUp",
+                            hide: "fadeOutLeftBig",
+                            delayShow: "delay2s"
+                        }
+                    },
+                    /*2: //Slide No3
+                    {
+                        "img#css3":
+                        {
+                            show: "flipInY",
+                            hide: "flipOutY",
+                            delayShow: "delay0-5s"
+                        },
+                        "img#html5":
+                        {
+                            show: "flipInY",
+                            hide: "flipOutY",
+                            delayShow: "delay0-5s"
+                        },
+                        "img#jquery":
+                        {
+                            show: "bounceIn",
+                            hide: "flipOutY",
+                            delayShow: "delay1-5s"
+                        },
+                        "img#modernizr":
+                        {
+                            show: "rollIn",
+                            hide: "flipOutY",
+                            delayShow: "delay2s"
+                        },
+                        "#animatecss":
+                        {
+                            show: "lightSpeedIn",
+                            hide: "flipOutY",
+                            delayShow: "delay2-5s"
+                        }
+                    }*/
+                }
+            });
+    </script>
+
+
+</body>
+</html>
