@@ -1,5 +1,7 @@
 <!doctype html>
 <html lang="en">
+<!-- <html dir="rtl" lang="ar"> -->
+		
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -123,7 +125,8 @@
 		fade: true,
 		cssEase: 'linear',
 		slidesToShow: 1,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		rtl: false
 	}).slickAnimation();
 	</script>
 
@@ -139,9 +142,32 @@
 		fade: true,
 		cssEase: 'linear',
 		slidesToShow: 1,
-		slidesToScroll: 1
+		slidesToScroll: 1,
+		rtl: false
 	}).slickAnimation();
 	</script>
+
+
+<script>
+$('.slick-animated-normal-slider').on('click', '.slick-next', function() {
+      //get_prev_slick_img();
+	  var next_slick_img = $('.slick-current').next().find('img').attr('src');
+      $('.next-slick-img img').attr('src', next_slick_img);
+	  //console.log(next_slick_img);
+      //$('.next-slick-img').css('background-image', 'url(' + next_slick_img + ')');
+    });
+
+
+	$(".slick-animated-normal-slider").on("beforeChange", function (){
+		//var next_slick_img = $('.slick-current').next().find('img').attr('src');
+		var tsl = $(this).find('.slick-slide').length;
+		var current_index = $(this).find('.slick-active').attr("data-slick-index");
+		var current_slider_number = parseInt(current_index) + parseInt(1);
+		console.log(tsl);
+		//console.log('index >'+ current_index);
+		console.log('current slide = '+current_slider_number);
+})
+</script>
 
 </body>
 </html>
