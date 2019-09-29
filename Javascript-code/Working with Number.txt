@@ -1,0 +1,60 @@
+Get Binary Number:
+var str = 10;
+var result = str.toString(2);
+console.log(result);
+
+// toString rang 2 - 36
+
+Get Octal Number:
+var str = 10;
+var result = str.toString(8);
+console.log(result);
+
+// toString rang 2 - 36
+
+Get Hexadecimal Number:
+var str = 10;
+var result = str.toString(16);
+console.log(result);
+
+// toString rang 2 - 36
+
+Convert decimal value to Round figure:
+var str = 200.65;
+var result = Math.ceil(str);
+console.log(result);
+
+var str = 200.65;
+var result = str.toFixed();
+console.log(result);
+
+Convert number of decimal places:
+var str = 200.65;
+var result = str.toFixed(1);
+console.log(result);
+//result: 200.7
+
+var str = 200.65;
+var result = str.toFixed(4);
+console.log(result);
+//result: 200.6500
+
+math.floor(6.7);
+//result:6
+
+math.floor(0.22);
+//result:0 
+
+math.floor(4.7);
+//result:4
+
+math.floor(-3.7);
+//result:-4
+
+Find Loss value:
+math.min(10,20,-5,18);
+//result:-5
+
+Find High value:
+math.max(10,20,-5,18);
+//result:20
