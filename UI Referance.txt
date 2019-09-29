@@ -1,5 +1,18 @@
 https://demo.cocobasic.com/blanka-html/index.html
 http://tk-themes.net/html-fount/demo/demo-architect-index.html
+http://webdesign-finder.com/html/fixetics/
+http://react.pixelstrap.com/multikart/
+http://askbootstrap.com/preview/chpoee/index.html
+
+/***************** creative *****************/
+http://webdesign-finder.com/html/nafta/
+http://webdesign-finder.com/html/smartfarm/
+http://webdesign-finder.com/html/petsalon/
+http://www.themesindustry.com/html/herox/demos/
+https://vlthemes.com/#leedo_html
+
+/************ testimonial ***************/
+http://webdesign-finder.com/html/betterlife/
 
 /**************************************************************************
 Design 
@@ -79,6 +92,20 @@ https://codepen.io/joxxce/pen/WjGLyr
 
 clip path css
 https://css-tricks.com/almanac/properties/c/clip/
+
+/*************** animation on scroll *******************/
+http://adfero.github.io/jScrollability/
+https://github.com/cyntss/Parallax-img-scroll
+https://github.com/pederan/Parallax-ImageScroll
+http://scrollme.nckprsn.com/
+https://codemyui.com/tag/scroll-animation/
+http://jsfiddle.net/nayemmajhar/8sWQq/1/
+http://jsfiddle.net/tilwinjoy/8z9sQ/
+
+
+https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1
+demo:
+https://campinaitalia.it/index.php#100-naturale
 
 
 
