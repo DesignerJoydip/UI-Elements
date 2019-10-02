@@ -1,0 +1,30 @@
+1. Disable button if Textfield empty.
+2. Get Field value using ngmodel.
+3. Event binding.
+4. use ngfor.
+5. push data in html.
+-------------------------------------------------------------------
+in .html file:
+-------------------------------------------------------------------
+<input type="text" class="form-control" [(ngModel)]="serverName">
+<p>{{serverName}}</p>
+<br>
+<button
+class="btn btn-primary btn-block" 
+[disabled]="!serverName" 
+(click)="onCreateServer()">Add</button>
+<br>
+<div *ngFor="let servernamelist of servernameArray" 
+class="alert alert-info" role="alert">{{servernamelist.name}}</div>
+
+-------------------------------------------------------------------
+in .ts file
+-------------------------------------------------------------------
+serverName = '';
+servernameArray = [];
+
+  onCreateServer() {
+    this.servernameArray.push({
+      name: this.serverName
+    });
+  }	
