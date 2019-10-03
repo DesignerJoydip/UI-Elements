@@ -1,0 +1,28 @@
+1. Add a button which says 'Dispaly Details'
+2. Add a paragragh with any content of your choice.
+3. Toggle the displaying of that paragraph with the button created in the first step.
+4. Log all button clicks in an array and output that array below the paragraph / timestamp / 
+   simply an incrementing number
+5. Starting at the 5th log item, give all future log items a blue bg ( via ng style ) and 
+   white color ( via ngClass)
+---------------------------------------------------------------------------------------
+toggle para with toggle button ->
+in .ts file ->
+toggleLine = false;
+
+in .html file ->
+<a class="btn btn-primary" (click)="toggleLine = !toggleLine">Display Details</a>
+<p *ngIf="toggleLine">Toggle line.....</p>
+
+---------------------------------------------------------------------------------------
+
+Create Auto increment array using ngFor and click event ->
+
+in .ts file ->
+logArray = [];
+onLogCreate() {
+    this.logArray.push(this.logArray.length + 1);
+  }
+
+in .html file ->
+<p *ngFor="let logItem of logArray">Log item - {{logItem}}</p> 

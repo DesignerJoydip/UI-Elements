@@ -1,0 +1,50 @@
+prant comp -> child comp = @Input()
+
+in parent.component.ts ->
+create a variable -> parentName = "Hi I am Parent";
+
+in parent component.html ->
+in child component tag ->(Eaxmple - <app-child>) we will bind name property
+<app-child [parentData]="parentName"></app-child>
+note: here "parentData" is a custom property name and sending data to child 
+component using thios custom property.
+
+in child.component.ts ->
+import { Input } from '@angular/core';
+@Input() parentData; / @Input() public parentData;
+
+in child.component.html ->
+<h2>{{parentData}}</h2>
+
+
+
+
+
+--------------------------------------------------------------------------------
+child comp -> parent comp = @Output()
+
+in child.component.ts ->
+create a event for send child data to parent component. for this
+import { Output, EventEmitter } from '@angular/core';
+now create a instance of eventEmitter->
+childEvent = new eventEmitter();
+now to able event data to parent component we use @Output() decorator.
+@Output childEvent = new eventEmitter();
+
+in child.component.html ->
+After above create a button with Event method for fire event.
+<button (click)="fireChildEvent()">Click</button>
+
+back to child.component.ts ->
+fireChildEvent() {
+ this.childEvent.emit('Hi I am Child data come for child component.');
+}
+
+in parent.component.html ->
+for capture it in parent component
+{{childMessage}}
+<app-child (childEvent)="childMessage=$event" [parentData]="parentName"></app-child>
+
+in parent.component.ts ->
+for declared event variable:
+childMessage = '';

@@ -1,0 +1,8 @@
+prompt() : where we get user input text field in popup.
+
+prompt("Field Heading") :  We can maintioned the field heading.
+
+Get prompt value in console:
+var name = prompt('Field heading');
+console.log(name);
+  

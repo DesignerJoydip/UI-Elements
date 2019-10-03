@@ -1,0 +1,7 @@
+install bootstrap
+npm install --save bootstrap@3
+
+1 > open angular.json
+2 > Goto "styles" array under "architect > build" node.
+3 > add -> "node_modules/bootstrap/dist/css/bootstrap.min.css"
+4 > ng serve

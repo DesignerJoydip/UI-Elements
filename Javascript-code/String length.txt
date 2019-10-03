@@ -1,0 +1,7 @@
+count string length:
+var stringLength = "www".length;
+console.log(stringLength);
+
+var textContent = "Text content here";
+var stringLength = textContent.length;
+console.log(stringLength);
