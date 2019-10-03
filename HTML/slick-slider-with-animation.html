@@ -59,12 +59,13 @@
 			<img src="assets/images/travel-banner-1.jpg" class="slider-banner-image animatedBg">
 		</div>
 	</div>
+	<div class="slick-animated-normal-slider-count"></div>
 	<!-- single slider closed -->
 	
 	<div style="width:100%; height:30px;"></div>
 
 	<!-- single slide open -->
-	<div class="slider slick-animated-slider slick-animated-parallax-slider">
+	<div class="slider slick-animated-slider slick-animated-parallax-slider" style="display: none;">
 		<div class="parallaxator">
 			<div class="slick-content-area">
 				<div class="container">
@@ -103,6 +104,7 @@
 		</div>
 	</div>
 	<!-- single slider closed -->
+	https://codepen.io/pjmtokyo/pen/JYyjew
 
 <div style="width:100%; height:1200px;"></div>
 
@@ -126,7 +128,10 @@
 		cssEase: 'linear',
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		rtl: false
+		rtl: false,
+		//nextArrow: '<i class="fa fa-arrow-right"></i>',
+		//prevArrow: '<i class="fa fa-arrow-left"></i>',
+		
 	}).slickAnimation();
 	</script>
 
@@ -149,23 +154,50 @@
 
 
 <script>
-$('.slick-animated-normal-slider').on('click', '.slick-next', function() {
+$('.slick-animated-normal-slider').on('beforeChange', function() {
       //get_prev_slick_img();
-	  var next_slick_img = $('.slick-current').next().find('img').attr('src');
-      $('.next-slick-img img').attr('src', next_slick_img);
+	  //var next_slick_img = $('.slick-current').next().find('img').attr('src');
+      //$('.next-slick-img img').attr('src', next_slick_img);
 	  //console.log(next_slick_img);
-      //$('.next-slick-img').css('background-image', 'url(' + next_slick_img + ')');
-    });
+	  //$('.next-slick-img').css('background-image', 'url(' + next_slick_img + ')');
+	  	var totalSlides = $(this).find('.slick-slide').length;
+		  var dataId = $('.slick-current').attr("data-slick-index");   
+		  var dataIdChange = parseInt(dataId) + parseInt(1);
+		//console.log(dataIdChange);
+		//console.log(totalSlides);
+		var htmlString = '<div>'+dataIdChange+'/'+totalSlides+'</div>';
+
+		console.log(dataId);
+
+		if(dataId=='0'){
+			var prevImage = $('.slick-current').find('img').attr('src');
+			console.log(prevImage);
+		}else{
+			var nextImage = $('.slick-current').next().find('img').attr('src');
+			console.log(nextImage);
+		}
+
+		
+		//console.log($('.slick-current').next().length);
+
+		//htmlStr = "";
+		//htmlStr += '<div>'+dataIdChange+'/'+ totalSlides +'</div>';
+
+		$(".slick-animated-normal-slider-count").html(htmlString);
+
+
+	});
+
 
 
 	$(".slick-animated-normal-slider").on("beforeChange", function (){
 		//var next_slick_img = $('.slick-current').next().find('img').attr('src');
-		var tsl = $(this).find('.slick-slide').length;
-		var current_index = $(this).find('.slick-active').attr("data-slick-index");
-		var current_slider_number = parseInt(current_index) + parseInt(1);
-		console.log(tsl);
+		//var tsl = $(this).find('.slick-slide').length;
+		//var current_index = $(this).find('.slick-active').attr("data-slick-index");
+		//var current_slider_number = parseInt(current_index) + parseInt(1);
+		//console.log(tsl);
 		//console.log('index >'+ current_index);
-		console.log('current slide = '+current_slider_number);
+		//console.log('current slide = '+ current_slider_number);
 })
 </script>
 
