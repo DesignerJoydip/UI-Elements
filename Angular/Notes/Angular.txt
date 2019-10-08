@@ -29,6 +29,10 @@ npm install -g @angular/cli@latest
 ------------------------------------------
 
 
+update project cli:
+ng update @angular/cli
+
+
 
 
 

@@ -1,7 +1,24 @@
 install bootstrap
-npm install --save bootstrap@3
+npm install --save bootstrap@3 / bootstrap@latest
 
-1 > open angular.json
-2 > Goto "styles" array under "architect > build" node.
-3 > add -> "node_modules/bootstrap/dist/css/bootstrap.min.css"
-4 > ng serve
+install jquery
+npm install jquery --save
+
+install popper.js
+npm install popper.js --save
+
+>> open angular.json
+"styles": [
+"./node_modules/bootstrap/dist/css/bootstrap.min.css"
+],
+"scripts": [
+"./node_modules/jquery/dist/jquery.min.js",
+"./node_modules/popper.js/dist/umd/popper.min.js",
+"./node_modules/bootstrap/dist/js/bootstrap.min.js"
+]
+
+---------------------------------------------------------------------
+
+install bootstrap 4
+npm install ngx-bootstrap bootstrap@4.1.1
+
