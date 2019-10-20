@@ -17,6 +17,29 @@ in child.component.html ->
 <h2>{{parentData}}</h2>
 
 
+Example 2:
+app.component.ts: 
+<app-element class="col-md-4" 
+*ngFor="let singleElement of arrayElement" 
+[element]="singleElement"></app-element>
+
+app.component.ts:
+arrayElement = [
+    { type: 'server', name: 'server 1', content: 'content 1' },
+    { type: 'blueprint', name: 'server 2', content: 'content 2' }
+  ];
+
+child.component.ts:
+@Input() element: { type: string, name: string, content: string };
+
+child.component.html
+<div class="card">
+        <div class="card-body">
+            <h5 class="card-title">{{element.name}}<br><small>{{element.type}}</small></h5>
+            <p class="card-text">{{element.content}}</p>
+            <a href="#" class="btn btn-primary">View Detail</a>
+        </div>
+    </div>
 
 
 
