@@ -1,0 +1,91 @@
+create app-routing.module.ts: by command:
+-----------------------------------------------------------------------------
+$ ng generate module app-routing --module app --flat
+
+
+create app-routing.module.ts: 
+-----------------------------------------------------------------------------
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+
+const routes: Routes = [];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
+
+in app.module.ts:
+-------------------------------------------------------------------------------
+import { AppRoutingModule } from './app-routing.module';
+
+imports: [
+    ...,
+    AppRoutingModule
+  ],
+
+Now create some component for routing and import in app-routing.module.ts
+--------------------------------------------------------------------------------
+import { HomeComponent } from './pages/home/home.component';
+import { AboutusComponent } from './pages/aboutus/aboutus.component';
+import { ServiceComponent } from './pages/service/service.component';
+import { ServerComponent } from './pages/server/server.component';
+/* for server detail */
+import { ServerDetailComponent } from './pages/server/serverDetail/serverDetail.component';
+
+create routes in app-routing.module.ts
+---------------------------------------------------------------------------------
+const routes: Routes = [
+  { path: 'home', component: HomeComponent },
+  { path: 'aboutus', component: AboutusComponent },
+  { path: 'service', component: ServiceComponent },
+  { path: 'server', component: ServerComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '**', component: PageNotFoundComponent }
+  /* for server detail */
+  { path: 'server/:id', component: ServerDetailComponent },
+];
+
+
+in app.component.html:
+-----------------------------------------------------------------------------------
+<router-outlet></router-outlet>
+
+in menu html:
+-----------------------------------------------------------------------------------
+<a class="nav-link" routerLink="home" routerLinkActive="active">Home</a>
+<a class="nav-link" routerLink="aboutus" routerLinkActive="active">About us</a>
+<a class="nav-link" routerLink="service" routerLinkActive="active">Service</a>
+<a class="nav-link" routerLink="server" routerLinkActive="active">Server</a>
+
+------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------
+
+for goto detail page:
+------------------------------------------------------------------------------------
+in loop html:
+{{element.id}}
+<a [routerLink]="['/server', element.id]" class="btn btn-primary">View Detail</a>
+
+in detil.component.ts:
+------------------------------------------------------------------------------------
+import { ActivatedRoute } from '@angular/router';
+
+id: any;
+
+constructor(private activatedRoute: ActivatedRoute) {
+    this.id = this.activatedRoute.snapshot.params.id;
+  }
+
+in detail.component.html:
+------------------------------------------------------------------------------------
+{{id}}
+
+
+
+
+
+
+
+
