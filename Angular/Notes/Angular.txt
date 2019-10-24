@@ -15,9 +15,18 @@ Install Specific Version (Example: 6.1.1)
 npm install -g @angular/cli@6.1.1
 ------------------------------------------
 Updating Angular CLI
+ng update @angular/cli
 npm uninstall -g angular-cli
 npm uninstall --save-dev angular-cli
 ------------------------------------------
+
+update project cli:
+-------------------------------------------
+ng update @angular/cli
+
+Define new port for ng-serve
+-------------------------------------------
+ng serve --port 4210
 
 To update Angular CLI to a new version, 
 you must update both the global package and your project's local package.
@@ -29,8 +38,6 @@ npm install -g @angular/cli@latest
 ------------------------------------------
 
 
-update project cli:
-ng update @angular/cli
 
 
 
