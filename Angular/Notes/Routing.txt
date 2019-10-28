@@ -20,10 +20,8 @@ in app.module.ts:
 -------------------------------------------------------------------------------
 import { AppRoutingModule } from './app-routing.module';
 
-imports: [
-    ...,
-    AppRoutingModule
-  ],
+imports: [ RouterModule.forRoot(routes)],
+exports: [RouterModule]
 
 Now create some component for routing and import in app-routing.module.ts
 --------------------------------------------------------------------------------

@@ -1,0 +1,22 @@
+form.component.html
+-----------------------------------------------------------------
+<input type="text" class="form-control" #ngmodelUsertitle placeholder="User title">
+<input type="text" class="form-control" #ngmodelUsersubtitle placeholder="User sub title">
+<button type="button" class="btn btn-primary" (click)="onAddData()">Add Data</button>
+
+form.component.ts
+-----------------------------------------------------------------
+import { ......, ......, ViewChild, ElementRef } from '@angular/core';
+
+@ViewChild('ngmodelUsertitle', { static: true }) ngmodelUsertitle: ElementRef;
+  @ViewChild('ngmodelUsersubtitle', { static: true }) ngmodelUsersubtitle: ElementRef;
+
+  usersArray = [];
+
+onAddData() {
+    console.log(this.ngmodelUsertitle);
+    this.usersArray.push({
+      userTitle: this.ngmodelUsertitle.nativeElement.value,
+      userSubtitle: this.ngmodelUsersubtitle.nativeElement.value
+    });
+  }
