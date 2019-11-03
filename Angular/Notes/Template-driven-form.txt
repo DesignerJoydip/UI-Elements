@@ -1,0 +1,77 @@
+in app.module.ts
+----------------------------------------------------------
+import { FormsModule } from '@angular/forms';
+
+in form.component.html
+---------------------------------------------------------
+<form (ngSubmit)="onSubmit()">
+ <input type="text" class="form-control" placeholder="User title" name="usertitle">
+<input type="text" class="form-control" placeholder="User sub title" name="usersubtitle">
+<select class="form-control" name="usertopic" ngModel>
+            <option value="Angular">Angular</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+        </select>
+<button type="submit" class="btn btn-primary">Add Data</button>
+</form>
+
+in form.component.ts
+------------------------------------------------------------
+onSubmit() {
+console.log('submitted...');
+}
+
+in form.component.html:
+------------------------------------------------------------
+create a form referance
+<form (ngSubmit)="onSubmit(userform)" #userform>
+
+in form.component.ts:
+------------------------------------------------------------
+onSubmit(form: HTMLFontElement) {
+    console.log(form);
+  }
+
+in form.component.html:
+------------------------------------------------------------
+create a form referance
+<form (ngSubmit)="onSubmit(userform)" #userform="ngForm">
+
+in form.component.ts:
+------------------------------------------------------------
+onSubmit(form: NgForm) {
+    console.log(form);
+  }
+
+in form.component.html:
+------------------------------------------------------------
+create a form referance
+<form (ngSubmit)="onSubmit(userform)" #userform="ngForm">
+<input type="text" class="form-control" placeholder="User title" name="usertitle" ngModel>
+<input type="text" class="form-control" placeholder="User sub title" name="usersubtitle" ngModel>
+<select class="form-control" name="usertopic" ngModel>
+            <option value="Angular">Angular</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+        </select>
+<button type="submit" class="btn btn-primary">Add Data</button>
+
+---------------------------------------------------------------
+Form submit using viewchild() decorator
+---------------------------------------------------------------
+
+in form.component.html:
+------------------------------------------------------------
+create a form referance
+<form (ngSubmit)="onSubmit()" #userform="ngForm">
+
+in form.component.ts:
+------------------------------------------------------------
+import { Component, OnInit, ViewChild } from '@angular/core';
+note: viewchild module will be auto import.
+
+@ViewChild('userform', {static: true}) userform: NgForm; 
+
+onSubmit() {
+    console.log(this.userform);
+  }

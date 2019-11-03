@@ -1,0 +1,108 @@
+in app.module.ts
+----------------------------------------------------------
+import { FormsModule } from '@angular/forms';
+
+in form.component.html:
+------------------------------------------------------------
+<form (ngSubmit)="onSubmit()" #userform="ngForm">
+<input type="text" class="form-control" placeholder="User title" name="usertitle" ngModel required>
+<input type="text" class="form-control" placeholder="User sub title" name="usersubtitle" ngModel required>
+<select class="form-control" name="usertopic" ngModel>
+            <option value="Angular">Angular</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+        </select>
+<button type="submit" class="btn btn-primary">Add Data</button>
+
+in form.component.html: for email validate
+------------------------------------------------------------
+<input type="email" class="form-control" placeholder="user email" name="usersubtitle" ngModel required email>
+
+in form.component.ts:
+------------------------------------------------------------
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+note: viewchild module will be auto import.
+
+@ViewChild('userform', {static: true}) userform: NgForm; 
+
+onSubmit() {
+    console.log(this.userform);
+  }
+
+
+disabled submit button for invalid submit
+------------------------------------------------------------
+<button type="submit" class="btn btn-primary" [disabled]="!userform.valid">Add Data</button>
+
+in form.component.css
+------------------------------------------------------------
+/*input.ng-invalid{
+    border:red solid 3px;
+}*/
+
+input.ng-touched.ng-invalid{
+    border:red solid 3px;
+}
+
+
+------------------------------------------------------------------------
+Show custom error message
+------------------------------------------------------------------------
+<input type="text" class="form-control" placeholder="User sub title" name="usersubtitle" ngModel required #usersubtitle="ngModel">
+<small class="text-danger" *ngIf="!usersubtitle.valid && usersubtitle.touched">Error text</small>
+
+
+------------------------------------------------------------------------
+Select default dropdown option
+------------------------------------------------------------------------
+
+in form.component.html
+------------------------------------------------------------------------
+<select class="form-control" name="usertopic" [(ngModel)]="defaulttopic">
+            <option value="Angular">Angular</option>
+            <option value="HTML">HTML</option>
+            <option value="CSS">CSS</option>
+        </select>
+
+in form.component.ts
+------------------------------------------------------------------------
+defaulttopic = 'Angular';
+
+
+-----------------------------------------------------------------------
+form data grouping
+-----------------------------------------------------------------------
+
+in form.component.html
+-----------------------------------------------------------------------
+<div ngModelGroup="userdetail">
+... form fields
+</div>
+
+-----------------------------------------------------------------------
+validate ngModelGroup
+-----------------------------------------------------------------------
+<div ngModelGroup="userdetail" #userdetail="ngModelGroup">
+... form fields
+</div>
+
+-----------------------------------------------------------------------
+Dynamic radio button with selected default value
+-----------------------------------------------------------------------
+
+in form.component.html
+-----------------------------------------------------------------------
+
+<div class="custom-control custom-radio" *ngFor="let gender of genderarray">
+<input id="customRadio{{gender.id}}" type="radio" name="gender" class="custom-control-input" value="{{gender.gender}}" [ngModel]="ngUsergender">
+<label class="custom-control-label" for="customRadio{{gender.id}}" >{{gender.gender}}</label>
+</div>
+
+in form.component.ts
+-----------------------------------------------------------------------
+genderarray = [
+    { id: '1', gender: 'Male' },
+    { id: '2', gender: 'Female' }
+  ];
+  ngUsergender = 'Male';

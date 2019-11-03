@@ -1,0 +1,16 @@
+in app.module.ts
+-----------------------------------------------
+import { ReactiveFormsModule } from '@angular/forms';
+imports: [
+......,
+ReactiveFormsModule
+],
+
+in form.component.ts
+----------------------------------------------
+import { FormGroup } from '@angular/forms';
+
+userReactiveForm: FormGroup;
+
+now setup form:
+---------------
