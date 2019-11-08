@@ -1,0 +1,33 @@
+> npm install -g @angular/cli
+> npm i --save angular-bootstrap-md chart.js@2.5.0 font-awesome hammerjs
+> app.module.ts 
+-> import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+ imports: [
+    BrowserModule,
+    MDBBootstrapModule.forRoot()
+  ],
+  schemas: [ NO_ERRORS_SCHEMA ],
+> angular-cli.json / angular.json
+"styles": [
+  "../node_modules/font-awesome/scss/font-awesome.scss",
+  "../node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
+  "../node_modules/angular-bootstrap-md/scss/mdb-free.scss",
+  "styles.scss"
+],
+"scripts": [
+  "../node_modules/chart.js/dist/Chart.js",
+  "../node_modules/hammerjs/hammer.min.js"
+],
+> tsconfig.json
+{
+  "compileOnSave": // removed for brevity,
+  "compilerOptions": {
+    // removed for brevity
+  },
+// add this line
+  "include": ["node_modules/angular-bootstrap-md/**/*.ts",  "src/**/*.ts"] 
+}
+> ng serve --open
+
+https://mdbootstrap.com/docs/angular/components/dropdowns/
