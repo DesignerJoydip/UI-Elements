@@ -54,7 +54,13 @@
 		//nextArrow: '<i class="fa fa-arrow-right"></i>',
 		//prevArrow: '<i class="fa fa-arrow-left"></i>',
 		
-    }).slickAnimation();
+	}).slickAnimation();
+	
+	$('.multiple-items').slick({
+		infinite: true,
+		slidesToShow: 2,
+		slidesToScroll: 1
+	  });
     
 
 
