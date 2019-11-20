@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>offset demo</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+*{ margin:0px; padding:0; }
+.image-icon{ width:100px; height:100px; display: inline-block; background: yellow; }
+.big-image-slide{ width:500px; height:500px; position: relative; display: inline-block; overflow: hidden; }
+.big-image-slide img, .current-image img{ width:100%; height:100%; object-fit: cover; }
+.current-image{opacity: 0; position: absolute; top:0px; left: 0px; z-index: 2; transition: all ease 0.5s;}
+.current-image.show{ opacity: 1; }
+</style>
+
+
+<div class="image-icon-box">
+	<div class="image-icon" data-image="assets/images/banner-1.jpg"></div>
+	<div class="image-icon" data-image="assets/images/banner-2.jpg"></div>
+	<div class="image-icon" data-image="assets/images/travel-banner-1.jpg"></div>
+	<div class="image-icon" data-image="assets/images/travel-banner-2.jpg"></div>
+</div>
+
+<div class="big-image-slide"></div>
+
+
+<script>
+	var image_icon_box_element = $(".image-icon-box > .image-icon");
+	var big_image_slide_element = $(".big-image-slide");
+	var total_icon_slide = image_icon_box_element.length;
+	console.log(total_icon_slide);
+	console.log(image_icon_box_element.length);
+	if ($(big_image_slide_element).is(':empty')) {
+		console.log("empty");
+		get_image_path = image_icon_box_element.first().attr("data-image");
+		console.log(get_image_path);
+		big_image_slide_element.append("<img src='"+get_image_path+"' class='fixed-image' alt=''>");
+		image_icon_box_element.each(function (index) {
+			dynamic_icon_id = "image-icon-id-" + (index + 1);
+			$(this).attr("id", dynamic_icon_id);
+			console.log(dynamic_icon_id);
+			$(this).click(function(){
+				console.log($(this).attr("data-image"));
+				get_clicked_icon_data = $(this).attr("data-image");
+				big_image_slide_element.prepend("<img src='" + get_clicked_icon_data + "' class='current-image' alt=''>");
+				
+				setTimeout(function () { 
+					big_image_slide_element.find(".current-image").addClass("show");
+					setTimeout(function () { 
+						$(".fixed-image").attr("src", get_clicked_icon_data);
+						$(".current-image").remove();
+					}, 100);
+				}, 100);
+			});
+			
+		});
+	}
+	
+</script>
+ 
+</body>
+</html>

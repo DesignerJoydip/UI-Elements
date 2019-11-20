@@ -1,0 +1,34 @@
+@media(min-width:1400px){
+
+/* common css start */
+.heading-lg{
+    font-size: 96px; line-height: 90px;
+}
+.btn-solid {
+    padding: 11px 19px; font-size: 19px;
+}
+
+.big-banner-with-sideinfo h3 {
+    font-size:60px; line-height: 90px;
+}
+.big-banner-with-sideinfo p {
+    margin-bottom: 55px;
+}
+/* common css ended */
+
+
+/* home banner css start */
+.banner_txt{
+    font-size: 88px; line-height: 80px;
+}
+.banner_txt span{
+    font-size: 87px; line-height: 80px; font-weight: 700;
+}
+/* home banner css ended */
+
+
+}
+
+@media(min-width:1700px){
+    .container{ max-width: 1600px; }
+}

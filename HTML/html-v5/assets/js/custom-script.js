@@ -134,10 +134,6 @@ $('.brand-slider').slick({
 
 });
 
-
-	
-
-
     
 
 
