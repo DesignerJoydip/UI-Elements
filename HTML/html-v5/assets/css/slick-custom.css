@@ -8,14 +8,63 @@ font-family: 'Raleway', sans-serif;
 *{ 
   margin:0px; padding:0px; 
 }
+
+.slick-arrow{
+  width:30px; height:30px; position: relative; cursor: pointer; background: #fdc800; border:none; outline: none; font-size: 0px; color: transparent;
+}
+.slick-arrow:before,
+.slick-arrow:after{
+  content:''; position: absolute; width:10px; height:3px; border-radius: 4px; background:#fff; left:50%; top:50%; margin-left:-5px;
+}
+.slick-arrow:before{
+   transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg);
+   top:34%;
+}
+.slick-arrow:after{
+   transform: rotate(45deg); -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg);
+   top:54%;
+}
+.slick-arrow.slick-next:before{
+  transform: rotate(45deg); -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg);
+}
+.slick-arrow.slick-next:after{
+  transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg);
+}
+.slick-arrow.slick-next{
+  margin-left:10px;
+}
+.slick-arrow-wrap{
+  position: absolute; right:0px; top:-10px;
+}
+
+
+.slick-dots{
+  width:100%; text-align: center;
+}
+.slick-dots li{
+  display: inline-block; margin:0px 4px; height: auto;
+}
+.slick-dots li button{
+  float:left; margin: 0px; padding: 0px; width:25px; height:9px; background: #dedede; border:none; border-radius: 20px;font-size: 0px; color:transparent;
+}
+.slick-dots li.slick-active{
+  height: auto;
+}
+.slick-dots li.slick-active button{
+  background: #002147;
+}
+
+
+
+
 .slick-animated-slider .slick-slide{
-    height:800px; overflow: hidden; font-family: 'Roboto Slab', serif;
+    height:700px; overflow: hidden;
 }
 .slick-animated-slider .slick-slide .slider-overlay{
-  width:100%; height:100%; position: absolute; top:0px; left:0px; background: rgba(110, 180, 193, 0.3); z-index: 1; display: none;
+  width:100%; height:100%; position: absolute; top:0px; left:0px; background: #0021478c; z-index: 1; display: _none;
 }
 .slick-animated-slider .slick-slide .slider-banner-image{
-  position: relative; top:0px; left:0px; width:100%;
+  position: relative; top:0px; left:0px; width:100%; height:100%; object-fit: cover;
 }
 .slick-animated-slider .slick-slide .animatedBg{
   width:100%; height:100%; object-fit: cover;
@@ -23,19 +72,16 @@ font-family: 'Raleway', sans-serif;
   /*-webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */ /*animation-fill-mode: forwards;*/
 }
 .slick-animated-slider .slick-slide .slick-content-area{
-    width:100%; position: absolute; z-index: 2; top:50%; left:0px; transform: translate(0px, -50%); -webkit-transform: translate(0px, -50%); text-align: center;
+    width:100%; position: absolute; z-index: 2; top:40%; left:0px; transform: translate(0px, -50%); -webkit-transform: translate(0px, -50%);
 }
 .slick-animated-slider .slick-slide .subheading{ 
-  font-size:28px; display:inline-block; padding:0px 20px 5px 20px; margin:0px; color:#fff; font-family: 'Roboto Slab', serif; background-color: rgb(17, 92, 161);
+  font-size:28px; display:inline-block; padding:0px 20px 5px 20px; margin:0px; color:#fff; 
 }
 .slick-animated-slider .slick-slide .heading{ 
-  font-size:80px; display:inline-block; margin:0px 0px 10px 0px; font-weight:900; color:#fff; font-family: 'Raleway', sans-serif; text-shadow:#6e6e6e 3px 3px 0px;
+  font-size:42px; line-height: 50px; display:inline-block; margin:0px 0px 10px 0px; font-weight:700; color:#fff;
 }
 .slick-animated-slider .slick-slide p{
   color:#fff; margin:0px 0px 30px 0px; font-size:20px; max-width:600px; width:100%; display:inline-block;
-}
-.slick-animated-slider .slick-slide a.link{
-  display: inline-block; padding:12px 35px; font-size:16px; background: rgb(17, 92, 161); border-radius:50px; color:#fff; font-family: 'Raleway', sans-serif; text-decoration: none;
 }
 
 /* slick-dot css */
@@ -58,7 +104,7 @@ font-family: 'Raleway', sans-serif;
   width:40px; height:40px; position: absolute; z-index: 1; top:50%; margin-top:-20px; background:transparent; color:transparent; border:none; overflow: hidden; outline: none; cursor: pointer;
 }
 .slick-animated-slider .slick-arrow:after, .slick-animated-slider .slick-arrow:before{
-  content: ''; width:20px; height:4px; left:50%; top:50%; margin-left:-10px; position: absolute; background: #000;
+  content: ''; width:20px; height:4px; left:50%; top:50%; margin-left:-10px; position: absolute; background: #fff;
 }
 .slick-animated-slider .slick-arrow.slick-prev:after{
   margin-top: -7px; transform: rotate(-40deg);

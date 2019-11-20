@@ -40,10 +40,10 @@
     
 
     $('.slick-animated-normal-slider').slick({
-		dots: true,
+		dots: false,
 		infinite: true,
 		arrows:true,
-		autoplay: false,
+		autoplay: true,
 		speed: 800,
 		//lazyLoad: 'progressive',
 		fade: true,
@@ -54,7 +54,90 @@
 		//nextArrow: '<i class="fa fa-arrow-right"></i>',
 		//prevArrow: '<i class="fa fa-arrow-left"></i>',
 		
-    }).slickAnimation();
+	}).slickAnimation();
+
+$('.featured-slider').slick({
+	dots: false,
+	infinite: true,
+	arrows: true,
+	autoplay: true,
+	centerMode: false,
+	speed: 800,
+	//lazyLoad: 'progressive',
+	fade: false,
+	//cssEase: 'linear',
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	rtl: false,
+	appendArrows: ".arrow-wrap-for-featured"
+	//nextArrow: '<i class="fa fa-arrow-right"></i>',
+	//prevArrow: '<i class="fa fa-arrow-left"></i>',
+
+});
+
+$('.skill-slider').slick({
+	dots: false,
+	infinite: true,
+	arrows: true,
+	autoplay: true,
+	centerMode: false,
+	speed: 800,
+	//lazyLoad: 'progressive',
+	fade: false,
+	//cssEase: 'linear',
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	rtl: false,
+	appendArrows: ".arrow-wrap-for-skill"
+	//nextArrow: '<i class="fa fa-arrow-right"></i>',
+	//prevArrow: '<i class="fa fa-arrow-left"></i>',
+
+});
+
+
+$('.testimonial-slider').slick({
+	dots: true,
+	infinite: true,
+	arrows: false,
+	autoplay: true,
+	centerMode: false,
+	speed: 800,
+	//lazyLoad: 'progressive',
+	fade: false,
+	//cssEase: 'linear',
+	slidesToShow: 2,
+	slidesToScroll: 1,
+	rtl: false,
+	//appendArrows: ".arrow-wrap-for-skill"
+	//nextArrow: '<i class="fa fa-arrow-right"></i>',
+	//prevArrow: '<i class="fa fa-arrow-left"></i>',
+
+});
+
+
+$('.brand-slider').slick({
+	dots: false,
+	infinite: true,
+	arrows: false,
+	autoplay: true,
+	centerMode: false,
+	speed: 800,
+	//lazyLoad: 'progressive',
+	fade: false,
+	//cssEase: 'linear',
+	slidesToShow: 4,
+	slidesToScroll: 1,
+	rtl: false,
+	//appendArrows: ".arrow-wrap-for-skill"
+	//nextArrow: '<i class="fa fa-arrow-right"></i>',
+	//prevArrow: '<i class="fa fa-arrow-left"></i>',
+
+});
+
+
+	
+
+
     
 
 
