@@ -1,30 +1,43 @@
 @media(min-width:1400px){
 
-/* common css start */
-.heading-lg{
-    font-size: 96px; line-height: 90px;
-}
-.btn-solid {
-    padding: 11px 19px; font-size: 19px;
-}
+    /* common css start */
+    .heading-lg{
+        font-size: 100px; line-height: 100px;
+    }
+    .btn-solid {
+        padding: 11px 19px; font-size: 19px;
+    }
 
-.big-banner-with-sideinfo h3 {
-    font-size:60px; line-height: 90px;
-}
-.big-banner-with-sideinfo p {
-    margin-bottom: 55px;
-}
-/* common css ended */
+    .big-banner-with-sideinfo h3 {
+        font-size:60px; line-height: 75px;
+    }
+    .big-banner-with-sideinfo p {
+        margin-bottom: 55px;
+    }
+    /* common css ended */
 
 
-/* home banner css start */
-.banner_txt{
-    font-size: 88px; line-height: 80px;
-}
-.banner_txt span{
-    font-size: 87px; line-height: 80px; font-weight: 700;
-}
-/* home banner css ended */
+    /* home banner css start */
+    .banner_txt{
+        font-size: 88px; line-height: 80px;
+    }
+    .banner_txt span{
+        font-size: 87px; line-height: 80px; font-weight: 700;
+    }
+    /* home banner css ended */
+
+
+    /* home talent section css start */
+    .home-talent-section .heading-row .col-lg-5 {
+        -ms-flex: 0 0 35.666667%; flex: 0 0 35.666667%; max-width: 35.666667%;
+    }
+    .home-talent-section .heading-row p{
+        margin-bottom:70px;
+    }
+    .home-talent-section .album-row .col-lg-5 {
+        -ms-flex: 0 0 35.666667%; flex: 0 0 35.666667%; max-width: 35.666667%;
+    }
+    /* home talent section css ended */
 
 
 }

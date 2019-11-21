@@ -60,6 +60,41 @@ $(document).ready(function(){
   // home expert section slider script ended ---------------------------------
 
 
+
+  // slick slider one dot slider script start --------------------------------
+  $('.slick-slider-one').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    rtl: true,
+    dots: true,
+    arrows:true,
+    focusOnSelect: true,
+    //appendArrows: ".arrow-wrap",
+    //appendDots: ".dot-wrap",
+    appendArrows: ".horizontal-slider-controlar-wrapper",
+    appendDots: ".horizontal-slider-controlar-wrapper",
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+  // slick slider one dot slider script ended --------------------------------
+
+
+
   // custom select dropdown script start -------------------------------------
   $(".custom-select-dropdown").select2({
     allowClear: true,
@@ -67,6 +102,93 @@ $(document).ready(function(){
   });
   // custom select dropdown script ended -------------------------------------
 
+
+
+  // home talent section album script start ----------------------------------
+  var image_icon_box_element = $(".talent-image-icon-box > .image-icon");
+  var image_icon_box_active_class = "active-image-icon";
+	var big_image_slide_element = $(".talent-big-image-slide");
+	var total_icon_slide = image_icon_box_element.length;
+	//console.log(total_icon_slide);
+	//console.log(image_icon_box_element.length);
+	if ($(big_image_slide_element).is(':empty')) {
+		//console.log("empty");
+    get_first_image_path = image_icon_box_element.first().attr("data-image");
+    image_icon_box_element.first().addClass(image_icon_box_active_class);
+		//console.log(get_first_image_path);
+    big_image_slide_element.append("<img src='"+get_first_image_path+"' class='fixed-image' alt=''>");
+    
+    var time = 200;
+
+		image_icon_box_element.each(function (index) {
+			dynamic_icon_id = "image-icon-id-" + (index + 1);
+			$(this).attr("id", dynamic_icon_id);
+      //console.log(dynamic_icon_id);
+      
+      // auto event open
+      setTimeout( function(){ 
+        console.log("image-icon-id-"+(index+1));
+        image_icon_box_element.removeClass(image_icon_box_active_class);
+        $("#image-icon-id-"+(index+1)).addClass(image_icon_box_active_class);
+        get_auto_active_image_icon_data = $("#image-icon-id-"+(index+1)).attr("data-image");
+        big_image_slide_element.prepend("<img src='" + get_auto_active_image_icon_data + "' class='current-image' alt=''>");
+
+        setTimeout(function () { 
+					big_image_slide_element.find(".current-image").addClass("show");
+					setTimeout(function () { 
+						$(".fixed-image").attr("src", get_auto_active_image_icon_data);
+						$(".current-image").remove();
+					}, 1000);
+				}, 100);
+      }, time)
+        time += 3000;
+      // auto event closed
+
+
+      /*if($(image_icon_box_element).hasClass(image_icon_box_active_class)){
+
+      }*/
+
+      
+      // click event open
+      $(this).click(function(){
+        image_icon_box_element.removeClass(image_icon_box_active_class);
+        $(this).addClass(image_icon_box_active_class);
+				//console.log($(this).attr("data-image"));
+				get_clicked_icon_data = $(this).attr("data-image");
+				big_image_slide_element.prepend("<img src='" + get_clicked_icon_data + "' class='current-image' alt=''>");
+				
+				setTimeout(function () { 
+					big_image_slide_element.find(".current-image").addClass("show");
+					setTimeout(function () { 
+						$(".fixed-image").attr("src", get_clicked_icon_data);
+						$(".current-image").remove();
+					}, 1000);
+				}, 100);
+      });
+      // click event closed
+			
+		});
+	}
+  // home talent section album script ended ----------------------------------
+
+
+
+  // header search script start ----------------------------------------------
+  $(".header-search-btn").click(function(){
+    $(".overlay-search-panel").addClass("opened");
+    setTimeout(function () { 
+      $(".search-field-area").addClass("visible");
+    }, 500);
+  });
+  $(".search-close-btn").click(function(){
+    $(".search-field-area").removeClass("visible");
+    setTimeout(function () { 
+      $(".search-close-btn").closest(".overlay-search-panel").removeClass("opened");
+    }, 500);
+  });
+  // header search script ended ----------------------------------------------
+  
 
 });
 
