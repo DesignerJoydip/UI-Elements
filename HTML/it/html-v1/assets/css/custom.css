@@ -127,10 +127,10 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
     margin: 0; padding: 0; display: inline-block;
 }
 .menu_area ul{
-    margin: 0; padding: 0; list-style: none;
+    margin: 0 -30px; padding: 0; list-style: none;
 }
 .menu_area ul li{
-    margin: 0; padding: 0; list-style: none; display: inline-block; padding: 0 35px; position: relative;
+    margin: 0; padding: 0; list-style: none; display: inline-block; padding: 0 30px; position: relative;
 }
 .menu_area ul li a{
     color:#fff; font-size: 22px; font-weight:500;
@@ -382,7 +382,7 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
     width:100%; height:950px; position: relative; display: flex; -webkit-display: flex; -ms-display: flex; overflow: hidden;
 }
 .big-banner-with-sideinfo .image-frame{
-    width:67%; overflow: hidden; background: #000;
+    width:67%; overflow: hidden; background: #000; position: relative;
 }
 .big-banner-with-sideinfo .image-frame img{
     width:100%; height:100%; object-fit: cover;
@@ -624,7 +624,7 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
 
 /* home talent section css start */
 .home-talent-section{
-    padding: 100px 0px 90px 0px;
+    padding: 100px 0px 0px 0px;
 }
 .home-talent-section .talent-heading-section{
     position: relative; overflow: hidden; margin-bottom:40px;
@@ -663,6 +663,101 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
     display: block; margin-left: 240px;
 }
 /* home talent section css ended */
+
+
+
+
+/* What happening section start */
+.sec-padding{
+    padding: 100px 0;
+}
+.What_happening_sec .What_happening_title h2{
+    width: 60%; margin-bottom: 0;
+}
+.What_happening_sec .What_happening_title p{
+    font-family: 'Lato', sans-serif; float: right; font-size: 30px; font-weight: 700; width: 73%; line-height: 42px; color: #33bfe3;
+}
+.what_happening_img_box{
+    margin-top: 97px;
+}
+.feed-content-box{
+    min-height: 304px; padding: 36px 57px; display: flex;
+}
+.feed-icon{
+    flex: 1 100%;
+}
+.feed-img-box{
+    min-height: 248px; max-width: 601px; width: 100%;
+}
+.feed-img-box img{
+    height: 100%; object-fit: cover;
+}
+.feed-box{
+    background: #F2F2F2;
+}
+.feed-content h5{
+    font-size: 40px; font-weight: 700; line-height: 49px; color: #000000; margin-bottom: 45px;
+}
+.feed-content p{
+    font-size: 15px; font-weight: 400; line-height: 20px; color: #000000;
+}
+.feed-img-box .image-frame{
+    position: relative;
+}
+.feed-img-box .overlay-content-area{
+    position: absolute; top: 50%; left: 0; right: 0; text-align: center; transform: translateY(-50%); -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%);
+}
+.feed-box2{
+    background: #DAF249;
+}
+.feed-box2 .feed-content-box{
+    padding: 0;
+}
+.feed-box2 .feed-img-box{
+    padding: 36px 50px 0;
+}
+.feed-box2 .feed-content h5, .feed-box6 .feed-content h5{
+    margin-bottom: 20px; font-size: 22px;
+}
+.feed-box4{
+    height: 100%;
+}
+.feed-box4 .feed-content{
+    background: #33BFE3; height: 100%;
+}
+.feed-box4 p{
+    font-size: 20px; font-weight: 700; line-height: 30px; font-style: italic; color: #fff; width: 85%;
+}
+.feed-box4 h2{
+    font-size: 61px; color: #fff; line-height: 74px; font-weight: 700; text-align: right;     margin-top: 30px;
+}
+.feed-box4 .feed-content, .feed-box5{padding: 36px 57px;}
+.feed-box5{background: #33BFE3;}
+.feed-box5 .feed-content{margin-top: 45px; margin-bottom: 0;}
+.feed-box5 .feed-content h5{color: #fff;}
+.feed-box5 .feed-img-box{min-height: auto; max-width: 100%;}
+.feed-box5 .feed-content h5{margin-bottom: 0;}
+.feed-box6 .feed-img-box {
+    height: 552px;
+    max-width: 100%;
+    width: 100%;
+    flex: 0 0 50%;
+    min-height: 100%;
+}
+.feed-box6{display: flex; background: #DAF249; overflow: hidden;}
+.feed-box6 .feed-icon{flex: auto; height: 100%;}
+.feed-box6 .feed-content-box{min-height: auto; flex-direction: column; 
+    justify-content: center;}
+.what_happening_col_left .row + .row, .what_happening_col_right .row + .row{margin-top: 40px;}
+.what_happening_col_left .what_happening_inner_col_left{padding-right: 20px;}
+.what_happening_col_left .what_happening_inner_col_right{padding-left: 20px; padding-right: 20px;}
+.what_happening_col_right .what_happening_inner_col_left, .what_happening_col_right .what_happening_inner_col_right{padding-left: 20px;}
+.what_happening_col_left .row + .row .what_happening_inner_col_left{padding-right: 0;}
+.what_happening_col_left .row + .row .what_happening_inner_col_right{padding-left: 0;}
+.feed-content p {
+    margin: 0;
+}
+
 
 
 
@@ -735,8 +830,6 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
 .common-horizontal-slider.slider .slick-current .community-content-box p{
     color:#fff; font-size:25px; line-height: 30px;
 }
-
-
 /* home community section css ended */
 
 
@@ -751,7 +844,7 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
     width: 45px; border:none; background: transparent;
 }
 .select2-container.custom-select-dropdown .select2-choice .select2-arrow b{
-    background: url("../images/down-arrow.svg") no-repeat center center;
+    background: url("../images/down-arrow.svg") no-repeat center center !important;
 }
 .select2-container.custom-select-dropdown.select2-container-active .select2-choice{
     box-shadow:none; -webkit-box-shadow:none; -ms-box-shadow:none;
@@ -772,29 +865,7 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
 
 
 
-/* common slick slider css start */
-.common-horizontal-slider .slick-track .slick-slide {
-    display: flex; align-self: center; flex-direction: column;
-}
-.single-slide-slider-with-v-dot.slick-dotted.slick-slider{
-    margin:0px;
-}
-.single-slide-slider-with-v-dot .slick-dots{
-    bottom: 65px; width:36%; left:auto; right:0;
-}
-.single-slide-slider-with-v-dot .slick-dots li{
-    display: block; margin-top: 40px;
-}
-.single-slide-slider-with-v-dot .slick-dots li button{
-    width:26px; height:26px; background: transparent; color:transparent; font-size:0px; border:4px solid #fff;
-}
-.single-slide-slider-with-v-dot .slick-dots li button:before{
-    display: none;
-}
-.single-slide-slider-with-v-dot .slick-dots li.slick-active button{
-    background: #fff;
-}
-/* common slick slider css ended */
+
 
 
 /* Footer start */

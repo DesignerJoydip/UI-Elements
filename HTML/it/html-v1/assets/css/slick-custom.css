@@ -130,3 +130,62 @@
 .slider-two.common-horizontal-slider .slick-next {
     right: 16%;
 }
+
+
+
+
+/* common slick slider css start */
+.common-horizontal-slider .slick-track .slick-slide {
+    display: flex; align-self: center; flex-direction: column;
+}
+.single-slide-slider-with-v-dot.slick-dotted.slick-slider, .white-v-dot.slick-dotted{
+    margin:0px;
+}
+.single-slide-slider-with-v-dot .slick-dots, .white-v-dot.slick-dotted .slick-dots{
+    bottom: 65px; width:36%; left:auto; right:0;
+}
+.single-slide-slider-with-v-dot .slick-dots li, .white-v-dot.slick-dotted .slick-dots li{
+    display: block; margin-top: 40px;
+}
+.single-slide-slider-with-v-dot .slick-dots li button, .white-v-dot .slick-dots li button{
+    width:26px; height:26px; background: transparent; color:transparent; font-size:0px; border:4px solid #fff;
+}
+.single-slide-slider-with-v-dot .slick-dots li button:before, .white-v-dot .slick-dots li button:before{
+    display: none;
+}
+.single-slide-slider-with-v-dot .slick-dots li.slick-active button, .white-v-dot .slick-dots li.slick-active button{
+    background: #fff;
+}
+
+@media(max-width:991px){
+
+    .slick-prev, .slick-next{
+        margin: 0px;
+    }
+    .slick-next {
+        right: 42px;
+    }
+    .slick-prev {
+        left: 42px;
+    }
+    .slick-prev:before, .slick-next:before{
+        font-size: 44px;
+    }
+
+    .single-slide-slider-with-v-dot .slick-dots, .white-v-dot .slick-dots {
+        bottom: 65px; width: 100%;
+    }
+    .single-slide-slider-with-v-dot .slick-dots li, .white-v-dot .slick-dots li{
+        display: inline-block;
+    }
+    .single-slide-slider-with-v-dot .slick-dots li button, .white-v-dot .slick-dots li button {
+        width: 13px; height: 13px; border: 2px solid #fff;
+    }
+
+
+
+}
+/* common slick slider css ended */
+
+
+

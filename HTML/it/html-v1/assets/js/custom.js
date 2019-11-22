@@ -1,4 +1,42 @@
 
+
+// mobile menu function script start --------------------------------------------
+function mobile_menu(){
+
+  var design_break_point = 992;
+  var mobile_menu_main_class = 'menu_area';
+  var mobile_menu_open_button_class = 'flyout_menu_open_btn';
+  var mobile_menu_closed_button_class = 'flyout_menu_close_btn';
+
+  var get_window_width = $(window).width();
+  //console.log(get_window_width);
+  var mobile_menu_main_wrapper = $("."+mobile_menu_main_class);
+  var mobile_menu_open_button_html = '<div class="'+mobile_menu_open_button_class+'"></div>';
+  var mobile_menu_closed_button_html = '<div class="'+mobile_menu_closed_button_class+'"></div>';
+
+  if(get_window_width >= design_break_point){
+    //console.log("Desktop");
+    $("."+mobile_menu_open_button_class).remove();
+    $("."+mobile_menu_closed_button_class).remove();
+  }else{
+    //console.log("mobile");
+    if(mobile_menu_main_wrapper.find("."+mobile_menu_closed_button_class).length == 0){
+      mobile_menu_main_wrapper.parent().prepend(mobile_menu_open_button_html);
+      mobile_menu_main_wrapper.prepend(mobile_menu_closed_button_html);
+      $("."+mobile_menu_closed_button_class).click(function(){
+        $(this).parent().removeClass("opened");
+      });
+      $("."+mobile_menu_open_button_class).click(function(){
+        $(this).next().parent().find("."+mobile_menu_main_class).addClass("opened");
+      });
+    }
+  }
+
+}
+// mobile menu function script closed ----------------------------------------
+
+
+
 $(document).ready(function(){
 
   // WOW script start --------------------------------------------------------
@@ -52,7 +90,8 @@ $(document).ready(function(){
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          dots: true,
         }
       }
     ]
@@ -126,7 +165,7 @@ $(document).ready(function(){
       //console.log(dynamic_icon_id);
       
       // auto event open
-      setTimeout( function(){ 
+      /*setTimeout( function(){ 
         console.log("image-icon-id-"+(index+1));
         image_icon_box_element.removeClass(image_icon_box_active_class);
         $("#image-icon-id-"+(index+1)).addClass(image_icon_box_active_class);
@@ -141,7 +180,7 @@ $(document).ready(function(){
 					}, 1000);
 				}, 100);
       }, time)
-        time += 3000;
+        time += 3000;*/
       // auto event closed
 
 
@@ -188,12 +227,16 @@ $(document).ready(function(){
     }, 500);
   });
   // header search script ended ----------------------------------------------
-  
 
+  mobile_menu();
+  
 });
 
 
+
 $(window).resize(function(){
+
+  mobile_menu();
 
 });
 
