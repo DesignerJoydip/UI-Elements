@@ -16,14 +16,14 @@ body, html {
     min-height: 100vh; -moz-osx-font-smoothing: grayscale; position: relative; overflow-x:hidden;
 }
 body {
-    /*font-family: 'Poppins', sans-serif;*/ font-family: 'Lato', sans-serif; font-size: 20px; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; font-size: 14px; padding-top: 90px;
+    font-family: 'Poppins', sans-serif; font-size: 20px; -webkit-font-smoothing: antialiased; font-smoothing: antialiased; font-size: 14px; padding-top: 90px;
 }
 
 h1, h2, h3, h4, h5, h6 { 
-    margin-top: 0px;  font-family: 'Poppins', sans-serif;
+    margin-top: 0px; 
 }
 p { 
-    margin: 0 0 25px; font-size: 30px; line-height: 36px; color: #212121; 
+    margin: 0 0 25px; font-size: 12px; line-height: 28px; color: #212121; 
 }
 b, strong { 
     font-weight: 600; 
@@ -83,12 +83,6 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
 .heading-lg{
     font-size: 70px; line-height: 78px; font-weight: 700; margin-bottom:60px;
 }
-.heading-lg .light{
-    font-weight:500;
-}
-.heading-md{
-    font-size: 60px; line-height: 68px; font-weight: 700; margin-bottom:30px;
-}
 .heading-sm{
     font-size: 40px; line-height: 48px; font-weight: 700; margin-bottom:50px;
 }
@@ -141,34 +135,12 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
 .menu_area ul li a{
     color:#fff; font-size: 22px; font-weight:500;
 }
-.menu_area ul li:hover > a{
+.menu_area ul li:hover a{
     color:#BED62F;
 }
 .menu_area ul li.active a{
     color:#BED62F;
 }
-
-/* dropdown css start */
-.menu_area ul li > ul{
-    width:200px; position: absolute; background: #efefef; text-align: left; top:70px; opacity: 0; visibility: hidden; transition: all ease-in-out 0.4s; -webkit-transition: all ease-in-out 0.4s;
-}
-.menu_area ul li > ul:before{
-    content: ''; position: absolute; top: -15px; left: 20px; width: 0; height: 0; border-left: 25px solid transparent; border-right: 25px solid transparent; border-bottom: 20px solid #efefef;
-}
-.menu_area ul li:hover > ul{
-    opacity: 10; visibility: visible; top:40px;
-}
-.menu_area ul li > ul li{
-    width: 100%; padding:0px;
-}
-.menu_area ul li > ul li a{
-    color:#000; display: block; padding: 7px 15px;
-}
-.menu_area ul li > ul li:hover a{
-    background-color:#BED62F; color:#000;
-}
-/* dropdown css ended */
-
 .cta_btn_area{
     padding: 25px 0; float: right;
 }
@@ -928,192 +900,6 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
     margin-right: 0;
 }
 /* Footer end */
-
-
-
-
-/* inner page banner css start */
-.innr_banner_area{
-    width:100%; height: 600px; overflow: hidden; position: relative;
-}
-.innr_banner_area img{
-    width:100%; height:100%; object-fit: cover;
-}
-/* inner page banner css ended */
-
-
-
-/* solution page css start */
-.black-bg{
-    background-color: #000;
-}
-.green-bg{
-    background-color: #BFD730;
-}
-.blue-bg{
-    background-color: #00AFDD;
-}
-
-.bullet-list ul{
-    padding: 0px; margin: 0px 0px 30px 0px; display: block; 
-}
-.bullet-list ul li{
-    width:100%; display: inline-block; font-size:30px; line-height: 36px; margin-bottom:30px;font-weight:600; padding-left: 30px; position: relative;
-}
-.bullet-list ul li:before{
-    content:''; width:10px; height:10px; position: absolute; top:14px; left:0px; background: #000; border-radius: 100%; -webkit-border-radius: 100%;
-}
-.bullet-list.white-list ul li{
-    color:#fff;
-}
-.bullet-list.white-list ul li:before{
-    background: #fff;
-}
-
-.solution-page-content-section{
-    width:100%; position: relative; overflow: hidden;
-}
-
-.solution-liting-section ul{
-    width: 100%; margin:0px; padding: 0px;
-}
-.solution-liting-section ul li{
-    width:100%; float: left; display: flex; -webkit-display: flex; background: #fff;
-}
-.solution-liting-section ul li > div.content-col{
-    width: 50%; min-height: 300px; position: relative; display: flex; -webkit-display: flex; align-items: center; justify-content: center;
-}
-.solution-liting-section ul li > div.content-col.color-bg{
-    background: #47CAEB;
-    background: -moz-linear-gradient(45deg,  #00fff5 0%, #47caeb 69%); 
-    background: -webkit-linear-gradient(45deg,  #00fff5 0%,#47caeb 69%);
-    background: linear-gradient(45deg,  #00fff5 0%,#47caeb 69%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fff5', endColorstr='#47caeb',GradientType=1 ); 
-}
-.solution-liting-section ul li > div.content-col.color-bg:after{
-    content: ''; position: absolute; top: 50px; right: -50px; width: 0; height: 0; border-top: 50px solid transparent; border-left: 50px solid #47CAEB; border-bottom: 50px solid transparent;
-}
-.solution-liting-section ul li:nth-child(even) > div.content-col.color-bg{
-    order:2;
-    background: #47caeb;
-    background: -moz-linear-gradient(45deg,  #47caeb 31%, #00fff5 100%);
-    background: -webkit-linear-gradient(45deg,  #47caeb 31%,#00fff5 100%);
-    background: linear-gradient(45deg,  #47caeb 31%,#00fff5 100%); 
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#47caeb', endColorstr='#00fff5',GradientType=1 );
-}
-.solution-liting-section ul li:nth-child(even) > div.content-col.color-bg:after{
-    border-left: 0px solid transparent; border-right: 50px solid #47CAEB; left:-50px; right:auto;
-}
-.solution-liting-section ul li h3{
-    margin: 0px; font-size:70px; line-height: 110px; color:#fff; font-weight:700;
-}
-.solution-liting-section ul li .content-wrap{
-    padding: 50px 130px; text-align: left; width:100%; font-size:40px; line-height: 48px;
-}
-.solution-liting-section ul li .content-wrap p{
-    margin-bottom:0px;
-}
-.solution-liting-section ul li a{
-    font-size:19px;font-weight: 700; color:#47CAEB; font-family: 'Poppins', sans-serif;
-}
-
-
-.all-ITBD-engineers-section{
-    background: url("../images/all-ITBD_engineers-bg.png") no-repeat top left; background-size: cover; padding: 100px 0px 50px;
-}
-.ovlay{
-    width:100%; height:100%; position: absolute; top:0px; left:0px; /* Permalink - use to edit and /* /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#73c4ef+26,000000+42&0.27+1,0.88+79,0.91+99 */
-background: -moz-radial-gradient(center, ellipse cover,  rgba(115,196,239,0.27) 1%, rgba(115,196,239,0.47) 26%, rgba(0,0,0,0.59) 42%, rgba(0,0,0,0.88) 79%, rgba(0,0,0,0.91) 99%); /* FF3.6-15 */
-background: -webkit-radial-gradient(center, ellipse cover,  rgba(115,196,239,0.27) 1%,rgba(115,196,239,0.47) 26%,rgba(0,0,0,0.59) 42%,rgba(0,0,0,0.88) 79%,rgba(0,0,0,0.91) 99%); /* Chrome10-25,Safari5.1-6 */
-background: radial-gradient(ellipse at center,  rgba(115,196,239,0.27) 1%,rgba(115,196,239,0.47) 26%,rgba(0,0,0,0.59) 42%,rgba(0,0,0,0.88) 79%,rgba(0,0,0,0.91) 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4573c4ef', endColorstr='#e8000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-
-
-
-}
-.all-ITBD-engineers-section .container{
-    z-index: 1; position: relative;
-}
-.all-ITBD-engineers-section h3{
-    line-height: 80px; margin-bottom: 90px;
-}
-.all-ITBD-engineers-section ul{
-    width: 100%; display: inline-block;
-}
-.all-ITBD-engineers-section ul li{
-    width: 100%; float: right; position: relative; padding: 0px 62px 0px 0px; margin:0px 0px 40px 0px; font-weight:600; font-size:25px; line-height: 30px; text-align: right; color:#fff;
-}
-.all-ITBD-engineers-section ul li i{
-    width:42px; height:34px; position: absolute; right:0px;
-}
-.all-ITBD-engineers-section ul li i img{
-    width:100%;
-}
-
-
-.dedicated-black-section{
-    padding: 60px 50px; background: #000; margin: 0px 0px 100px 0px;
-}
-.dedicated-black-section h3{
-    color:#fff; margin-bottom:30px;
-}
-.dedicated-black-section p{
-    margin: 0px 0px 25px 0px; font-size: 30px; line-height: 36px; color:#fff;
-}
-
-.howItWork-Blue-section{
-    background: #00AFDD; color:#fff; padding: 80px 60px 25px 80px;
-}
-.howItWork-green-section{
-    background: #BFD730; color:#fff; padding: 80px 60px 25px 80px;
-}
-
-.howItWork-section{
-    margin: 0px 0px 0px 0px;
-}
-
-.on-demand-section{
-    padding-top:55px; padding-bottom:35px;
-}
-.on-demand-section h3{
-    color:#fff; margin-bottom:40px;
-}
-.on-demand-section p{
-    margin-bottom:35px;
-}
-
-.direct-hire-section{
-    padding:100px 0px 70px;
-}
-
-.howItWork-Black-Section{
-    padding: 115px 0px 80px;
-}
-
-.NOC-Black-Section{
-    position: relative; z-index: 1;
-}
-.NOC-Black-Section .black-bg{
-    padding: 50px 65px 25px;
-}
-.NOC-Black-Section p{
-    color:#fff; font-size:30px; line-height: 60px; font-weight:700; font-family:  'Poppins', sans-serif;
-}
-
-.NOC-green-Section{
-    padding: 280px 0px 60px; margin-top:-180px;
-}
-
-.NOC-white-blue-Section .blue-bg{
-    padding: 134px 100px 100px;
-}
-
-.black-bg-common{
-    padding: 70px 70px 20px 70px;
-}
-
-/* solution page css ended */
 
 
 .mb-0{
