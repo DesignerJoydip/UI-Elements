@@ -8,6 +8,24 @@ function mobile_menu(){
   var mobile_menu_open_button_class = 'flyout_menu_open_btn';
   var mobile_menu_closed_button_class = 'flyout_menu_close_btn';
 
+  //console.log($("."+mobile_menu_main_class + " li").has("ul").length);
+
+  var select_li_has_submenu = $("." + mobile_menu_main_class + " li");
+
+  select_li_has_submenu.each(function(){
+    if ($(this).has("ul").length != 0){
+      //console.log($(this).has("ul").length);
+      $(this).has("ul").addClass("has-submenu");
+      if ($(this).find(".dropdown").length ==0){
+        $(this).has("ul").prepend('<span class="dropdown"></span>');
+        $(this).find(".dropdown").click(function(){
+          //console.log("clicked");
+          $(this).closest("li").children("ul").toggleClass("opened");
+        });
+      }
+    }
+  });
+
   var get_window_width = $(window).width();
   //console.log(get_window_width);
   var mobile_menu_main_wrapper = $("."+mobile_menu_main_class);

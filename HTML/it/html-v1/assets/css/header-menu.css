@@ -1,0 +1,113 @@
+
+.menu_area{
+    margin: 0; padding: 0; display: inline-block;
+}
+.menu_area ul{
+    margin: 0 -30px; padding: 0; list-style: none; position: relative;
+}
+.menu_area ul li{
+    margin: 0; padding: 0; list-style: none; display: inline-block; padding: 0 30px; position: relative;
+}
+.menu_area ul li a{
+    color:#fff; font-size: 22px; font-weight:500;
+}
+.menu_area ul li:hover > a{
+    color:#BED62F;
+}
+.menu_area ul li.active a{
+    color:#BED62F;
+}
+
+
+@media(min-width:992px){
+
+    /* dropdown css start */
+
+    .menu_area ul li > ul{
+        width:200px; position: absolute; background: #efefef; text-align: left; top:70px; opacity: 0; visibility: hidden; transition: all ease-in-out 0.4s; -webkit-transition: all ease-in-out 0.4s;
+    }
+    .menu_area ul li > ul:before{
+        content: ''; position: absolute; top: -15px; left: 20px; width: 0; height: 0; border-left: 25px solid transparent; border-right: 25px solid transparent; border-bottom: 20px solid #efefef;
+    }
+    .menu_area ul li:hover > ul{
+        opacity: 1; visibility: visible; top:40px;
+    }
+    .menu_area ul li > ul li{
+        width: 100%; padding:0px; position: relative;
+    }
+    .menu_area ul li > ul li a{
+        color:#000; display: block; padding: 7px 15px;
+    }
+    .menu_area ul li > ul li:hover > a{
+        background-color:#BED62F; color:#000;
+    }
+    .menu_area ul li ul li ul{
+        margin: 0px; left: 100%;
+    }
+    .menu_area ul li ul li:hover ul{
+         top: 0px;
+    }
+    .menu_area ul li ul li:hover ul:before{
+        display: none;
+    }
+    /* dropdown css ended */
+
+}
+
+@media(max-width:991px){
+
+    /* mobile dropdown css start */
+    header .menu_area{
+        position: fixed; left:-200px; top:0px; z-index: 9; width:200px; height:100%; padding: 40px 0px 0px 0px; background: rgba(0,0,0,0.9);
+        transition: all ease-in-out 0.7s; -webkit-transition: all ease-in-out 0.7s; -ms-transition: all ease-in-out 0.7s;
+    }
+    header .menu_area.opened{
+        left:0px;
+    }
+    header .menu_area ul{
+        margin: 0; text-align: center;
+    }
+    header .menu_area > ul{
+        height: 100%; overflow: hidden; overflow-y: scroll;
+    }
+    header .menu_area ul li{
+        width:100%; padding: 0px 0px; margin-bottom:30px; position: relative;
+    }
+    header .menu_area ul li .dropdown{
+        width:30px; height:30px; background: #00ffff; position: absolute; right:0px; top:7px;
+    }
+    header .menu_area ul li a {
+        font-size: 15px;
+    }
+    .menu_area ul li > ul{
+        opacity: 1; visibility: visible; 
+    }
+    .menu_area > ul li ul{
+        height:0; overflow: hidden; transition: all ease 0.4s; -webkit-transition: all ease 0.4s;
+    }
+    .menu_area > ul li ul.opened{
+        height:auto; border-color:#BED62F; border-style: solid; border-width: 2px 0px 0px 0px;
+    }
+    .menu_area ul li > a{
+        padding: 10px 0px; width: 100%; display: inline-block;
+    }
+    .menu_area ul li > ul li{
+        width: 100%; padding:0px 0px; margin: 0px;
+    }
+    .menu_area ul li > ul li a{
+        color:#BED62F;
+    }
+    /* mobile dropdown css ended */
+
+
+    /* header flyout menu css start */
+    header .flyout_menu_open_btn{
+        width:40px; height:40px; display: inline-block; background:url("../images/menu-icon.png") no-repeat center center; margin: 15px 0px 0px 0px;
+    }
+    header .flyout_menu_close_btn{
+        width:40px; height:40px; position: absolute; top: 32px; left: 5px; background:url("../images/back-icon.png") no-repeat center center; z-index: 1;
+    }
+    /* header flyout menu css ended */
+
+
+}

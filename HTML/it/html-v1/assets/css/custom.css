@@ -129,45 +129,6 @@ a:focus, a:active, button:focus, button:active, .btn.active.focus, .btn.active:f
 .logo{
     margin: 0; padding: 0; display: inline-block; padding-right: 20px;
 }
-.menu_area{
-    margin: 0; padding: 0; display: inline-block;
-}
-.menu_area ul{
-    margin: 0 -30px; padding: 0; list-style: none;
-}
-.menu_area ul li{
-    margin: 0; padding: 0; list-style: none; display: inline-block; padding: 0 30px; position: relative;
-}
-.menu_area ul li a{
-    color:#fff; font-size: 22px; font-weight:500;
-}
-.menu_area ul li:hover > a{
-    color:#BED62F;
-}
-.menu_area ul li.active a{
-    color:#BED62F;
-}
-
-/* dropdown css start */
-.menu_area ul li > ul{
-    width:200px; position: absolute; background: #efefef; text-align: left; top:70px; opacity: 0; visibility: hidden; transition: all ease-in-out 0.4s; -webkit-transition: all ease-in-out 0.4s;
-}
-.menu_area ul li > ul:before{
-    content: ''; position: absolute; top: -15px; left: 20px; width: 0; height: 0; border-left: 25px solid transparent; border-right: 25px solid transparent; border-bottom: 20px solid #efefef;
-}
-.menu_area ul li:hover > ul{
-    opacity: 10; visibility: visible; top:40px;
-}
-.menu_area ul li > ul li{
-    width: 100%; padding:0px;
-}
-.menu_area ul li > ul li a{
-    color:#000; display: block; padding: 7px 15px;
-}
-.menu_area ul li > ul li:hover a{
-    background-color:#BED62F; color:#000;
-}
-/* dropdown css ended */
 
 .cta_btn_area{
     padding: 25px 0; float: right;
