@@ -56,78 +56,35 @@
 		
 	}).slickAnimation();
 
-$('.featured-slider').slick({
-	dots: false,
-	infinite: true,
-	arrows: true,
-	autoplay: true,
-	centerMode: false,
-	speed: 800,
-	//lazyLoad: 'progressive',
-	fade: false,
-	//cssEase: 'linear',
-	slidesToShow: 4,
-	slidesToScroll: 1,
-	rtl: false,
-	appendArrows: ".arrow-wrap-for-featured"
-	//nextArrow: '<i class="fa fa-arrow-right"></i>',
-	//prevArrow: '<i class="fa fa-arrow-left"></i>',
-
-});
-
-$('.skill-slider').slick({
-	dots: false,
-	infinite: true,
-	arrows: true,
-	autoplay: true,
-	centerMode: false,
-	speed: 800,
-	//lazyLoad: 'progressive',
-	fade: false,
-	//cssEase: 'linear',
-	slidesToShow: 4,
-	slidesToScroll: 1,
-	rtl: false,
-	appendArrows: ".arrow-wrap-for-skill"
-	//nextArrow: '<i class="fa fa-arrow-right"></i>',
-	//prevArrow: '<i class="fa fa-arrow-left"></i>',
-
-});
 
 
-$('.testimonial-slider').slick({
-	dots: true,
-	infinite: true,
-	arrows: false,
-	autoplay: true,
-	centerMode: false,
-	speed: 800,
-	//lazyLoad: 'progressive',
-	fade: false,
-	//cssEase: 'linear',
-	slidesToShow: 2,
-	slidesToScroll: 1,
-	rtl: false,
-	//appendArrows: ".arrow-wrap-for-skill"
-	//nextArrow: '<i class="fa fa-arrow-right"></i>',
-	//prevArrow: '<i class="fa fa-arrow-left"></i>',
 
-});
-
-
-$('.brand-slider').slick({
+$('.payment-slider').slick({
 	dots: false,
 	infinite: true,
 	arrows: false,
 	autoplay: true,
 	centerMode: false,
-	speed: 800,
+	speed: 1000,
 	//lazyLoad: 'progressive',
 	fade: false,
 	//cssEase: 'linear',
-	slidesToShow: 4,
+	slidesToShow: 5,
 	slidesToScroll: 1,
 	rtl: false,
+	responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+			}
+		}
+		// You can unslick at a given breakpoint now by adding:
+		// settings: "unslick"
+		// instead of a settings object
+	]
 	//appendArrows: ".arrow-wrap-for-skill"
 	//nextArrow: '<i class="fa fa-arrow-right"></i>',
 	//prevArrow: '<i class="fa fa-arrow-left"></i>',

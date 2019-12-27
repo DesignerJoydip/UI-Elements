@@ -1,6 +1,6 @@
 resizeFix = function () {
     var nav_class = 'primary-menu';
-    var nav_open_style_class = 'flyout_left'; // open ttype class: flyout_left
+    var nav_open_style_class = 'flyout_right'; // open ttype class: flyout_left
     $('.' + nav_class).each(function () {
         $(this).find('li').each(function () {
             $(this).has('ul').addClass('submenu');
@@ -27,7 +27,7 @@ resizeFix = function () {
 
             var mobile_menu_heading_element = $(this).find(".mobile-navbar").length;
             if (mobile_menu_heading_element == 0) {
-                $(this).prepend('<div class="mobile-navbar">Navigation <span class="burgermenu-icon"></span></div>');
+                $(this).prepend('<div class="mobile-navbar"><span class="burgermenu-icon"><i class="fa fa-list-ul" aria-hidden="true"></i></span></div>');
             }
 
             if (nav_open_style_class != '') {

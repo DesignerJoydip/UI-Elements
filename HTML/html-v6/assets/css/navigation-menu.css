@@ -34,7 +34,7 @@
 
         .primary-menu ul li:hover,
         .primary-menu ul li.submenu:hover > a {
-            background: #126d9b;
+            background: #ff9a45;
         }
 
         .primary-menu ul li:hover ul{
@@ -127,7 +127,7 @@
         }
 
         .primary-menu ul li ul li a:hover {
-            background: #126d9b;
+            background: #ff9a45;
         }
 
         .primary-menu ul li ul li ul {
@@ -136,24 +136,31 @@
         }
 
         .mobile-navbar{
-            background:#ff0000;
             display:none;
             height:40px;
         }
         .primary-menu .burgermenu-icon{
-            width:40px;
+            width:50px;
             height:40px;
             float:right;
-            background:#ff00ff;
+            text-align: center;
+            line-height: 40px;
+            color:#fff;
         }
         
         @media (max-width:991px){
             .mobile-view .mobile-navbar{
-                display:block;
+                display:block; 
+                position: relative; 
+                z-index: 9;
             }
+
             .primary-menu .mobilemenu_ul{
                 left:-100%;
                 opacity:0;
+                background: #3a0052;
+                height: 100%;
+                overflow-y: scroll;
             }
             .mobile-view .mobilemenu_ul.flyout_left{
                 position: relative;
@@ -167,10 +174,35 @@
             .mobile-view .mobilemenu_ul.flyout_left.ul_opened{
                 left:0%; opacity:1; visibility:visible;
             }
+
+            .primary-menu .mobilemenu_ul.flyout_right{
+                top: 40px;
+                left:auto;
+                right:-100%;
+                opacity:0;
+            }
+            .mobile-view .mobilemenu_ul.flyout_right{
+                position: fixed;
+                display:block;
+                visibility:hidden;
+                transition: all ease 0.4s;
+                -webkit-transition: all ease 0.4s;
+                top:0;
+                right:-100%;
+                opacity:0;
+                padding: 40px 0px 0px 0px;
+            }
+            .mobile-view .mobilemenu_ul.flyout_right.ul_opened{
+                right:0%; opacity:1; visibility:visible;
+            }
+
+
+
             .mobile-view .mobilemenu_ul{
                 display:none;
                 width:100%;
                 position: absolute;
+                
             }
             .mobile-view ul{
                 margin:0px;
@@ -192,8 +224,12 @@
             .mobile-view ul li a {
                 width: 100%;
                 display:inline-block;
-                padding: 15px 14px;
-                border-bottom:#126d9b solid 1px;
+                padding: 10px 14px;
+                color:#fff;
+            }
+            .primary-menu ul li ul li a{
+                border-top:none;
+                color:#fff;
             }
             .primary-menu.mobile-view ul li ul li ul{
                 left:0;
