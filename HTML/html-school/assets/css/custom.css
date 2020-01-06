@@ -412,7 +412,7 @@ footer ul.footer-social li:hover a {
      transition: all ease-in-out 0.4s; -webkit-transition: all ease-in-out 0.4s;
 }
 .course-item-block{
-     width:100%; display: inline-block; position: relative; box-shadow: 0px 0px 10px 1px rgba(71, 85, 95,0.08); -webkit-box-shadow: 0px 0px 10px 1px rgba(71, 85, 95,0.08);
+     width:100%; display: inline-block; position: relative; background: #fff; box-shadow: 0px 0px 10px 1px rgba(71, 85, 95,0.08); -webkit-box-shadow: 0px 0px 10px 1px rgba(71, 85, 95,0.08);
      -moz-box-shadow: 0px 0px 10px 1px rgba(71, 85, 95,0.08);
 }
 .course-item-block .course-image{
@@ -484,7 +484,56 @@ footer ul.footer-social li:hover a {
 }
 
 
+.course-item-block.small .course-image{
+     height: 150px;
+}
+.course-item-block.small h4 {
+    font-size: 16px;  min-height: 35px;
+}
+.course-item-block.small .course-rating-area {
+    margin: 0px 0px;
+}
+.course-item-block.small .rating-stars li {
+    font-size: 14px;
+}
+.course-item-block.small .author-profile-area .author-pic {
+    width: 28px; height: 28px;
+}
+
+
 
 .course-list-with-tab-section{
      width:100%; position: relative; overflow: hidden; background: #f3f3f3; padding: 100px 0px;
+}
+
+
+
+.courses-listing-area{
+     position: relative; overflow: hidden; padding: 100px 0px;
+}
+.courses-listing-area .nav-tabs{
+     border:none;
+}
+.courses-listing-area .nav > li > a{
+     border:none !important; border-radius: 0 !important; font-size: 16px; color: rgba(0,0,0,.75); padding: 18px 15px; position: relative;
+}
+.courses-listing-area .nav > li.active > a:after{
+     content: ''; position: absolute; top: 50%; margin-top: -20px; width: 0; height: 0; right: -20px;
+    border-top: 20px solid transparent; border-bottom: 20px solid transparent; border-left: 20px solid #385cce;
+}
+.courses-listing-area .nav-tabs > li{
+     width:100%;
+}
+.courses-listing-area .nav-tabs > li.active > a,
+.courses-listing-area .nav-tabs > li.active:hover > a{
+     background: #385cce; color:#fff;
+}
+.courses-listing-area .nav-tabs > li > a:hover{
+     background: #fdc800; color:#000;
+}
+.courses-listing-area .course-list-blocks-row{
+     display: flex; display: -webkit-flex; flex-wrap: wrap;
+}
+.courses-listing-area .course-list-blocks-row > div{
+     margin-bottom:30px;
 }
