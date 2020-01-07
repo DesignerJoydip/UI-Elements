@@ -501,6 +501,14 @@ footer ul.footer-social li:hover a {
 }
 
 
+.course-item-block.row-view{
+     display: flex; display: -webkit-flex;
+}
+.course-item-block.row-view .course-image {
+     width: 40%; height: 225px;
+}
+
+
 
 .course-list-with-tab-section{
      width:100%; position: relative; overflow: hidden; background: #f3f3f3; padding: 100px 0px;
@@ -537,3 +545,55 @@ footer ul.footer-social li:hover a {
 .courses-listing-area .course-list-blocks-row > div{
      margin-bottom:30px;
 }
+
+
+
+/* inner page banner css start */
+.inner_page_banner{ 
+     min-height: 250px; padding: 50px 0px; text-align: center; align-items: center; position: relative; overflow: hidden; background-size: cover !important; background-position: center !important; display: flex; display: -webkit-flex; justify-content: center; 
+}
+.inner_page_banner:before{ 
+     content: ""; display: block; left: 0; right: 0; top: 0; bottom: 0; height: 100%; width: 100%; position: absolute; background: #182131; opacity: 0.8; 
+}
+.inner_page_banner .banner_heading{ 
+     color:#fff; font-size: 36px; line-height: 38px; 
+}
+
+.breadcrumb_area{ 
+     width:100%; display: inline-block; position: relative; text-align: center; margin:10px 0px 0px 0px; 
+}
+.breadcrumb_area ul{ 
+     margin:0px; padding: 0px; display: inline-block; 
+}
+.breadcrumb_area ul li{ 
+     display: inline-block; color:#fff; position: relative; 
+}
+.breadcrumb_area ul li:after{ 
+     content:'\f105'; font: 600 18px/1 'FontAwesome'; margin:0px 10px 0px 13px; 
+}
+.breadcrumb_area ul li:last-child:after{ 
+     display: none; 
+}
+.breadcrumb_area ul li a{ 
+     color: #a67421; 
+}
+/* inner page banner css ended */
+
+
+.shadow_box{ 
+     padding: 15px; box-shadow: 0px 0px 10px 1px rgba(71, 85, 95,0.08); -webkit-box-shadow: 0px 0px 10px 1px rgba(71, 85, 95,0.08); -moz-box-shadow: 0px 0px 10px 1px rgba(71, 85, 95,0.08); 
+}
+
+.product_detail_cart_area{
+     width:100%; position: relative; padding: 70px 0px; min-height:600px; 
+}
+.product_cart_info-tab .product_content_wrapper{ 
+     width:100%; display: inline-block; border-top:1px solid #eaeff5; padding: 25px 20px 10px 20px; margin-top:15px; 
+}
+
+.product_cart_info-tab{ padding: 15px; margin-bottom: 20px; }
+.product_cart_info-tab .product_cart_info_heading{ width: 100%; display: inline-block; padding: 0px 20px; color: #956622; font-size:20px; }
+.product_cart_info-tab .product_cart_info_heading i{ margin-right:5px; color: #f8b91f; }
+.product_cart_info-tab .product_cart_info_description{ padding:0px 0px 0px 0px; }
+.product_cart_info-tab .product_content_wrapper{ width:100%; display: inline-block; border-top:1px solid #eaeff5; padding: 25px 20px 10px 20px; margin-top:15px; }
+
