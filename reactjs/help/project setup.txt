@@ -1,0 +1,36 @@
+1. Install node and git bash.
+-------------------------------------------------------
+2. Check version : node -v, npm -v
+-------------------------------------------------------
+3. Create react app: ( https://reactjs.org/docs/create-a-new-react-app.html )
+npx create-react-app my-app
+cd my-app
+npm start
+-------------------------------------------------------
+create functional component
+-------------------------------------------------------
+import React from "react";
+function NameOfComponent() {
+return(
+<div>
+<h3>Heading</h3>
+</div>
+)
+}
+export default NameOfComponent
+
+-------------------------------------------------------
+class component
+-------------------------------------------------------
+import React, {component} from "react";
+class NameOfComponent extends Component{
+render(){
+return(
+<div>
+<h3>Heading</h3>
+</div>
+)
+}
+}
+
+   

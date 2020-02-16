@@ -1,0 +1,42 @@
+class App extends Component{
+
+  constructor() {
+    super(); // this call state
+
+    this.state = {
+      string: 'Re-write State',
+      AvatarArray:[
+        {
+          name: 'Avater 1',
+          id: '1'
+        },
+        {
+          name: 'Avater 2',
+          id: '2'
+        },
+        {
+          name: 'Avater 3',
+          id: '3'
+        },
+        {
+          name: 'Avater 4',
+          id: '4'
+        }
+      ]
+    };
+
+  }
+
+  render(){
+    return (
+      <div>
+            {
+              this.state.AvatarArray.map(avater => (<h3 key={avater.id}>{ avater.name }</h3>))
+            }
+          </div>
+    )
+  }
+
+}
+
+export default App;

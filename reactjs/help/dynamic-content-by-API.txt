@@ -1,0 +1,31 @@
+class App extends Component{
+
+  constructor() {
+    super(); // this call state
+
+    this.state = {
+      usersArray:[]
+    };
+
+
+  }
+// api call
+  componentDidMount(){
+    fetch('https://jsonplaceholder.typicode.com/users')
+    .then(response => response.json())
+      .then(users => this.setState({ usersArray: users }));
+  }
+
+  render(){
+    return (
+      <div>
+            {
+              this.state.usersArray.map(user => (<h3 key={user.id}>{user.name}</h3>))
+            }
+          </div>
+    )
+  }
+
+}
+
+export default App;
