@@ -1,0 +1,8 @@
+npm install bootstrap --save
+npm install --save bootstrap reactstrap
+
+in app.js ->
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button} from 'reactstrap';
+
+<Button color="success">Email</Button>
