@@ -1,0 +1,2 @@
+npm install jquery --save
+import $ from "jquery";
