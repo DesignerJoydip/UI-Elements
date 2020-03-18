@@ -14,9 +14,9 @@ Password: xrnUO40oSBniTogI074u
 
 -------------------------------------------------
 9 server, please chk
-FTP: Host:192.168.1.9
-Username: htmllive2018
-Password: 2ClKyO2rP5xQ4NRZ
+Host: testyourprojects.net
+User: wpnewmatrix9
+Password: BLQg8tSEb1O2dESDYR9AwvyzyOmwrYBiOoX
 -------------------------------------------------
 
 -------------------------------------------------
