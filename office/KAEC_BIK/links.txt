@@ -1,0 +1,3 @@
+https://search.google.com/structured-data/testing-tool
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Microdata
