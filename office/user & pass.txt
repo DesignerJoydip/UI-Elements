@@ -27,6 +27,13 @@ Password: BLQg8tSEb1O2dESDYR9AwvyzyOmwrYBiOoX
 -------------------------------------------------
 
 -------------------------------------------------
+8 server
+http://readycloud.netgear.com/client/index.html#page=access
+joydip@matrixnmedia.com
+Matrix@4321
+-------------------------------------------------
+
+-------------------------------------------------
 \\192.168.1.8\design
 ========================================
 User: design2017
