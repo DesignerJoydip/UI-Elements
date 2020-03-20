@@ -1,0 +1,65 @@
+
+/* window size greater than 1400px */
+@media screen and (min-width:1400px) {
+
+    /* header desktop css start */
+    header .row.header-row .menu-col{ width:auto; }
+
+    header .row.header-row .contact-info-col{ width:auto; }
+
+    header .row.header-row{ justify-content: space-between; align-items: center; }
+
+    header .row.header-row > div[class*='col-']{ width:auto; max-width: inherit; flex: inherit; }
+
+    header .row.header-row > div{ max-width: inherit; }
+    /* header desktop css ended */
+
+}
+
+/* window size greater than 1024px */
+@media screen and (min-width:1024px) {
+    
+    
+}
+
+@media screen and (min-width:992px) {
+
+
+}
+
+
+
+/* responsive css start */
+@media screen and (max-width:1399px) {
+
+
+}
+
+@media screen and (max-width:1366px) {
+
+    
+}
+
+@media screen and (max-width:1199px) {
+
+    
+}
+
+
+@media screen and (max-width:991px) {
+
+
+}
+
+
+@media screen and (max-width:768px) {
+
+    
+}
+
+
+@media screen and (max-width:767px) {
+
+
+}
+
