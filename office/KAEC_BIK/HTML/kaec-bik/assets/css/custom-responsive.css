@@ -18,6 +18,12 @@
     header .row.header-row > div{ max-width: inherit; }
     /* header desktop css ended */
 
+    /* footer desktop css start */
+    .footer-row{ justify-content: space-between; }
+
+    .footer-row div[class*='col-']{ width:auto; max-width: inherit; flex: inherit; }
+    /* footer desktop css ended */
+
 }
 
 /* window size greater than 1024px */

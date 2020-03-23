@@ -1,0 +1,7 @@
+/* thumbnail-image-gallery-slider css start */
+.thumbnail-image-gallery-slider-area{ width:100%; display: inline-block; position: relative; }
+
+.thumbnail-image-gallery-slider-area .property-big-image{ max-height:540px; }
+
+.thumbnail-image-gallery-slider-area .property-big-image img{ width:100%; }
+/* thumbnail-image-gallery-slider css ended */

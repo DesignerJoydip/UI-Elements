@@ -2,6 +2,51 @@
     "use strict";
 
     new WOW().init();
+
+    // Property detail page thumbnail image gallery script start-------------
+    if ($(".thumbnail-image-gallery-slider").length) {
+
+        $('.thumbnail-image-gallery-slider').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.thumb-for-thumbnail-image-gallery-slider'
+        });
+        $('.thumb-for-thumbnail-image-gallery-slider').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            asNavFor: '.thumbnail-image-gallery-slider',
+            dots: true,
+            centerMode: false,
+            focusOnSelect: true,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    }
+    // Property detail page thumbnail image gallery script ended -------------
+
     
     
 
