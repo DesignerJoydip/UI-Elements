@@ -2,6 +2,10 @@
 /* window size greater than 1400px */
 @media screen and (min-width:1400px) {
 
+    /* common structure css start */
+    .container{ max-width: 1280px; }
+    /* common structure css ended */
+
     /* header desktop css start */
     header .row.header-row .menu-col{ width:auto; }
 
