@@ -7,7 +7,7 @@
 
 .select-styled:after { content: ""; width: 0; height: 0; border: 7px solid transparent; border-color: #0a70ff transparent transparent transparent; position: absolute; top: 20px; right: 10px; transition: all ease 0.4s; -webkit-transition: all ease 0.4s; }
 
-.select-styled:active:after, .select-styled.active:after { top: 9px; border-color: transparent transparent #0a70ff transparent; }
+.select-styled:active:after, .select-styled.active:after { top: 12px; border-color: transparent transparent #0a70ff transparent; }
 
 .select-styled:hover { background-color: #fff; }
 
