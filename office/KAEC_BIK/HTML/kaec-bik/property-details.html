@@ -16,20 +16,18 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <!-- fonts -->
     <link href="assets/fonts/font-awesome/font-awesome.css" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,600,700|Roboto:400,500,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Open+Sans:400,600,700|Roboto:400,500,700&display=swap" rel="stylesheet">
     <!-- base css -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/header-menu.css" rel="stylesheet">
     <link href="assets/css/slick.css" rel="stylesheet">
     <link href="assets/css/slick-custom.css" rel="stylesheet">
-    <link href="assets/css/bootstrap-select.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
+    <link href="assets/css/responsive-tab-accrodian.css" rel="stylesheet">
+    <link href="assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+    <link href="assets/css/header-menu.css" rel="stylesheet">
     <!-- custom -->
     <link href="assets/css/custom.css" rel="stylesheet">
-    <link href="assets/css/thumbnail-image-gallery.css" rel="stylesheet">
     <link href="assets/css/custom-responsive.css" rel="stylesheet">
+    <link href="assets/css/custom-dropdown.css" rel="stylesheet">
 
 
 </head>
@@ -43,112 +41,63 @@
 
     <!-- header open -->
     <header class="wow fadeIn">
-        <div class="container">
-            <div class="row header-row">
-                <div class="col-lg-2 logo-col">
-                    <div class="header-main-logo">
-                        <a href="index.html"><img src="assets/images/logo.png" alt="KAEC BIK"></a>
+        <div class="header-wrapper StickyElementAfterScroll">
+            <div class="container">
+                <div class="row header-row">
+                    <div class="col-lg-2 col-sm-4 col-4 logo-col">
+                        <div class="header-main-logo">
+                            <a href="index.html"><img src="assets/images/logo.png" alt="KAEC BIK"></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-7 menu-col">
-                    <nav class="header-main-menu">
-                        <ul>
-                            <li class="current-item"><a href="#">HOME</a>
-                                <!-- <ul>
-                                    <li><a href="#">HOME</a></li>
-                                    <li><a href="#">COMMUNITIES</a></li>
-                                    <li><a href="#">WALK IN THE CITY</a></li>
-                                    <li><a href="#">CONTACT US</a>
-                                        <ul>
+                    <div class="col-lg-7 col-sm-3 col-3 menu-col">
+                        <nav class="header-main-menu">
+                            <ul class="head-menulist">
+                                <li class="current-item"><a href="#">HOME</a>
+                                    <!-- <ul>
                                             <li><a href="#">HOME</a></li>
                                             <li><a href="#">COMMUNITIES</a></li>
                                             <li><a href="#">WALK IN THE CITY</a></li>
-                                            <li><a href="#">CONTACT US</a></li>
-                                        </ul>
-                                    </li>
-                                </ul> -->
-                            </li>
-                            <li><a href="#">COMMUNITIES</a></li>
-                            <li><a href="#">WALK IN THE CITY</a></li>
-                            <li><a href="#">CONTACT US</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="col-lg-2 contact-info-col">
-                    <div class="header-iconic-info">
-                        <ul>
-                            <li>
-                                <a href="#">Arabic</a>
-                            </li>
-                            <li class="only-icon">
-                                <a href="#"><img src="assets/images/icons/like-icon.png" alt=""></a>
-                            </li>
-                        </ul>
+                                            <li><a href="#">CONTACT US</a>
+                                                <ul>
+                                                    <li><a href="#">HOME</a></li>
+                                                    <li><a href="#">COMMUNITIES</a></li>
+                                                    <li><a href="#">WALK IN THE CITY</a></li>
+                                                    <li><a href="#">CONTACT US</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul> -->
+                                </li>
+                                <li><a href="#">COMMUNITIES</a></li>
+                                <li><a href="#">WALK IN THE CITY</a></li>
+                                <li><a href="#">CONTACT US</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="header-iconic-info">
-                        <ul>
-                            <li>
-                                <a href="tel:8001180010"><img src="assets/images/icons/header-phone-icon.png" alt="">
-                                    800 11 800 10</a>
-                            </li>
-                        </ul>
+                    <div class="col-lg-2 col-sm-5 col-5 contact-info-col">
+                        <div class="header-iconic-info">
+                            <ul>
+                                <li>
+                                    <a href="#">Arabic</a>
+                                </li>
+                                <li class="only-icon">
+                                    <a href="#"><img src="assets/images/icons/like-icon.png" alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-iconic-info">
+                            <ul>
+                                <li>
+                                    <a href="tel:8001180010"><img src="assets/images/icons/header-phone-icon.png" alt="">
+                                        800 11 800 10</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
     <!-- header closed -->
-
-
-    <!-- search filter css start -->
-    <section class="search-filter-section" style="display: none;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="search-filter-wrap-area">
-                        <div class="search-filter-col">
-                            <select id="mounth">
-                                <option value="hide">-- Month --</option>
-                                <option value="januaryy" size="04">Januaryi </option>
-                                <option value="february" size="34">February</option>
-                                <option value="march">March</option>
-                                <option value="april">April</option>
-                                <option value="may">May</option>
-                                <option value="june">June</option>
-                                <option value="july">July</option>
-                                <option value="august">August</option>
-                                <option value="september">September</option>
-                                <option value="october">October</option>
-                                <option value="november">November</option>
-                                <option value="december">December</option>
-                            </select>
-                        </div>
-                        <div class="search-filter-col">
-                            <select id="date">
-                                <option value="hide">-- Month --</option>
-                                <option value="january">January</option>
-                                <option value="february">February</option>
-                                <option value="march">March</option>
-                                <option value="april">April</option>
-                                <option value="may">May</option>
-                                <option value="june">June</option>
-                                <option value="july">July</option>
-                                <option value="august">August</option>
-                                <option value="september">September</option>
-                                <option value="october">October</option>
-                                <option value="november">November</option>
-                                <option value="december">December</option>
-                            </select>
-                        </div>
-                        <div class="search-filter-col">f</div>
-                        <div class="search-filter-col">f</div>
-                        <div class="search-filter-col"><a class="rr">fdfdf</a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- search filter css endec -->
 
 
     <!-- property detail page area open -->
@@ -167,7 +116,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-9">
+                <div class="col-xl-9 col-sm-8 col-12">
 
                     <!-- slider area open -->
                     <div class="thumbnail-image-gallery-slider-area">
@@ -216,12 +165,61 @@
 
 
                 </div>
-                <div class="col-lg-3">
+                <div class="col-xl-3 col-sm-4 col-12">
                     <div class="white-border-box">
                         <div class="white-border-padding">
-                            ffdfgf
+                            <h3 class="heading-sm section-heading">Apartment In Al Shurooq</h3>
+                            <ul class="iconic-info-list">
+                                <li>
+                                    <img src="assets/images/icons/price-icon.png" alt="">
+                                    <div class="text">Price : <span><b>SAR 518,521</b></span></div>
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/ref-icon.png" alt="">
+                                    <div class="text">REF Number :<span><b>V1-45-4</b></span></div>
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/type-icon.png" alt="">
+                                    <div class="text">Type :<span><b>Apartment</b></span></div>
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/area-icon.png" alt="">
+                                    <div class="text">Area :<span><b>96 SQM</b></span></div>
+                                </li>
+                                <li>
+                                    <img src="assets/images/icons/bed-icon.png" alt="">
+                                    <div class="text">Bedrooms :<span><b>2</b></span></div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
+                    <a href="#" class="btn btn-primary btn-block btn-btm-gap">BOOK AN APPOINTMENT</a>
+                    <a href="#" class="btn btn-primary btn-block btn-btm-gap">RESERVE NOW</a>
+
+                    <a href="#" class="btn btn-primary btn-outline btn-block btn-btm-gap"><i class="fa fa-paper-plane" aria-hidden="true"></i>REQUEST A CALL BACK</a>
+
+                    <a href="#" class="btn btn-primary btn-outline btn-block btn-btm-gap"><i class="fa fa-heart-o" aria-hidden="true"></i>ADD TO FAVORITES</a>
+
+                    <div class="white-border-box btn-btm-gap">
+                        <div class="white-border-padding">
+                            <div class="download-pdf-box">
+                                <img src="assets/images/icons/pdf-icon.png" alt="Download PDF">
+                                <div class="info-area">
+                                    <h5>Property Brochure</h5>
+                                    <a href="#">Download <i class="fa fa-download" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="green-box">
+                        <div class="green-box-headding">
+                            <img src="assets/images/icons/home-loan-icon.png" alt="">
+                            <div class="info-area">Home finance Calculator</div>
+                        </div>
+                    </div>
+                    
+
                 </div>
             </div>
         </div>
@@ -283,12 +281,12 @@
     <script src="assets/js/popper.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/bootstrap-multiselect-dropdown.js"></script>
-    <!-- <script src="assets/js/multi-label-menu.js"></script> -->
+    <script src="assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="assets/js/jquery.multipurpose_tabcontent.js"></script>
     <script src="assets/js/header-menu.js"></script>
     <!-- CUSTOM SCRIPT -->
     <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>

@@ -78,9 +78,9 @@ textarea { min-height: 125px; resize: none; }
 .btn:before{ transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; content: ''; width: 0; height: 0; transform: rotate(360deg); -webkit-transform: rotate(360deg); border-style: solid; border-width: 0 0 0 0;  border-color: #fff transparent transparent transparent; position: absolute; z-index: -1; top: 0; left: 0; -webkit-transition: 1.2s;
  -o-transition: 1.2s; transition: 1.2s; }
 
-.btn i { margin-left: 15px; margin-right: 0px; font-size: 17px; line-height: 12px; }
+.btn i { margin-right: 10px; font-size: 17px; line-height: 12px; }
 
-.btn.btn-primary, .btn.btn-success{ min-width:160px; padding: 18px 10px; text-align: center; position: relative; z-index: 1; font-weight:800; color:#fff; border-width:1px; border-style:solid; font-size:16px; overflow: hidden; }
+.btn.btn-primary, .btn.btn-success{ min-width:160px; padding: 19px 10px; text-align: center; position: relative; z-index: 1; font-weight:800; color:#fff; border-width:1px; border-style:solid; font-size:16px; overflow: hidden; margin-top:0px; }
 
 .btn.btn-primary{ background-color: #0a70ff; border-color:#0a70ff; }
 
@@ -95,6 +95,32 @@ textarea { min-height: 125px; resize: none; }
 .btn.btn-primary:hover{ color:#0a70ff; }
 
 .btn.btn-success:hover{ color:#6fdc56; }
+
+.btn-primary.btn-outline{ background: #fff; border-color:#0a70ff; color:#333333; }
+
+.btn-primary.btn-outline i{ color:#0a70ff; margin-right:10px; }
+
+.btn-primary.btn-outline:hover{ color:#fff; }
+
+.btn-primary.btn-outline:hover:before { border-color:#0a70ff transparent transparent transparent; border-width: 330px 330px 0 0; }
+
+.btn-primary.btn-outline:hover i{ color:#fff; }
+
+.btn i.fa-heart-o{ color:#fa0d3f; transform: scale(1.2); }
+
+.btn-success.btn-outline{ background: #fff; border-color:#6fdc56; color:#333333; }
+
+.btn-success.btn-outline:hover{ color:#fff; }
+
+.btn-success.btn-outline:hover:before { border-color:#6fdc56 transparent transparent transparent; border-width: 330px 330px 0 0; }
+
+.btn-success.btn-outline.dark{ background: #fff; border-color:#5da91e; color:#333333; }
+
+.btn-success.btn-outline.dark:hover{ color:#fff; }
+
+.btn-success.btn-outline.dark:hover:before { border-color:#5da91e transparent transparent transparent; border-width: 330px 330px 0 0; }
+
+.btn-btm-gap{ margin-bottom:20px; }
 
 /* color css */
 .blue-color{ color:#0a70ff; }
@@ -271,7 +297,7 @@ ul.footer-social li.youtube:hover{ background: #f44336; }
 /* common structure css start */
 .white-border-box{ width:100%; display: inline-block; position: relative; background: #fff; border:#dddddd solid 1px; }
 
-.white-border-padding{ padding: 24px; }
+.white-border-padding{ padding:15px 20px; }
 /* common structure css ended */
 
 
@@ -323,7 +349,7 @@ ul.footer-social li.youtube:hover{ background: #f44336; }
 
 .iconic-name-list .icon-wrap img{ display: inline-block; }
 
-.iconic-name-list h3{ display: block; font-size:20px; color:#595959; }
+.iconic-name-list h3{ display: block; font-size:20px; color:#595959; font-weight:400; }
 /* home communities section css ended */
 
 
@@ -414,6 +440,26 @@ ul.iconic-info-list li .text span{ color:#333333; }
 ul.iconic-info-list li .text span b, ul.iconic-info-list li .text span strong{ font-weight:800; }
 /* home featured property section css ended */
 
+
+
+.download-pdf-box{ width:100%; display: flex; flex-wrap: nowrap; align-items: center; }
+
+.download-pdf-box img{ max-width:24px; margin:0px 24px 0px 10px; }
+
+.download-pdf-box .info-area{ position: relative; }
+
+.download-pdf-box h5{ margin-bottom: 7px; }
+
+
+.green-box{ width:100%; position: relative; display: inline-block; padding: 20px 15px; background: #6fdc56; }
+
+.green-box-headding{ width:100%; display: flex; flex-wrap: nowrap; align-items: center; }
+
+.green-box-headding img{ max-width:68px; margin:0px 24px 0px 10px; }
+
+.green-box-headding .info-area{ position: relative; font-size:24px; font-family: 'Bree Serif', serif; line-height: 28px }
+
+.green-box-headding h5{ margin-bottom: 7px; font-size:24px; color:#333333; font-family: 'Bree Serif', serif; font-weight:600; }
 
 
 
