@@ -1,8 +1,6 @@
 (function ($) {
     "use strict";
 
-    new WOW().init();
-
     // Property detail page thumbnail image gallery script start-------------
     if ($(".thumbnail-image-gallery-slider").length) {
 
@@ -46,6 +44,46 @@
         });
     }
     // Property detail page thumbnail image gallery script ended -------------
+
+
+
+    // home-city-benefit-slider script start-------------
+    if ($(".home-city-benefit-slider").length) {
+        $('.home-city-benefit-slider').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            dots: false,
+            centerMode: false,
+            focusOnSelect: false,
+            responsive: [
+                {
+                    breakpoint: 1200,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    }
+    // home-city-benefit-slider script ended-------------
+
+
+    
 
 
 
@@ -96,25 +134,13 @@ jQuery(window).scroll(function() {
     // define class and elements
     var StikyElement = ".StickyElementAfterScroll";
     var StikyClass = "Sticky";
-
     var StikyElementOffset = $(StikyElement).offset();
     var StikyElementTopOffset = StikyElementOffset.top;
-    console.log("sticky top offset:" + StikyElementTopOffset);
-
     // animation function
     function stickyHeaderAnimate() {
         var FullHeaderElement = StikyElement;
         var FullHeaderElementHeight = $(FullHeaderElement).outerHeight();
-        console.log("Header Height:" + FullHeaderElementHeight);
-
         var scrollTop = $(window).scrollTop();
-        console.log("scroll to top:" + scrollTop);
-
-        /*var StikyElementOffset = $(StikyElement).offset();
-        var StikyElementTopOffset = StikyElementOffset.top;
-        console.log("sticky top offset:"+StikyElementTopOffset);*/
-        console.log("sticky top offset:" + StikyElementTopOffset);
-
         if (scrollTop >= StikyElementTopOffset) {
             //$(StikyElement).addClass(StikyClass);
             $("html").addClass(StikyClass);

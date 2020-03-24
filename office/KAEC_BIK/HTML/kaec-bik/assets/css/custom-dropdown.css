@@ -22,3 +22,14 @@
 .select-options li[rel="hide"] { display: none; }
 /* common css ended */
 
+
+@media screen and (max-width:1499px) {
+
+    .search-filter-section .select-styled { padding: 8px 15px 8px 35px; }
+
+    .select { font-size: 13px; }
+
+    .select-options li { padding: 7px 10px; }
+
+}
+
