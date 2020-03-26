@@ -72,6 +72,8 @@
 
     .heading-lg { font-size: 26px; line-height: 20px; }
 
+    .heading-md { font-size: 20px; }
+
     p { font-size: 14px; line-height: 20px; }
 
     .btn.btn-primary, .btn.btn-success { padding: 14px 10px; font-size: 14px; }
@@ -101,6 +103,11 @@
     /* home communities section css ended */
 
 
+    /* home curve color infograph section css start */
+    .home-curve-infograph-section .curve-section-heading { font-size: 25px; line-height: 25px; margin-bottom: 25px; }
+    /* home curve color infograph section css ended */
+
+
     /* home city benefit section css start */
     .home-city-benefit-sectn { padding: 30px 0px 30px; }
 
@@ -119,6 +126,14 @@
     .footer-logo { max-width: 100px; }
 
     .copyright { font-size: 14px; }
+
+    .footer-row > div:first-child{ align-self: center; }
+
+    footer ul.footer-link{ font-size: 14px; }
+
+    ul.footer-link { max-width: 140px; }
+
+    ul.footer-link.two-col { max-width: 220px; }
     /* footer css ended */
 
 
@@ -168,7 +183,7 @@
 
     .home-communities-sectn .tab_wrapper.left_side .content_wrapper { width: 100%; }
 
-    .home-communities-sectn .tab_wrapper .content_wrapper .accordian_header{ border:none; background: #5da91e; color:#fff; margin-bottom:2px; font-size: 14px; }
+    .home-communities-sectn .tab_wrapper .content_wrapper .accordian_header{ border:none; background: #0a70ff; color:#fff; margin-bottom:2px; font-size: 14px; }
 
     .home-communities-sectn .tab_wrapper .content_wrapper .accordian_header .arrow{ background: transparent; }
 
@@ -177,7 +192,7 @@
     .home-communities-sectn .tab_wrapper .content_wrapper .accordian_header.active .arrow,
     .home-communities-sectn .tab_wrapper .content_wrapper .accordian_header .arrow{ border-color:#fff; }
 
-    .home-communities-sectn .tab_wrapper .content_wrapper .tab_content{ padding:20px; }
+    .home-communities-sectn .tab_wrapper .content_wrapper .tab_content{ padding:20px; height:auto; }
 
     .action-info-row{ text-align: center; }
     /* community css ended */
@@ -194,10 +209,30 @@
     /* home search section css ended */
 
 
+    /* home curve color infograph section css start */
+    .home-curve-infograph-section{ height:auto; }
+
+    .home-curve-infograph-section .home-left-curve, .home-curve-infograph-section .home-right-curve{ display: none; }
+
+    .home-curve-infograph-section .heading-wrap{ background-color:#fe9100; padding: 30px; text-align: center; }
+
+    .home-curve-infograph-section .curve-info-section .contant-area { width: 100%; padding: 30px 0px; }
+
+    /* home curve color infograph section css ended */
+
+
     /* footer css start */
-    footer { padding: 10px 0px; }
+    footer { padding: 30px 0px; }
 
     .footer-row { align-items: center; text-align: center; }
+
+    ul.footer-link { max-width: 100%; margin-bottom:20px; }
+
+    ul.footer-link.two-col { max-width: 100%; }
+
+    ul.footer-link.two-col li{ width:100%; }
+
+    ul.footer-link.two-col li:nth-child(even){ width:100%; }
     /* footer css ended */
 
 
@@ -210,6 +245,11 @@
     .home-communities-sectn .tab_wrapper{ display: inline-block; }
     /* home community section css ended */
 
+
+    /* property boc css start */
+    .property-box .property-image { height: 210px; }
+    /* property box css endec */
+
     
 }
 
@@ -221,6 +261,21 @@
 
     .contact-info-col{ text-align: right; }
     /* header css ended */
+
+    .breadcrumb li { padding: 0px 12px 0px 0px; margin-right: 5px; }
+
+    /* property detail page css start */
+
+    .thumbnail-image-gallery-slider-area .property-big-image { height: 220px; }
+
+    .agent-img-wrapper, .agent-details { text-align: center; }
+
+    .agent-img-wrapper{margin-bottom:15px;}
+
+    .agent-list li { justify-content: center; align-items: flex-start;}
+    
+    .agent-img-wrapper:after{display:none;}
+    /* property detail page css ended */
 
 }
 

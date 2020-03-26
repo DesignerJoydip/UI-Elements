@@ -14,21 +14,13 @@ font-family: 'Raleway', sans-serif;
 }
 .slick-arrow:before,
 .slick-arrow:after{
-  content:''; position: absolute; width:10px; height:3px; border-radius: 4px; background:#fff; left:50%; top:50%; margin-left:-5px;
-}
-.slick-arrow:before{
-   transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg);
-   top:34%;
-}
-.slick-arrow:after{
-   transform: rotate(45deg); -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg);
-   top:54%;
-}
-.slick-arrow.slick-next:before{
-  transform: rotate(45deg); -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg);
+   position: absolute; left:0; right:0; top:50%; transform: translateY(-50%); -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); font-family: 'FontAwesome'; font-size:30px; font-weight:normal; color:#4793ff;
 }
 .slick-arrow.slick-next:after{
-  transform: rotate(-45deg); -webkit-transform: rotate(-45deg); -ms-transform: rotate(-45deg);
+  content:"\f105";
+}
+.slick-arrow.slick-prev:after{
+  content:"\f104";
 }
 .slick-arrow.slick-next{
   margin-left:10px;
@@ -36,7 +28,15 @@ font-family: 'Raleway', sans-serif;
 .slick-arrow-wrap{
   position: absolute; right:0px; top:-10px;
 }
-
+.slick-arrow.slick-disabled{
+	border-color:#ddd;
+}
+.slick-arrow.slick-disabled:after{
+	color:#6b6b6b;
+}
+.slick-arrow{
+	width:39px; height:39px; border:1px solid #4793ff; background:#fff;
+}
 
 /* */
 
@@ -60,3 +60,70 @@ font-family: 'Raleway', sans-serif;
 }
 
 
+.thumbnail-image-gallery-slider-area .slick-arrow, .vitual_slick_slider .slick-arrow{
+ position:absolute; z-index:2; top: 50%; transform: translateY(-50%); -moz-transform: translateY(-50%); -webkit-transform: translateY(-50%); height:100%; width: 39px;
+}
+.thumbnail-image-gallery-slider-area .slick-next.slick-arrow, .vitual_slick_slider .slick-next.slick-arrow{
+right:0;
+}
+.thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider{
+	margin-top:25px;
+}
+.thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider .slick-arrow.slick-prev:after, .thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider .slick-arrow.slick-next:after{
+font-family: 'FontAwesome'; font-size:50px; font-weight:normal;
+}
+.thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider .slick-arrow.slick-prev:after{
+content:"\f104";
+}
+.thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider .slick-arrow.slick-next:after{
+content:"\f105";
+}
+.thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider .slick-arrow:after{
+color:#47de89;
+}
+.thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider .slick-arrow:after{
+width: auto; height: auto; border-radius: 0; background: transparent; left: 50%; top: 50%; margin-left: 0; transform: inherit;
+    -webkit-transform: inherit;  -ms-transform: inherit; left:0; right:0;
+}
+.thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider .slick-arrow:before{
+	display:none;
+}
+.thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider .slick-arrow.slick-disabled{
+	background:rgba(0,0,0,0.6); 
+}
+.thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider .slick-arrow.slick-disabled:after{
+	color:#fff; 
+}
+.thumbnail-image-gallery-slider-area .thumb-for-thumbnail-image-gallery-slider .slick-arrow{
+	background:#0965e6;
+}
+
+/*Floor section css start*/
+
+.floor_plan_slider_wrapper .slick-arrow{
+	position:absolute; top:-87px; right:0;
+}
+.floor_plan_slider_wrapper .slick-prev.slick-arrow{
+	right:32px;
+}
+.floor_plan_slider_wrapper .slick-next.slick-arrow{
+	right:-20px;
+}
+
+/*Floor section css end*/
+/*virtual slider start*/
+.vitual_slick_slider .slick-arrow{
+	background:transparent; border:none;
+}
+.vitual_slick_slider .slick-arrow.silck-next:after{
+	left:0; right:inherit;
+}
+.vitual_slick_slider .slick-arrow.silck-prev:after{
+	right:0; left:inherit;
+}
+.vitual_slick_slider .slick-arrow:before, .vitual_slick_slider .slick-arrow:after{
+font-size:40px; color:#000000;
+}
+
+
+/*virtual slider end*/
