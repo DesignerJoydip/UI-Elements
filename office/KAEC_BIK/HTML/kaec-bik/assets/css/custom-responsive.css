@@ -6,11 +6,7 @@
     .container{ max-width: 1280px; }
     /* common structure css ended */
 
-    /* home community section css start */
-    .community-iconic-row{ justify-content: space-between; }
     
-    .community-iconic-row > div[class*='col-']{ width:auto; max-width: inherit; flex: inherit; }
-    /* home community section css ended */
 
 }
 
@@ -44,6 +40,13 @@
 @media screen and (min-width:992px) {
 
 
+    /* home community section css start */
+    .community-iconic-row{ justify-content: space-between; }
+    
+    .community-iconic-row > div[class*='col-']{ width:auto; max-width: inherit; flex: inherit; }
+    /* home community section css ended */
+
+
 }
 
 
@@ -74,6 +77,8 @@
 
     .heading-md { font-size: 20px; }
 
+    .heading-sm { font-size: 18px; }
+
     p { font-size: 14px; line-height: 20px; }
 
     .btn.btn-primary, .btn.btn-success { padding: 14px 10px; font-size: 14px; }
@@ -93,18 +98,22 @@
 
     .home-communities-sectn .section-heading { margin-bottom: 30px; }
 
-    .home-communities-sectn .tab_wrapper.left_side > ul {height: 350px; }
+    .home-communities-sectn .tab_wrapper.left_side > ul { height: 420px; }
 
-    .home-communities-sectn .tab_wrapper.left_side > ul li { min-height: 70px; font-size: 15px; }
+    .home-communities-sectn .tab_wrapper.left_side > ul li { min-height: 85px; font-size: 14px; }
 
     .home-communities-sectn .tab_wrapper.left_side > ul li img { max-width: 28px; margin-right: 10px; }
 
-    .iconic-name-list h3 { font-size: 15px; }
+    .iconic-name-list h3 { font-size: 15px; white-space: nowrap; }
     /* home communities section css ended */
 
 
     /* home curve color infograph section css start */
-    .home-curve-infograph-section .curve-section-heading { font-size: 25px; line-height: 25px; margin-bottom: 25px; }
+    .home-curve-infograph-section { /*height: 265px;*/ height:auto; }
+
+    /* .home-curve-infograph-section .curve-section-heading { font-size: 21px; line-height: 30px; margin-bottom: 25px; } */
+    .home-curve-infograph-section .curve-section-heading { font-size: 30px; line-height: 36px; margin-bottom: 25px; }
+
     /* home curve color infograph section css ended */
 
 
@@ -112,6 +121,8 @@
     .home-city-benefit-sectn { padding: 30px 0px 30px; }
 
     .home-city-benefit-sectn .section-heading { margin-bottom: 25px; }
+
+    .home-city-benefit-sectn .iconic-box h5 { font-size: 16px; }
     /* home city benefit section css ended */
 
 
@@ -119,11 +130,25 @@
     .home-property-sectn { padding: 30px 0px 20px; }
 
     .home-property-sectn .section-heading { margin-bottom: 30px; }
+
+    .property-box .property-image { height: 250px; }
+
+    .property-box .property-info-box { padding: 45px 20px 20px 20px; }
+
+    .property-logo { width: 94px; height: 94px; }
+
+    .property-logo img { max-width: 45px; }
+
+    .property-box .property-info-box .heading-sm {  margin-bottom: 12px; }
+
+    ul.iconic-info-list { margin: 0px 0px 5px 0px; }
+
+    ul.iconic-info-list li .text { font-size: 14px; }
     /* home property css ended */
 
 
     /* footer css start */
-    .footer-logo { max-width: 100px; }
+    .footer-logo { max-width: 135px; }
 
     .copyright { font-size: 14px; }
 
@@ -136,8 +161,6 @@
     ul.footer-link.two-col { max-width: 220px; }
     /* footer css ended */
 
-
-
 }
 
 @media screen and (max-width:1399px) {
@@ -147,10 +170,11 @@
 
 @media screen and (max-width:1366px) {
 
-    
 }
 
 @media screen and (max-width:1199px) {
+
+    .home-curve-infograph-section .curve-section-heading { font-size: 21px; line-height: 30px; margin-bottom: 25px; }
 
     
 }
@@ -210,7 +234,9 @@
 
 
     /* home curve color infograph section css start */
-    .home-curve-infograph-section{ height:auto; }
+    .home-curve-infograph-section{ height:auto; background: transparent; }
+
+    .curve-info-section .left-curve{ display: none; }
 
     .home-curve-infograph-section .home-left-curve, .home-curve-infograph-section .home-right-curve{ display: none; }
 
@@ -276,6 +302,9 @@
     
     .agent-img-wrapper:after{display:none;}
     /* property detail page css ended */
+
+
+    .sticky-connect-btn{ width: 70px; right: -15px; }
 
 }
 
