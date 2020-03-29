@@ -1,0 +1,310 @@
+
+/* window size greater than 1400px */
+@media screen and (min-width:1400px) {
+
+    /* common structure css start */
+    .container{ max-width: 1280px; }
+    /* common structure css ended */
+
+    
+
+}
+
+@media screen and (min-width:1025px) {
+    /* header desktop css start */
+    header .row.header-row .menu-col{ width:auto; }
+
+    header .row.header-row .contact-info-col{ width:auto; }
+
+    header .row.header-row{ justify-content: space-between; align-items: center; flex-wrap: nowrap; }
+
+    header .row.header-row > div[class*='col-']{ width:auto; max-width: inherit; flex: inherit; }
+
+    header .row.header-row > div{ max-width: inherit; }
+    /* header desktop css ended */
+
+    /* footer desktop css start */
+    .footer-row{ justify-content: space-between; }
+
+    .footer-row div[class*='col-']{ width:auto; max-width: inherit; flex: inherit; }
+    /* footer desktop css ended */
+
+}
+
+/* window size greater than 1024px */
+@media screen and (min-width:1025px) {
+
+    
+}
+
+@media screen and (min-width:992px) {
+
+
+    /* home community section css start */
+    .community-iconic-row{ justify-content: space-between; }
+    
+    .community-iconic-row > div[class*='col-']{ width:auto; max-width: inherit; flex: inherit; }
+    /* home community section css ended */
+
+
+}
+
+
+
+/* responsive css start */
+@media screen and (max-width:1499px) {
+
+    /* header css start */
+    header { padding: 18px 0px; }
+
+    .header-main-logo img { max-width: 100px; }
+
+    .Sticky header .header-main-logo img { max-width: 80px; }
+
+    .header-iconic-info { font-size: 14px; }
+
+    .header-iconic-info img { max-width: 15px; margin-right: 6px; }
+
+    .header-iconic-info li { margin: 0px 5px; }
+    /* header css ended */
+
+    /* common css start */
+    .heading-xl { font-size: 40px; line-height: 45px; }
+
+    .heading-lgmd { font-size: 24px; line-height: 28px; }
+
+    .heading-lg { font-size: 26px; line-height: 20px; }
+
+    .heading-md { font-size: 20px; }
+
+    .heading-sm { font-size: 18px; }
+
+    p { font-size: 14px; line-height: 20px; }
+
+    .btn.btn-primary, .btn.btn-success { padding: 14px 10px; font-size: 14px; }
+    /* common css ended */
+
+
+    /* home search cssm start */
+    .propertyType .select-styled, .communitiesType .select-styled,
+    .minPriceType .select-styled, .maxPriceType .select-styled { background-position: 10px 12px; background-size: 18px; }
+
+    .search-filter-section .btn.btn-primary, .search-filter-section .btn.btn-success{ min-width:100px; font-size:12px; }
+    /* home search css ended */
+
+
+    /* home communities section css start */
+    .home-communities-sectn { padding: 25px 0px 45px; }
+
+    .home-communities-sectn .section-heading { margin-bottom: 30px; }
+
+    .home-communities-sectn .tab_wrapper.left_side > ul { height: 420px; }
+
+    .home-communities-sectn .tab_wrapper.left_side > ul li { min-height: 85px; font-size: 14px; }
+
+    .home-communities-sectn .tab_wrapper.left_side > ul li img { max-width: 28px; margin-right: 10px; }
+
+    .iconic-name-list h3 { font-size: 15px; white-space: nowrap; }
+    /* home communities section css ended */
+
+
+    /* home curve color infograph section css start */
+    .home-curve-infograph-section { /*height: 265px;*/ height:auto; }
+
+    /* .home-curve-infograph-section .curve-section-heading { font-size: 21px; line-height: 30px; margin-bottom: 25px; } */
+    .home-curve-infograph-section .curve-section-heading { font-size: 30px; line-height: 36px; margin-bottom: 25px; }
+
+    /* home curve color infograph section css ended */
+
+
+    /* home city benefit section css start */
+    .home-city-benefit-sectn { padding: 30px 0px 30px; }
+
+    .home-city-benefit-sectn .section-heading { margin-bottom: 25px; }
+
+    .home-city-benefit-sectn .iconic-box h5 { font-size: 16px; }
+    /* home city benefit section css ended */
+
+
+    /* home property css start */
+    .home-property-sectn { padding: 30px 0px 20px; }
+
+    .home-property-sectn .section-heading { margin-bottom: 30px; }
+
+    .property-box .property-image { height: 250px; }
+
+    .property-box .property-info-box { padding: 45px 20px 20px 20px; }
+
+    .property-logo { width: 94px; height: 94px; }
+
+    .property-logo img { max-width: 45px; }
+
+    .property-box .property-info-box .heading-sm {  margin-bottom: 12px; }
+
+    ul.iconic-info-list { margin: 0px 0px 5px 0px; }
+
+    ul.iconic-info-list li .text { font-size: 14px; }
+    /* home property css ended */
+
+
+    /* footer css start */
+    .footer-logo { max-width: 135px; }
+
+    .copyright { font-size: 14px; }
+
+    .footer-row > div:first-child{ align-self: center; }
+
+    footer ul.footer-link{ font-size: 14px; }
+
+    ul.footer-link { max-width: 140px; }
+
+    ul.footer-link.two-col { max-width: 220px; }
+    /* footer css ended */
+
+}
+
+@media screen and (max-width:1399px) {
+
+
+}
+
+@media screen and (max-width:1366px) {
+
+}
+
+@media screen and (max-width:1199px) {
+
+    .home-curve-infograph-section .curve-section-heading { font-size: 21px; line-height: 30px; margin-bottom: 25px; }
+
+    
+}
+
+@media screen and (max-width:991px) {
+
+    /* header css start */
+    body{ padding-top: 0px !important; }
+
+    .Sticky .StickyElementAfterScroll{ position: relative; }
+    /* header css ended */
+
+
+    /* common css start */
+    .heading-xl { font-size: 25px; line-height: 30px; }
+
+    .heading-lg { font-size: 20px; line-height: 20px; }
+
+    .heading-lgmd { font-size: 18px; line-height: 24px; }
+    /* common css ended */
+
+
+    /* home city css start */
+    .home-city-benefit-sectn .section-heading { margin-bottom: 10px; }
+    /* home city css ended */
+
+
+    /* community css start */
+    .community-tab-main-heading { margin-bottom: 20px; }
+
+    .home-communities-sectn .tab_wrapper.left_side .content_wrapper { width: 100%; }
+
+    .home-communities-sectn .tab_wrapper .content_wrapper .accordian_header{ border:none; background: #0a70ff; color:#fff; margin-bottom:2px; font-size: 14px; }
+
+    .home-communities-sectn .tab_wrapper .content_wrapper .accordian_header .arrow{ background: transparent; }
+
+    .home-communities-sectn .tab_wrapper .content_wrapper .accordian_header.active:after{ display: none; }
+
+    .home-communities-sectn .tab_wrapper .content_wrapper .accordian_header.active .arrow,
+    .home-communities-sectn .tab_wrapper .content_wrapper .accordian_header .arrow{ border-color:#fff; }
+
+    .home-communities-sectn .tab_wrapper .content_wrapper .tab_content{ padding:20px; height:auto; }
+
+    .action-info-row{ text-align: center; }
+    /* community css ended */
+
+
+    /* home search section css start */
+    .search-filter-wrap-area{ flex-flow: column; }
+
+    .search-filter-col{ width:100%; }
+
+    .search-filter-col.action-col { justify-content: space-between; flex-wrap: wrap; flex-flow: column; }
+
+    .search-filter-section .btn.btn-primary, .search-filter-section .btn.btn-success{ margin: 5px 0px 0px; }
+    /* home search section css ended */
+
+
+    /* home curve color infograph section css start */
+    .home-curve-infograph-section{ height:auto; background: transparent; }
+
+    .curve-info-section .left-curve{ display: none; }
+
+    .home-curve-infograph-section .home-left-curve, .home-curve-infograph-section .home-right-curve{ display: none; }
+
+    .home-curve-infograph-section .heading-wrap{ background-color:#fe9100; padding: 30px; text-align: center; }
+
+    .home-curve-infograph-section .curve-info-section .contant-area { width: 100%; padding: 30px 0px; }
+
+    /* home curve color infograph section css ended */
+
+
+    /* footer css start */
+    footer { padding: 30px 0px; }
+
+    .footer-row { align-items: center; text-align: center; }
+
+    ul.footer-link { max-width: 100%; margin-bottom:20px; }
+
+    ul.footer-link.two-col { max-width: 100%; }
+
+    ul.footer-link.two-col li{ width:100%; }
+
+    ul.footer-link.two-col li:nth-child(even){ width:100%; }
+    /* footer css ended */
+
+
+}
+
+
+@media screen and (max-width:768px) {
+
+    /* home community section css start */
+    .home-communities-sectn .tab_wrapper{ display: inline-block; }
+    /* home community section css ended */
+
+
+    /* property boc css start */
+    .property-box .property-image { height: 210px; }
+    /* property box css endec */
+
+    
+}
+
+
+@media screen and (max-width:767px) {
+
+    /* header css start */
+    .header-iconic-info:last-child{ display: none; }
+
+    .contact-info-col{ text-align: right; }
+    /* header css ended */
+
+    .breadcrumb li { padding: 0px 12px 0px 0px; margin-right: 5px; }
+
+    /* property detail page css start */
+
+    .thumbnail-image-gallery-slider-area .property-big-image { height: 220px; }
+
+    .agent-img-wrapper, .agent-details { text-align: center; }
+
+    .agent-img-wrapper{margin-bottom:15px;}
+
+    .agent-list li { justify-content: center; align-items: flex-start;}
+    
+    .agent-img-wrapper:after{display:none;}
+    /* property detail page css ended */
+
+
+    .sticky-connect-btn{ width: 70px; right: -15px; }
+
+}
+
