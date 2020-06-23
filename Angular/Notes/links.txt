@@ -1,0 +1,163 @@
+mdb
+https://www.youtube.com/watch?v=m68xvSiuijE
+-------------------------------------------------------
+npm install -g @angular/cli
+---------------------------------------------------------
+ng new project-name
+---------------------------------------------------------
+npm install --save bootstrap@4
+in angular.json: "styles": [ "node_modules/bootstrap/dist/css/bootstrap.min.css"],
+---------------------------------------------------------
+manual create component:
+
+import { Component } from '@angular/core';
+
+@Component({
+selector: 'app-service',
+templateUrl: './service.component.html',
+styleUrls: ['./service.component.css']
+})
+
+export class ServiceComponent {
+}
+
+-- in app.module.ts:
+import { ServerComponent } from "./server/server.component";
+
+declaration: [
+.....
+ServerComponent
+]
+-------------------------------------------------------------
+cli command for create component: ng g c componentname
+-------------------------------------------------------------
+Databinding:
+1. Output data: 
+1.a. String Interpolation : {{ data }}
+1.b. Property Binding: [property]="data"
+
+2. React to Events:
+2.a. Event binding: (enent)="experssion"	
+2.b. Two-way-blinding: [(ngModel)]="data"
+--------------------------------------------------------------
+Example of "String Interpolation":
+a. in .ts file: ServerID = 10;  ServerStatus = "offline"; // ServerID: number = 10;  ServerStatus: string = "offline";
+getServerStatus(){ return this.ServerStatus; }  
+b. in .html file:Server id is {{ ServerID }} and Status is {{ ServerStatus }} and Get Status by method {{ getServerStatus() }}
+--------------------------------------------------------------
+Property Binding: [property]="data"
+button disable using property binding.
+1. in ts file : serverBtnDisable = false; [ create a variable ]
+2. in html file: <button class="btn btn-danger" [disabled]="serverBtnDisable">Server Button</button>
+** Note: [disabled]="!serverBtnDisable" --- "!" will invert the bolean valuw. if variable is true, it return false. **
+
+now using setTimeout function we will disactivate disabled:
+-------------------------------------------------------------
+1. in ts file:create a variable and inside constructor method.
+serverBtnDisable = true;
+constructor() {
+setTimeout(() => {
+this.serverBtnDisable = false;
+} , 2000);// this arrow function is a ES6 arrow function
+}
+2. in html file: <button class="btn btn-danger" [disabled]="serverBtnDisable">Server Button</button>
+
+<p>{{ serverBtnDisable }}<p> -- we can also show bolean value by "string interpulation" in any tag or
+<p [innerText]="serverBtnDisable"></p>
+-------------------------------------------------------------
+Event Binding:
+We will change a text  by event binding.
+1. in ts file:
+1.a. create a variable: normalMsg = 'Button not Clicked yet!!!!!!';
+1.b. create a method: 
+onClickChnageMsg() {
+this.normalMsg = 'Button Clicked';
+}
+2. in html: <button class="btn btn-danger" (click)="onClickChnageMsg()">Button</button>
+-------------------------------------------------------------
+Passing data from input field using Event binding and show those data in string Interpulation
+(type in input field show immidiatly using string interpulation)
+1. in .ts file:
+1.a. create a blank variable: formData = '';
+1.b. create method: onCreateFormdata(event: Event) {
+console.log(event);
+this.formData = (<HTMLInputElement>event.target).value;
+} 
+** <HTMLInputElement> = it help to render form field data in page with string interpulation.
+
+2. in .html:
+2.a. <input type="text" (input)="onCreateFormdata($event)" >
+** $event = it help to take data from input field.
+2.b. {{ formData }} 
+** above code will show the form data in html.
+-------------------------------------------------------------
+Two-way data binding
+1. in app.module.ts: 
+1.a. import FormsModule: improt { FormsModule } from '@angular/forms';
+and add in imports decorator: imports: [.., FormsModule],
+2. in .html: <input type="text" [(ngModel)]="username" >
+for show form field data: {{ username }} 
+-------------------------------------------------------------
+Two-way data binding example:
+get form data by click button.
+1. in app.module.ts: 
+1.a. import FormsModule: improt { FormsModule } from '@angular/forms';
+and add in imports decorator: imports: [.., FormsModule],
+2. in .ts file: 
+2.a. create two variable: showFromsData = ''; formData1 = '';
+2.b. create a method: getFormsData() { this.showFormsMsg = 'form data is' + this.formsData1; }
+3. in .html:
+3.a. <inut type="text" [(ngModel)]="formData1" ><button (click)="getFormsData()">Click</button>{{ showFormsMsg }}
+-------------------------------------------------------------
+What are Directives: Directives are instructions in the DOM.
+-------------------------------------------------------------
+****** structural directive **********
+****** ngIf Directive ******
+-------------------------------------------------------------
+1. ngIf Directive: [it is a structural directive. which will change the structure in DOM]
+1.1. Show/hide a tag using *ngIf:
+1.1.a. in .ts file: create a property/variable: ngifCondition = true; // if this value is true then "p" tag will visible.
+1.1.b. in .html file: <p *ngIf="ngifCondition">ngIf is now true.</p>
+** if we change the "ngifCondition" to false, then "p" tag will invisible. **
+------------------
+1.2. Show a element using ngIf and after button click:
+1.2.a. in .ts file: create a property/variable: ngifConditionWithEvent = false;
+now we will create a method for this: showHTMLElement() { this.ngifConditionWithEvent = true; }
+1.2.b. in .html file: 
+<button class="btn btn-danger" (click)="showHTMLElement()">Click</button>
+<p *ngIf='ngifConditionWithEvent'>ngIf directive is {{ ngifCondition }}</p>
+------------------
+1.3. Show e section in *ngIf else part:
+1.3.a. in .ts file: create a property/variable: ngifConditionWithEventAndElseCondition = false;
+now we will create a method for this: showHTMLElementWithElseCondition() { this.ngifConditionWithEventAndElseCondition = true; }
+1.3.b. in .html file:
+<button class="btn btn-danger" (click)="showHTMLElementWithElseCondition()">Click</button>
+<p *ngIf='ngifConditionWithEventAndElseCondition; else elseConditionRef'>ngIf directive is {{ ngifConditionWithEventAndElseCondition }}</p>
+<ng-template #elseConditionRef>
+    <p>ngIf directive is {{ ngifConditionWithEventAndElseCondition }}</p>
+</ng-template>
+** #elseConditionRef: this is use for local referance to find else section for this perticular ngIf condition. **
+------------------
+***** Attribute Directive *****
+***** ngStyle *****
+[ this directive don't add or remove elements. They only change the element they ware placed on. ]
+------------------
+2.1. change styling of a element by using ngStyle:
+2.1.a. in .ts file: create a property: styleOnStatus = 'offline';
+and create a methode for dynamic style change: styleStatusMethod(){ return styleOnStatus === 'offline' ? 'red' : 'green';  }
+2.1.b in .html: 
+<p [ngStyle]="{backgroundColor: styleStatusMethod()}">Status is {{ styleOnStatus }}</p>
+** now if you change property value styleOnStatus = 'online', then ngStyle will changed the bgcolor to green. **
+------------------
+***** ngClass *****
+[class add or remove dynamically using ngClass directive]
+3.1. in .ts file: create  a property: classStatus = 'offline';
+and create a methode: 
+classStatusMethod() { return this.classStatus === 'offline' ? 'offlineClass' : 'onlineClass'; }
+3.2. in .css file: create a class: 
+.onlineClass{ color:#fff; background: green; }
+.offlineClass{ color:#fff; background: rgb(151, 2, 2); }
+3.3. in .html file: <p [ngClass]="classStatusMethod()">{{ classStatus }}</p>
+------------------
+***** ngFor *****
+

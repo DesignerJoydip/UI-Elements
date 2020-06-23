@@ -7,3 +7,7 @@ Cpanel details:
 https://vertenergie.com.sg/cpanel
 User: vertener
 Password: j$1yq+8(a6F7^fnsFS
+
+https://www.testyourprojects.net/wpnew2018/ashlarlaw/
+UID: admin
+PWD: RqD5r1i7Dsw4GckP7w

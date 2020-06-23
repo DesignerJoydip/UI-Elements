@@ -4,7 +4,7 @@ https://www.youtube.com/watch?v=4ZugNBFA2mA&list=PLC3y8-rFHvwilEuCqFGTL5Gt5U6deI
 
 ng add @angular/material
 
-
+"node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
 
 ---------------------------------------------------------------------------------
 
