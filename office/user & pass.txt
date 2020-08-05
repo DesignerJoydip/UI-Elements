@@ -21,9 +21,11 @@ Password: xrnUO40oSBniTogI074u
 
 -------------------------------------------------
 9 server, please chk
-Host: testyourprojects.net
-User: wpnewmatrix9
-Password: BLQg8tSEb1O2dESDYR9AwvyzyOmwrYBiOoX
+FTP
+Host: 35.209.138.46
+UserName:wpcloud2020
+Password: HW2G64aVjIlCzW3iwE1z
+PORT: 21212
 -------------------------------------------------
 
 -------------------------------------------------
@@ -51,3 +53,19 @@ PM
 https://pm.serverworld.biz/
 joydip@matrixnmedia.com
 JoydipPM@5014
+
+
+
+FTP
+Host: 35.209.138.46
+UserName:wpcloud2020
+Password: HW2G64aVjIlCzW3iwE1z
+Please use The PORT in FTP
+
+PORT: 21212FTP
+Host: 35.209.138.46
+UserName:wpcloud2020
+Password: HW2G64aVjIlCzW3iwE1z
+Please use The PORT in FTP
+
+PORT: 21212
