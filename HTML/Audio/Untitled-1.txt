@@ -1,0 +1,8 @@
+<div class="footAudiobox">
+        <a class="manual-click"></a>
+        <audio class="footaudio" controls="">
+            <!-- <source src="horse.ogg" type="audio/ogg"> -->
+            <source src="https://greystoneproductions.com/wp-content/uploads/2017/06/Track-1.wav" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>

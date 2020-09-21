@@ -392,3 +392,72 @@ Work detail of 05-08-2020:
 Translation Assistant Website: service section, Get instant quote section, testimonial section create in wordpress for home page and service detail page design work in progress
 Time: 07 hrs.
 -------------------------------------------------
+
+
+Work detail of 06-08-2020:
+------------------------------------------
+Translation Assistant Website: Service detail page and about us page development done.
+Time: 07 hrs
+-------------------------------------------------
+
+Work detail of 07-08-2020:
+------------------------------------------
+Translation Assistant Website: remaining 5 service detail page development complete.
+Time: 07 hrs
+-------------------------------------------------
+
+Work detail of 10-08-2020:
+------------------------------------------
+MISCELLANEOUS: R&D on Angular time: 04 hrs 30 mins
+Translation Assistant Website: Remove Typing effect from heading, Add all industires name in "industries we assist" section,
+translation services page - make the heading banner text in two line, About us page - Hide "How it works" section. Also hide from menu section.
+Time: 02 hrs 30 mins
+-------------------------------------------------
+
+11-08-2020
+------------------------------------------
+leave
+-------------------------------------------------
+
+Work detail of 12-08-2020:
+----------------------------------------------------
+MISCELLANEOUS: R&D on Reactjs for Carer Connect project. Time: 07 hrs
+
+Work Detail of 13-08-2020
+-------------------------------------
+1. Translation Assist: design change done in contact us page, in Aboutus, design change in home with nilanjana. Time: 04 hrs.
+2. R&D on React. Time: 03 hrs. 
+
+Work Detail of 14-08-2020
+------------------------------------------------
+1. Make new design estimation for "kaec.net" website.
+2. R&D on reactjs for "Carer Connect" Project.
+------------------------------------------------
+Time: 07 hrs.
+
+Work Detail of 17-08-2020
+------------------------------------------------
+1. R&D on reactjs for "Carer Connect" Project. Time: 03 hrs
+2. Translation Assists: start design changes as per client feedback. Time: 04 hrs 
+------------------------------------------------
+Total Time: 7 hrs
+
+Work Detail of 18-08-2020
+----------------------------------------
+1. Translation assist: design changes done in overall website, image replace done, Working on get quote popup form.
+Time: 07 hrs.
+
+Work Detail of 19-08-2020
+----------------------------------------------
+1. Translation assists: "Get Quote" form design done. Time: 02 hrs
+2. Carer Connect: Home page banner section and Testimonial section desktop view coding complete. Time: 05 hrs
+Total: 7 hrs.
+
+Work detail of 20-08-2020:
+------------------------------------------------
+1. Translation assist: images replace done, font fixing doe, worked with developer for get a quote language dropdown. Time: 03 hrs 30 min
+2. Carer Connect: code changes done in home page banner section, marge about us page in main project folder and make responsive, also design changes done in responsive view in home page and aboutus page.. Time: 03 hrs 30 mins.
+---------------------------------------------------
+Total time: 07 hrs.
+
+

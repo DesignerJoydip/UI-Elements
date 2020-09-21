@@ -22,9 +22,11 @@ Password: xrnUO40oSBniTogI074u
 -------------------------------------------------
 9 server, please chk
 FTP
-Host: 35.209.138.46
+Host: 104.197.32.20
 UserName:wpcloud2020
 Password: HW2G64aVjIlCzW3iwE1z
+Please use The PORT in FTP
+
 PORT: 21212
 -------------------------------------------------
 
@@ -53,6 +55,11 @@ PM
 https://pm.serverworld.biz/
 joydip@matrixnmedia.com
 JoydipPM@5014
+
+support bug tracker
+-------------------------------------
+joydipsarkar
+joydip1234
 
 
 
