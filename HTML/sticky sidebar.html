@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Sticky Sidebar</title>
+  <style>
+  p {
+    margin-left: 10px;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+*{ margin:0px; padding:0; box-sizing: border-box; }
+
+/* sticky flyout panel css start */
+.sticky-connect-btn{ width: 275px; height: 56px; font-size:18px; display: flex; align-items: center; justify-content: center; background: #4141ff; color:#fff; position: absolute; top:300px; left:-56px; transform-origin: 0 0; transform: rotate(-90deg); text-decoration: none; border-radius: 7px 7px 0px 0px; z-index: -1; box-shadow:0px -6px 20px rgba(0,0,0,0.6); }
+.sticky-connect-btn:hover, .sticky-connect-btn:focus{ color:#fff; text-decoration: none; }
+.sticky-connect-btn i{ margin-right:10px;}
+.sticky-sidebar-box{ position: fixed; top:140px; right:0px; width:100%; max-width:0px; z-index: 2; transition: all ease 0.4s; }
+.sticky-sidebar-box.opened{ max-width:600px; z-index: 9991; }
+.sticky-sidebar-box .inner-area{ width:100%; height:auto; position: relative; padding:20px; background: #fff; border: #dddddd solid 1px;}
+.sticky-sidebar-box .content-area{ width:100%; min-height:260px; overflow: hidden; overflow-y: auto; }
+.sticky-sidebar-box .sticky-flyout-panel-close-btn{ width:30px; height:30px; font-size: 20px; position: absolute; top: -20px; right: 20px; opacity: 0; transition: all ease 0.4s; background: #4141ff; color:#fff; text-align: center; border-radius: 100%; overflow: hidden;}
+.sticky-sidebar-box .sticky-flyout-panel-close-btn i{ line-height: 30px; }
+.sticky-sidebar-box .sticky-flyout-panel-close-btn img{ width:100%; }
+.sticky-sidebar-box.opened .sticky-flyout-panel-close-btn{ opacity: 1; }
+/* sticky flyout panel css ended */
+
+@media (max-width:767px){
+	/* sticky sidebar css start */
+    .sticky-sidebar-box{ top:0px; height:100%; }
+    .sticky-sidebar-box.opened { max-width: 100%; }
+    .sticky-sidebar-box .inner-area{ height:100%; padding: 40px 20px 20px; }
+    .sticky-sidebar-box .content-area{ min-height: 100px; height:100%; }
+    .sticky-sidebar-box .sticky-flyout-panel-close-btn { top: 10px; right: 10px; }
+    .sticky-connect-btn { top: 435px; }
+	/* sticky flyout side bar css ended */
+}
+</style>
+
+
+
+<!-- sticky sidebar open -->
+<section class="sticky-sidebar-box">
+	<a href="javascript:void(0);" class="sticky-connect-btn"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+		STICKY SIDEBAR</a>
+	<div class="inner-area">
+		<a href="javascript:void(0);" class="sticky-flyout-panel-close-btn">
+			<i class="fa fa-times" aria-hidden="true"></i>
+		</a>
+		<div class="content-area">
+			<!-- form open -->
+			<div class="row">
+				<div class="col-xl-12">
+					<!-- <h2 class="main-heading text-center">SET UP YOUR BUSINESS</h2> -->
+					<div class="business_form_div black_line">
+						<form class="" action="index.html" method="post">
+							<ul>
+								<li>
+									<!-- <label for="">First Name</label> -->
+									<input type="text" value="" placeholder="First Name">
+								</li>
+								<li>
+									<!-- <label for="">Last Name</label> -->
+									<input type="text" value="" placeholder="Last Name">
+								</li>
+								<li>
+									<!-- <label for="">Mobile Number</label> -->
+									<input type="text" value="" placeholder="Mobile Number">
+								</li>
+								<li>
+									<!-- <label for="">Email Address</label> -->
+									<input type="text" value="" placeholder="Email Address">
+								</li>
+								<li>
+									<!-- <label for="">Sector</label> -->
+									<select class="form-control select2-dropdown">
+										<option value="AK">Choose Sector</option>
+										<option value="CA">Sector 1</option>
+										<option value="NV">Sector 2</option>
+										<option value="OR">Sector 3</option>
+										<option value="WA">Sector 4</option>
+									</select>
+								</li>
+								<li>
+									<!-- <label for="">&nbsp;</label> -->
+									<input type="submit" value="Submit">
+								</li>
+							</ul>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- form closed -->
+		</div>
+	</div>
+</section>
+<!-- sticky sidebar closed -->
+
+
+ 
+<script>
+// sticky sidebar script start ------------------------------------------
+	$(".sticky-connect-btn").click(function () {
+		$(this).closest('.sticky-sidebar-box').toggleClass('opened');
+	});
+	$(".sticky-flyout-panel-close-btn").click(function () {
+		$(this).closest('.sticky-sidebar-box').removeClass('opened');
+	});
+// sticky sidebar script ended ------------------------------------------
+</script>
+ 
+</body>
+</html>
