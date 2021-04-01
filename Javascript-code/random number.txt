@@ -1,6 +1,0 @@
-var randomNumber = Math.random() * 11;
-console.log(randomNumber);
-
-// make decimal to round digite  
-var roundFigure = Math.ceil(randomNumber);
-console.log(roundFigure);

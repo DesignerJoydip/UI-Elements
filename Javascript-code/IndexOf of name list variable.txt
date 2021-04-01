@@ -1,9 +1,0 @@
-var productList = "Apple banana Lemon";
-var getProductName = prompt("Enter product Name:");
-var product = productList.indexOf(getProductName);
-console.log(product);
-if(product === -1){
-  document.write("<p>"+ getProductName + " is not available!</p>");
-}else{
- document.write("<p>" + getProductName + " is available!</p>");
-}

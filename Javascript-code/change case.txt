@@ -1,7 +1,0 @@
-var data = "ABCD";
-var lowerCase = data.toLowerCase();
-console.log(lowerCase);
-
-var data = "abcd";
-var upperCase = data.toUpperCase();
-console.log(upperCase);
